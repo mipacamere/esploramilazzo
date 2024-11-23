@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Itinerario a Milazzo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Itinerario Personalizzato a Milazzo</h1>
+        
+        <!-- Sezione di benvenuto -->
+        <div id="intro">
+            <p>Benvenuto! Iniziamo il tuo itinerario a Milazzo. Fai le tue scelte per creare una giornata su misura.</p>
+        </div>
+
+        <!-- Sezione per le domande e risposte -->
+        <div id="question-section">
+            <p id="question"></p>
+            <div id="options">
+                <!-- Le risposte saranno aggiunte dinamicamente qui -->
+            </div>
+        </div>
+
+        <!-- Sezione per visualizzare l'itinerario -->
+        <div id="itinerary-section" style="display: none;">
+            <h2>Il tuo itinerario:</h2>
+            <p id="itinerary"></p>
+        </div>
+
+        <!-- Sezione per il bottone di reset -->
+        <div id="reset-section" style="display: none;">
+            <button id="reset-button">Inizia di nuovo</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
