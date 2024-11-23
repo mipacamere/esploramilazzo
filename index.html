@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Itinerario Personalizzato a Milazzo</title>
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Itinerario a Milazzo</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
-        <h1>Benvenuto! Crea il tuo itinerario personalizzato a Milazzo.</h1>
-
-        <!-- Primo Bivio: Arrivo o sveglia a Milazzo -->
-        <div class="question" id="question1">
-            <p>Ti trovi già a Milazzo o stai arrivando?</p>
-            <button onclick="selectOption(1, 'arrivo')">Arrivo a Milazzo</button>
-            <button onclick="selectOption(1, 'sveglia')">Sveglio a Milazzo</button>
+        <h1>Itinerario Personalizzato a Milazzo</h1>
+        
+        <!-- Sezione di benvenuto -->
+        <div id="intro">
+            <p>Benvenuto! Iniziamo il tuo itinerario a Milazzo. Fai le tue scelte per creare una giornata su misura.</p>
         </div>
 
-        <!-- Secondo Bivio: Attività mattutine -->
-        <div class="question" id="question2">
-            <p>Che cosa ti piacerebbe fare al mattino?</p>
-            <button onclick="selectOption(2, 'capo')">Visita a Capo Milazzo</button>
-            <button onclick="selectOption(2, 'mare')">Mattinata al mare (Spiaggia di Tono)</button>
+        <!-- Sezione per le domande e risposte -->
+        <div id="question-section">
+            <p id="question"></p>
+            <div id="options">
+                <!-- Le risposte saranno aggiunte dinamicamente qui -->
+            </div>
         </div>
 
-        <!-- Altri passaggi dell'itinerario (etc.) -->
-        <div id="itineraryOutput">
+        <!-- Sezione per visualizzare l'itinerario -->
+        <div id="itinerary-section">
             <h2>Il tuo itinerario:</h2>
-            <p id="finalItinerary">Il tuo itinerario sarà visualizzato qui...</p>
+            <p id="itinerary"></p>
+        </div>
+
+        <!-- Sezione per il bottone di reset -->
+        <div id="reset-section">
+            <button id="reset-button">Inizia di nuovo</button>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
