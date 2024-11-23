@@ -27,10 +27,11 @@ function handleChoice(nextStep, action) {
     // Aggiungi l'azione all'itinerario
     itinerary += action + " ";
 
-    // Mostra l'itinerario se siamo oltre il primo passo
+    // Se siamo arrivati all'ultimo step, mostra l'itinerario
     if (nextStep === 3) {
         itineraryTextElement.innerText = itinerary;
         itinerarySection.style.display = "block"; // Mostra la sezione dell'itinerario
+        resetButton.style.display = "inline-block"; // Mostra il tasto per resettare
     }
 
     // Passa alla domanda successiva
@@ -58,8 +59,11 @@ resetButton.onclick = () => {
     itinerary = "";
     step = 1;
     itinerarySection.style.display = "none";
+    resetButton.style.display = "none";
     loadNextStep();
 };
 
-// Carica la prima domanda
-loadNextStep();
+// Carica la prima domanda quando la pagina si carica
+window.onload = () => {
+    loadNextStep();
+};
