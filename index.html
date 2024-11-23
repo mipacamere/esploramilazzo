@@ -1,60 +1,41 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Itinerario di un Giorno a Milazzo</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itinerario della giornata</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Itinerario di un Giorno a Milazzo</h1>
-    <nav>
-      <ul>
-        <li><a href="#intro">Introduzione</a></li>
-        <li><a href="#mappa">Mappa</a></li>
-        <li><a href="#itinerario">Itinerario</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <h1>Itinerario della Giornata a [Nome della città]</h1>
+        <p>Scopri il meglio della città, un passo alla volta!</p>
+    </header>
 
-  <section id="intro">
-    <h2>Benvenuti a Milazzo!</h2>
-    <p>Milazzo è una splendida città sulla costa nord della Sicilia, con una storia ricca e bellissimi panorami. Se hai solo un giorno per esplorare la città, ecco un itinerario ideale.</p>
-  </section>
+    <section id="morning">
+        <h2>Appena svegli</h2>
+        <button onclick="toggleContent('morning-content')">Mostra Dettagli</button>
+        <div id="morning-content" class="hidden">
+            <p>Ecco cosa puoi fare appena svegli: visita [nome del luogo] per una colazione speciale.</p>
+            <a href="https://www.google.com/maps?q=location" target="_blank">Vedi su Google Maps</a>
+        </div>
+    </section>
 
-  <section id="mappa">
-    <h2>Mappa della città</h2>
-    <p>Qui puoi vedere la mappa della città con i punti principali da visitare durante il giorno:</p>
-    <div id="mappa-container">
-      <!-- Inserisci una mappa interattiva qui, come una mappa di Google -->
-      <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-  </section>
+    <section id="breakfast">
+        <h2>Colazione</h2>
+        <button onclick="toggleContent('breakfast-content')">Mostra Dettagli</button>
+        <div id="breakfast-content" class="hidden">
+            <p>Consigliamo di fare colazione a [nome del caffè o panetteria].</p>
+            <a href="https://www.google.com/maps?q=location" target="_blank">Vedi su Google Maps</a>
+        </div>
+    </section>
 
-  <section id="itinerario">
-    <h2>Itinerario di un Giorno</h2>
-    <h3>Mattina</h3>
-    <ul>
-      <li>Visita al Castello di Milazzo</li>
-      <li>Passeggiata nel centro storico</li>
-    </ul>
-    <h3>Pranzo</h3>
-    <ul>
-      <li>Ristorante "La Taverna di Milazzo" per assaporare i piatti tipici siciliani.</li>
-    </ul>
-    <h3>Pomeriggio</h3>
-    <ul>
-      <li>Esplora il lungomare e la spiaggia di Milazzo</li>
-      <li>Visita al Parco dell'Etna per una vista panoramica della città.</li>
-    </ul>
-  </section>
+    <!-- Aggiungi altre sezioni per gli altri momenti della giornata -->
 
-  <footer>
-    <p>Realizzato con amore da [Il tuo nome]</p>
-  </footer>
+    <footer>
+        <p>Buon viaggio e divertiti!</p>
+    </footer>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
