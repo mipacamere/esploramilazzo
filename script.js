@@ -1,15 +1,27 @@
-function toggleContent(contentId, button) {
-    const content = document.getElementById(contentId);
-    const mapLink = document.getElementById(contentId + '-map');  // ID del link alla mappa
+let itinerary = "";
 
-    // Se il contenuto è nascosto, mostriamo il contenuto e il link della mappa
-    if (content.style.display === "none" || content.style.display === "") {
-        content.style.display = "block";  // Mostra il contenuto
-        mapLink.style.display = "block";  // Mostra il link alla mappa
-        button.textContent = "-";  // Cambia il pulsante a "-"
-    } else {
-        content.style.display = "none";  // Nascondi il contenuto
-        mapLink.style.display = "none";  // Nascondi il link alla mappa
-        button.textContent = "+";  // Cambia il pulsante a "+"
+function selectOption(question, choice) {
+    switch(question) {
+        case 1: // Prima scelta: Arrivo a Milazzo o Sveglia a Milazzo
+            if (choice === "arrivo") {
+                itinerary += "Arrivo a Milazzo: Parcheggia o prendi il treno. ";
+            } else {
+                itinerary += "Sveglio a Milazzo: Colazione e inizio della giornata. ";
+            }
+            break;
+        
+        case 2: // Seconda scelta: Attività mattutine
+            if (choice === "capo") {
+                itinerary += "Visita a Capo Milazzo per una passeggiata panoramica. ";
+            } else {
+                itinerary += "Mattinata al mare: Spiaggia di Tono. ";
+            }
+            break;
+
+        // Aggiungi ulteriori opzioni per altre parti dell'itinerario
+        
     }
+    
+    // Aggiorna l'itinerario sullo schermo
+    document.getElementById("finalItinerary").innerText = itinerary;
 }
