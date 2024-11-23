@@ -1,13 +1,15 @@
-function toggleContent(id) {
-    const content = document.getElementById(id);
-    const button = content.previousElementSibling;  // Trova il tasto relativo alla sezione
+function toggleContent(contentId, button) {
+    const content = document.getElementById(contentId);
+    const mapLink = document.getElementById(contentId + '-map');  // ID del link alla mappa
 
-    // Controlliamo se il contenuto è nascosto o visibile
+    // Se il contenuto è nascosto, mostriamo il contenuto e il link della mappa
     if (content.style.display === "none" || content.style.display === "") {
-        content.style.display = "block";
-        button.textContent = "-";  // Cambia il tasto a "-"
+        content.style.display = "block";  // Mostra il contenuto
+        mapLink.style.display = "block";  // Mostra il link alla mappa
+        button.textContent = "-";  // Cambia il pulsante a "-"
     } else {
-        content.style.display = "none";
-        button.textContent = "+";  // Cambia il tasto a "+"
+        content.style.display = "none";  // Nascondi il contenuto
+        mapLink.style.display = "none";  // Nascondi il link alla mappa
+        button.textContent = "+";  // Cambia il pulsante a "+"
     }
 }
