@@ -3,38 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Itinerario della giornata</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Itinerario Personalizzato a Milazzo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Itinerario della Giornata a [Nome della città]</h1>
-        <p>Scopri il meglio della città, un passo alla volta!</p>
-    </header>
+    <div class="container">
+        <h1>Benvenuto! Crea il tuo itinerario personalizzato a Milazzo.</h1>
 
-    <section id="morning">
-        <h2>Appena svegli</h2>
-        <button class="toggle-btn" onclick="toggleContent('morning-content', this)">+</button>
-        <div id="morning-content" class="hidden">
-            <p>Ecco cosa puoi fare appena svegli: visita <strong>[nome del luogo]</strong> per una colazione speciale.</p>
-            <p id="morning-map" class="hidden">Puoi vedere il posto su <a href="https://www.google.com/maps?q=location" target="_blank">Google Maps</a>.</p>
+        <!-- Primo Bivio: Arrivo o sveglia a Milazzo -->
+        <div class="question" id="question1">
+            <p>Ti trovi già a Milazzo o stai arrivando?</p>
+            <button onclick="selectOption(1, 'arrivo')">Arrivo a Milazzo</button>
+            <button onclick="selectOption(1, 'sveglia')">Sveglio a Milazzo</button>
         </div>
-    </section>
 
-    <section id="breakfast">
-        <h2>Colazione</h2>
-        <button class="toggle-btn" onclick="toggleContent('breakfast-content', this)">+</button>
-        <div id="breakfast-content" class="hidden">
-            <p>Consigliamo di fare colazione a <strong>[nome del caffè o panetteria]</strong>. Qui puoi gustare deliziosi piatti locali.</p>
-            <p id="breakfast-map" class="hidden">Trovi il posto su <a href="https://www.google.com/maps?q=location" target="_blank">Google Maps</a>.</p>
+        <!-- Secondo Bivio: Attività mattutine -->
+        <div class="question" id="question2">
+            <p>Che cosa ti piacerebbe fare al mattino?</p>
+            <button onclick="selectOption(2, 'capo')">Visita a Capo Milazzo</button>
+            <button onclick="selectOption(2, 'mare')">Mattinata al mare (Spiaggia di Tono)</button>
         </div>
-    </section>
 
-    <!-- Aggiungi altre sezioni per gli altri momenti della giornata -->
-
-    <footer>
-        <p>Buon viaggio e divertiti!</p>
-    </footer>
+        <!-- Altri passaggi dell'itinerario (etc.) -->
+        <div id="itineraryOutput">
+            <h2>Il tuo itinerario:</h2>
+            <p id="finalItinerary">Il tuo itinerario sarà visualizzato qui...</p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
