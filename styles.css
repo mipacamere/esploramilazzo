@@ -1,78 +1,48 @@
-/* Reset di base per margini e padding */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Corpo della pagina */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
 }
 
 header {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2.5em;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 10px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
 }
 
 section {
-  padding: 20px;
-  margin: 20px;
-  background-color: white;
-  border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-section h2 {
-  color: #333;
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
 }
 
-ul {
-  list-style-type: disc;
-  margin-left: 20px;
+button:hover {
+    background-color: #0056b3;
 }
 
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #333;
-  color: white;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+.hidden {
+    display: none;
 }
 
-#intro p {
-  font-size: 1.2em;
+a {
+    color: #007BFF;
+    text-decoration: none;
 }
 
-#itinerario ul {
-  font-size: 1.1em;
+a:hover {
+    text-decoration: underline;
 }
-
