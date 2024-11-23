@@ -1,6 +1,6 @@
-// Dichiarazione delle variabili per gestire il flusso e l'itinerario
+// Variabili per gestire il flusso e l'itinerario
 let itinerary = "";
-let step = 1;
+let step = 1; // Indica il passo dell'itinerario corrente
 
 // Aggiungere la prima domanda
 const questionElement = document.getElementById("question");
@@ -28,7 +28,7 @@ function handleChoice(nextStep, action) {
     itinerary += action + " ";
 
     // Se siamo arrivati all'ultimo step, mostra l'itinerario
-    if (nextStep === 3) {
+    if (nextStep === 4) {
         itineraryTextElement.innerText = itinerary;
         itinerarySection.style.display = "block"; // Mostra la sezione dell'itinerario
         resetButton.style.display = "inline-block"; // Mostra il tasto per resettare
@@ -44,12 +44,18 @@ function loadNextStep() {
     if (step === 1) {
         updateQuestion("Ti trovi già a Milazzo o stai arrivando?", [
             { text: "Arrivo a Milazzo", nextStep: 2, action: "Arrivo a Milazzo: Parcheggia o prendi il treno" },
-            { text: "Sveglio a Milazzo", nextStep: 2, action: "Sveglio a Milazzo: Colazione e inizio della giornata" }
+            { text: "Mi sveglio a Milazzo", nextStep: 2, action: "Sveglio a Milazzo: Colazione e inizio della giornata" }
         ]);
     } else if (step === 2) {
-        updateQuestion("Che cosa ti piacerebbe fare al mattino?", [
+        updateQuestion("Fai una passeggiata verso il centro e fai colazione con una granita e brioche. Cosa preferisci fare dopo?", [
             { text: "Visita a Capo Milazzo", nextStep: 3, action: "Visita a Capo Milazzo per una passeggiata panoramica" },
-            { text: "Mattinata al mare (Spiaggia di Tono)", nextStep: 3, action: "Mattinata al mare: Spiaggia di Tono" }
+            { text: "Mattinata al mare a Ponente", nextStep: 3, action: "Mattinata al mare a Ponente" }
+        ]);
+    } else if (step === 3) {
+        // Qui si concludono i due percorsi separati
+        updateQuestion("Ottimo! Il tuo itinerario è completo. Vuoi rivederlo o iniziare di nuovo?", [
+            { text: "Rivedi l'itinerario", nextStep: 4, action: "" },  // Solo per visualizzare l'itinerario finale
+            { text: "Inizia di nuovo", nextStep: 1, action: "" }  // Reset
         ]);
     }
 }
