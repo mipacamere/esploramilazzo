@@ -14,19 +14,19 @@
 
     <section id="morning">
         <h2>Appena svegli</h2>
-        <button onclick="toggleContent('morning-content')">Mostra Dettagli</button>
+        <button class="toggle-btn" onclick="toggleContent('morning-content')">+</button>
         <div id="morning-content" class="hidden">
-            <p>Ecco cosa puoi fare appena svegli: visita [nome del luogo] per una colazione speciale.</p>
-            <a href="https://www.google.com/maps?q=location" target="_blank">Vedi su Google Maps</a>
+            <p>Ecco cosa puoi fare appena svegli: visita <strong>[nome del luogo]</strong> per una colazione speciale.</p>
+            <p>Per maggiori dettagli, consulta il <a href="https://www.google.com/maps?q=location" target="_blank">link alla mappa</a>.</p>
         </div>
     </section>
 
     <section id="breakfast">
         <h2>Colazione</h2>
-        <button onclick="toggleContent('breakfast-content')">Mostra Dettagli</button>
+        <button class="toggle-btn" onclick="toggleContent('breakfast-content')">+</button>
         <div id="breakfast-content" class="hidden">
-            <p>Consigliamo di fare colazione a [nome del caffè o panetteria].</p>
-            <a href="https://www.google.com/maps?q=location" target="_blank">Vedi su Google Maps</a>
+            <p>Consigliamo di fare colazione a <strong>[nome del caffè o panetteria]</strong>. Qui puoi gustare deliziosi piatti locali.</p>
+            <p>Trovi il posto su <a href="https://www.google.com/maps?q=location" target="_blank">Google Maps</a>.</p>
         </div>
     </section>
 
