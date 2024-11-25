@@ -1,61 +1,139 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diagramma di Flusso</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Itinerario a Milazzo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+    .container {
+      padding: 20px;
+      text-align: center;
+    }
+    .choice-button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 18px;
+      border-radius: 8px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    .choice-button:hover {
+      background-color: #45a049;
+    }
+    .hidden {
+      display: none;
+    }
+    .header {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Itinerario Personalizzato a Milazzo</h1>
-        <div id="step1">
-            <p>Sei a Milazzo già da ieri?</p>
-            <button onclick="nextStep('step2')">Sì</button>
-            <button onclick="nextStep('step3')">No</button>
-        </div>
-        
-        <div id="step2" class="hidden">
-            <p>Perfetto! Cosa ti interessa fare oggi?</p>
-            <button onclick="nextStep('step4')">Cultura</button>
-            <button onclick="nextStep('step5')">Natura</button>
-            <button onclick="nextStep('step6')">Relax</button>
-        </div>
 
-        <div id="step3" class="hidden">
-            <p>Come arrivi a Milazzo?</p>
-            <button onclick="nextStep('step2')">Con l'auto</button>
-            <button onclick="nextStep('step7')">Con il treno</button>
-        </div>
+<div class="container" id="start-screen">
+  <div class="header">Itinerario di un giorno a Milazzo</div>
+  <button class="choice-button" onclick="chooseArrival('already')">Sono già a Milazzo</button>
+  <button class="choice-button" onclick="chooseArrival('arriving')">Arrivo a Milazzo</button>
+</div>
 
-        <div id="step4" class="hidden">
-            <p>Ti consigliamo di visitare il Castello di Milazzo e il centro storico!</p>
-            <button onclick="nextStep('end')">Fine</button>
-        </div>
+<div class="container hidden" id="arrival-screen">
+  <div class="header">Come arrivi a Milazzo?</div>
+  <button class="choice-button" onclick="showNext('colazione')">In treno o bus</button>
+  <button class="choice-button" onclick="showNext('colazione')">In auto</button>
+</div>
 
-        <div id="step5" class="hidden">
-            <p>Goditi una passeggiata a Capo Milazzo o una gita in barca alle Isole Eolie!</p>
-            <button onclick="nextStep('end')">Fine</button>
-        </div>
+<div class="container hidden" id="colazione-screen">
+  <div class="header">Colazione</div>
+  <button class="choice-button" onclick="showNext('itinerary')">Vai all'itinerario della mattina</button>
+</div>
 
-        <div id="step6" class="hidden">
-            <p>Trascorri il pomeriggio sulla spiaggia di Ponente!</p>
-            <button onclick="nextStep('end')">Fine</button>
-        </div>
+<div class="container hidden" id="itinerary-screen">
+  <div class="header">Scegli il tuo itinerario per la mattinata</div>
+  <button class="choice-button" onclick="chooseItinerary('capoMilazzo')">Capo Milazzo (Scelta A)</button>
+  <button class="choice-button" onclick="chooseItinerary('spiaggiaPonente')">Spiaggia di Ponente (Scelta B)</button>
+</div>
 
-        <div id="step7" class="hidden">
-            <p>Benvenuto a Milazzo! Come preferisci iniziare la tua giornata?</p>
-            <button onclick="nextStep('step4')">Cultura</button>
-            <button onclick="nextStep('step5')">Natura</button>
-            <button onclick="nextStep('step6')">Relax</button>
-        </div>
+<!-- Scelta A (Capo Milazzo) -->
+<div class="container hidden" id="capoMilazzo-screen">
+  <div class="header">Arrivo a Capo Milazzo</div>
+  <p>Indicazioni su come arrivare a Capo Milazzo...</p>
+  <button class="choice-button" onclick="showNext('escursione')">Escursione piscina di Venere</button>
+</div>
 
-        <div id="end" class="hidden">
-            <p>Grazie per aver creato il tuo itinerario! Buon viaggio!</p>
-        </div>
-    </div>
+<div class="container hidden" id="escursione-screen">
+  <div class="header">Escursione Piscina di Venere</div>
+  <p>Dettagli sull'escursione...</p>
+  <button class="choice-button" onclick="showNext('panorama')">Panoramica delle Isole Eolie</button>
+</div>
 
-    <script src="script.js"></script>
+<div class="container hidden" id="panorama-screen">
+  <div class="header">Panoramica delle Isole Eolie</div>
+  <p>Vista panoramica delle Isole Eolie...</p>
+  <button class="choice-button" onclick="endItinerary()">Fine itinerario</button>
+</div>
+
+<!-- Scelta B (Spiaggia di Ponente) -->
+<div class="container hidden" id="spiaggiaPonente-screen">
+  <div class="header">Spiaggia di Ponente</div>
+  <p>Descrizione della spiaggia...</p>
+  <button class="choice-button" onclick="showNext('lidoLibero')">Scegli se andare in un lido o spiaggia libera</button>
+</div>
+
+<div class="container hidden" id="lidoLibero-screen">
+  <div class="header">Lido o Spiaggia Libera?</div>
+  <button class="choice-button" onclick="showNext('attivita')">Lido</button>
+  <button class="choice-button" onclick="showNext('attivita')">Spiaggia Libera</button>
+</div>
+
+<div class="container hidden" id="attivita-screen">
+  <div class="header">Attività in acqua</div>
+  <p>Dettagli sulle attività da fare in acqua...</p>
+  <button class="choice-button" onclick="showNext('pranzo')">Pranzo nella Baia del Tono</button>
+</div>
+
+<div class="container hidden" id="pranzo-screen">
+  <div class="header">Pranzo nella Baia del Tono</div>
+  <p>Dettagli sul pranzo nella Baia del Tono...</p>
+  <button class="choice-button" onclick="endItinerary()">Fine itinerario</button>
+</div>
+
+<script>
+  function chooseArrival(type) {
+    document.getElementById('start-screen').classList.add('hidden');
+    document.getElementById('arrival-screen').classList.remove('hidden');
+  }
+
+  function showNext(nextScreen) {
+    const screens = document.querySelectorAll('.container');
+    screens.forEach(screen => screen.classList.add('hidden'));
+    document.getElementById(nextScreen + '-screen').classList.remove('hidden');
+  }
+
+  function chooseItinerary(type) {
+    document.getElementById('itinerary-screen').classList.add('hidden');
+    if (type === 'capoMilazzo') {
+      document.getElementById('capoMilazzo-screen').classList.remove('hidden');
+    } else {
+      document.getElementById('spiaggiaPonente-screen').classList.remove('hidden');
+    }
+  }
+
+  function endItinerary() {
+    alert('Itinerario completato!');
+    location.reload(); // Ricarica la pagina per iniziare di nuovo
+  }
+</script>
+
 </body>
 </html>
-
