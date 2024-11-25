@@ -4,40 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Itinerario a Milazzo</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f9;
-    }
-    .container {
-      padding: 20px;
-      text-align: center;
-    }
-    .choice-button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 18px;
-      border-radius: 8px;
-      margin: 10px;
-      cursor: pointer;
-    }
-    .choice-button:hover {
-      background-color: #45a049;
-    }
-    .hidden {
-      display: none;
-    }
-    .header {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -108,32 +75,6 @@
   <button class="choice-button" onclick="endItinerary()">Fine itinerario</button>
 </div>
 
-<script>
-  function chooseArrival(type) {
-    document.getElementById('start-screen').classList.add('hidden');
-    document.getElementById('arrival-screen').classList.remove('hidden');
-  }
-
-  function showNext(nextScreen) {
-    const screens = document.querySelectorAll('.container');
-    screens.forEach(screen => screen.classList.add('hidden'));
-    document.getElementById(nextScreen + '-screen').classList.remove('hidden');
-  }
-
-  function chooseItinerary(type) {
-    document.getElementById('itinerary-screen').classList.add('hidden');
-    if (type === 'capoMilazzo') {
-      document.getElementById('capoMilazzo-screen').classList.remove('hidden');
-    } else {
-      document.getElementById('spiaggiaPonente-screen').classList.remove('hidden');
-    }
-  }
-
-  function endItinerary() {
-    alert('Itinerario completato!');
-    location.reload(); // Ricarica la pagina per iniziare di nuovo
-  }
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
