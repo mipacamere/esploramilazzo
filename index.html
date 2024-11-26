@@ -267,12 +267,20 @@
 <!-- 26. B8 - Capo Milazzo -->
 <div id="capoMilazzoB" class="hidden">
     <h2>Capo Milazzo</h2>
-    <button onclick="goToIndicazioniCapoMilazzoB()">Indicazioni per Capo Milazzo</button>
+    <button onclick="goIndicazionicapomilazzoB()">Indicazioni per Capo Milazzo</button>
     <button onclick="goToCastelloB()">Indietro</button>
     <button onclick="goToIntro()">Torna all'inizio</button>
 </div>
 
-<!-- 27. B9 - Escursione Piscina di Venere -->
+<!-- 27. B9 - Indicazioni Capo Milazzo B -->
+<div id="indicazionicapomilazzoB" class="hidden">
+    <h2>Capo Milazzo</h2>
+    <button onclick="goToPiscinaVenereB()">Izzo</button>
+    <button onclick="goTocapoMilazzoB()">Indietro</button>
+    <button onclick="goToIntro()">Torna all'inizio</button>
+</div>
+
+<!-- 28. B10 - Escursione Piscina di Venere -->
 <div id="piscinaVenereB" class="hidden">
     <h2>Escursione alla Piscina di Venere</h2>
     <p>Descrizione dell'escursione alla Piscina di Venere...</p>
@@ -281,7 +289,7 @@
     <button onclick="goToIntro()">Torna all'inizio</button>
 </div>
 
-<!-- 28. B10 - Panoramica delle Isole Eolie -->
+<!-- 29. B11 - Panoramica delle Isole Eolie -->
 <div id="panoramicaIsoleB" class="hidden">
     <h2>Panoramica delle Isole Eolie</h2>
     <p>Panoramica delle Isole Eolie da Capo Milazzo...</p>
@@ -290,7 +298,7 @@
     <button onclick="goToIntro()">Torna all'inizio</button>
 </div>
 
-<!-- 29. B11 - Tramonto a Capo Milazzo -->
+<!-- 30. B12 - Tramonto a Capo Milazzo -->
 <div id="tramontoCapoMilazzo" class="hidden">
     <h2>Tramonto a Capo Milazzo</h2>
     <p>Descrizione di cosa fare e vedere al tramonto a Capo Milazzo...</p>
@@ -299,7 +307,7 @@
     <button onclick="goToIntro()">Torna all'inizio</button>
 </div>
 
-<!-- 30. B12 - Rientro in Centro -->
+<!-- 31. B13 - Rientro in Centro -->
 <div id="rientroCentroB" class="hidden">
     <h2>Rientro in Centro</h2>
     <p>Rientra in centro dopo una giornata intensa!</p>
@@ -308,7 +316,7 @@
     <button onclick="goToIntro()">Torna all'inizio</button>
 </div>
 
-<!-- 31. Cena in Centro -->
+<!-- 32. Cena in Centro -->
 <div id="cena" class="hidden">
     <h2>Cena in Centro</h2>
     <p>Goditi una cena tipica in uno dei ristoranti di Milazzo.</p>
@@ -317,7 +325,7 @@
     <button onclick="goToIntro()">Torna all'inizio</button>
 </div>
 
-<!-- 32. Passeggiata sul Lungomare -->
+<!-- 33. Passeggiata sul Lungomare -->
 <div id="passeggiata" class="hidden">
     <h2>Passeggiata sul Lungomare</h2>
     <p>Fai una passeggiata lungo il mare per ammirare il tramonto.</p>
@@ -326,7 +334,7 @@
     <button onclick="goToIntro()">Torna all'inizio</button>
 </div>
 
-<!-- 33. Gelato -->
+<!-- 34. Gelato -->
 <div id="gelato" class="hidden">
     <h2>Gelato</h2>
     <p>Assapora un gelato artigianale in una delle gelaterie locali.</p>
@@ -335,7 +343,7 @@
     <button onclick="goToIntro()">Torna all'inizio</button>
 </div>
 
-<!-- 34. Bar e Vita Notturna -->
+<!-- 35. Bar e Vita Notturna -->
 <div id="bar" class="hidden">
     <h2>Bar e Vita Notturna</h2>
     <p>Goditi la serata nei bar e locali di Milazzo.</p>
@@ -344,7 +352,7 @@
     <button onclick="goToIntro()">Torna all'inizio</button>
 </div>
 
-<!-- 35. Fine Giornata -->
+<!-- 36. Fine Giornata -->
 <div id="fineGiornata" class="hidden">
     <h2>Fine Giornata</h2>
     <p>Concludi la tua giornata e torna alla tua struttura.</p>
@@ -540,55 +548,61 @@ function goToCapoMilazzoB() {
     document.getElementById('capoMilazzoB').classList.remove('hidden');
 }
 
-// 27. B9 - Escursione Piscina di Venere
+// 27. B9 - Indicazioni Capo Milazzo B
+function goToIndicazionicapomilazzoB() {
+    hideAllSections();
+    document.getElementById('indicazionicapomilazzoB').classList.remove('hidden');
+}
+
+// 28. B10 - Escursione Piscina di Venere
 function goToPiscinaVenereB() {
     hideAllSections();
     document.getElementById('piscinaVenereB').classList.remove('hidden');
 }
 
-// 28. B10 - Panoramica delle Isole Eolie
+// 29. B11 - Panoramica delle Isole Eolie
 function goToPanoramicaIsoleB() {
     hideAllSections();
     document.getElementById('panoramicaIsoleB').classList.remove('hidden');
 }
 
-// 29. B11 - Tramonto a Capo Milazzo
+// 30. B12 - Tramonto a Capo Milazzo
 function goToTramontoCapoMilazzo() {
     hideAllSections();
     document.getElementById('tramontoCapoMilazzo').classList.remove('hidden');
 }
 
-// 30. B12 - Rientro in Centro
+// 31. B13 - Rientro in Centro
 function goToRientroCentroB() {
     hideAllSections();
     document.getElementById('rientroCentroB').classList.remove('hidden');
 }
 
-// 31. Cena in Centro
+// 32. Cena in Centro
 function goToCena() {
     hideAllSections();
     document.getElementById('cena').classList.remove('hidden');
 }
 
-// 32. Passeggiata sul Lungomare
+// 33. Passeggiata sul Lungomare
 function goToPasseggiata() {
     hideAllSections();
     document.getElementById('passeggiata').classList.remove('hidden');
 }
 
-// 33. Gelato
+// 34. Gelato
 function goToGelato() {
     hideAllSections();
     document.getElementById('gelato').classList.remove('hidden');
 }
 
-// 34. Bar e Vita Notturna
+// 35. Bar e Vita Notturna
 function goToBar() {
     hideAllSections();
     document.getElementById('bar').classList.remove('hidden');
 }
 
-// 35. Fine Giornata
+// 36. Fine Giornata
 function fineGiornata() {
     hideAllSections();
     document.getElementById('fineGiornata').classList.remove('hidden');
@@ -643,6 +657,11 @@ function goToCastelloB() {
 function goToCapoMilazzoB() {
     hideAllSections();
     document.getElementById('capoMilazzoB').classList.remove('hidden');
+}
+
+function goToIndicazionicapomilazzoB() {
+    hideAllSections();
+    document.getElementById('indicazionicapomilazzoB').classList.remove('hidden');
 }
 
 function goToPiscinaVenereB() {
