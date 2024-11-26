@@ -186,14 +186,14 @@
              <button onclick="goToIntro()">Torna all'inizio</button>
         </div>
 
-<!-- 17. A11 - Tramonto alla Baia del Tono -->
-<div id="tramontoTonoA" class="hidden">
-    <h2>Tramonto alla Baia del Tono</h2>
-    <p>Descrizione di cosa fare e vedere al tramonto alla Baia del Tono...</p>
-    <button onclick="goToRientroCentroA()">Rientro in Centro</button>
-    <button onclick="goToAttivitaSpiaggiaA()">Indietro</button>
-    <button onclick="goToIntro()">Torna all'inizio</button>
-</div>
+        <!-- 17. A11 - Tramonto alla Baia del Tono -->
+        <div id="tramontoTonoA" class="hidden">
+             <h2>Tramonto alla Baia del Tono</h2>
+             <p>Descrizione di cosa fare e vedere al tramonto alla Baia del Tono...</p>
+             <button onclick="goToRientroCentroA()">Rientro in Centro</button>
+             <button onclick="goToAttivitaSpiaggiaA()">Indietro</button>
+             <button onclick="goToIntro()">Torna all'inizio</button>
+        </div>
 
 <!-- 18. A12 - Rientro in Centro -->
 <div id="rientroCentroA" class="hidden">
@@ -267,7 +267,8 @@
 <!-- 26. B8 - Capo Milazzo -->
 <div id="capoMilazzoB" class="hidden">
     <h2>Capo Milazzo</h2>
-    <button onclick="goIndicazionicapomilazzoB()">Indicazioni per Capo Milazzo</button>
+    <p>Descrizione dell'escursione alla Piscina di Venere...</p>
+    <button onclick="goToIndicazionicapomilazzoB()">Indicazioni per Capo Milazzo</button>
     <button onclick="goToCastelloB()">Indietro</button>
     <button onclick="goToIntro()">Torna all'inizio</button>
 </div>
@@ -275,7 +276,8 @@
 <!-- 27. B9 - Indicazioni Capo Milazzo B -->
 <div id="indicazionicapomilazzoB" class="hidden">
     <h2>Capo Milazzo</h2>
-    <button onclick="goToPiscinaVenereB()">Izzo</button>
+    <p>Descrizione dell'escursione alla Piscina di Venere...</p>
+    <button onclick="goToPiscinaVenereB()">Piscina di venere</button>
     <button onclick="goTocapoMilazzoB()">Indietro</button>
     <button onclick="goToIntro()">Torna all'inizio</button>
 </div>
@@ -368,116 +370,86 @@
     sections.forEach(section => section.classList.add('hidden'));
 }
 
+    // 2. Selezione arrivo
         function goToArrivo() {
     hideAllSections();
     document.getElementById('arrivo').classList.remove('hidden');
 }
 
+// 3. Indicazioni su come arrivare a Milazzo
 function goToIndicazioni() {
     hideAllSections();
     document.getElementById('indicazioni').classList.remove('hidden');
 }
 
+// 4. Colazione
 function goToColazione() {
     hideAllSections();
     document.getElementById('colazione').classList.remove('hidden');
 }
 
+// 5. Itinerario della Mattina
 function goToItinerario() {
     hideAllSections();
     document.getElementById('itinerario').classList.remove('hidden');
 }
 
+// 6. Scelta A: Capo Milazzo
 function goToCapoMilazzo() {
     hideAllSections();
     document.getElementById('capoMilazzo').classList.remove('hidden');
 }
 
+// 7. A1 - Indicazioni per Capo Milazzo
 function goToIndicazioniCapoMilazzo() {
     hideAllSections();
     document.getElementById('indicazioniCapoMilazzo').classList.remove('hidden');
 }
 
+// 8. A2 - Escursione alla Piscina di Venere
 function goToPiscinaVenereA() {
     hideAllSections();
     document.getElementById('piscinaVenereA').classList.remove('hidden');
 }
 
+// 9. A3 - Panoramica delle Isole Eolie
 function goToPanoramicaIsoleA() {
     hideAllSections();
     document.getElementById('panoramicaIsoleA').classList.remove('hidden');
 }
 
+// 10. A4 - Borgo Antico
 function goToBorgoAnticoA() {
     hideAllSections();
     document.getElementById('borgoAnticoA').classList.remove('hidden');
 }
 
+// 11. A5 - Visita del Castello
 function goToCastelloA() {
     hideAllSections();
     document.getElementById('castelloA').classList.remove('hidden');
 }
 
+// 12. A6 - Pranzo al Borgo
 function goToPranzoA() {
     hideAllSections();
     document.getElementById('pranzoA').classList.remove('hidden');
 }
 
+// 13. A7 - Pomeriggio
 function goToPomeriggioA() {
     hideAllSections();
     document.getElementById('pomeriggioA').classList.remove('hidden');
 }
+
+// 14. A8 - Baia del Tono
 function goToBaiaDelTonoA() {
     hideAllSections();
     document.getElementById('baiaDelTonoA').classList.remove('hidden');
 }
-function goToTempoSpiaggiaA() {
-    hideAllSections();
-    document.getElementById('tempoSpiaggiaA').classList.remove('hidden');
-}
-
-function goToAttivitaSpiaggiaA() {
-    hideAllSections();
-    document.getElementById('attivitaSpiaggiaA').classList.remove('hidden');
-}
-
-function goToTramontoTonoA() {
-    hideAllSections();
-    document.getElementById('tramontoTonoA').classList.remove('hidden');
-}
-
-function goToRientroCentroA() {
-    hideAllSections();
-    document.getElementById('rientroCentroA').classList.remove('hidden');
-}
-
-function goToCena() {
-    hideAllSections();
-    document.getElementById('cena').classList.remove('hidden');
-}
-
-function goToPasseggiata() {
-    hideAllSections();
-    document.getElementById('passeggiata').classList.remove('hidden');
-}
-
-function goToGelato() {
-    hideAllSections();
-    document.getElementById('gelato').classList.remove('hidden');
-}
-
-function goToBar() {
-    hideAllSections();
-    document.getElementById('bar').classList.remove('hidden');
-}
-
-function fineGiornata() {
-    hideAllSections();
-    document.getElementById('fineGiornata').classList.remove('hidden');
-}
 
 // 15. A9 - Tempo in Spiaggia
-function goToTempoSpiaggiaA() {
+function goTempoSpiaggiaA() {
     hideAllSections();
     document.getElementById('tempoSpiaggiaA').classList.remove('hidden');
 }
