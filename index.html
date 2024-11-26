@@ -163,28 +163,28 @@
         <div id="baiaDelTonoA" class="hidden">
             <h2>Baia del Tono</h2>
             <p>Scopri la Baia del Tono.</p>
-            <button onclick="goToRientroA()">Rientro</button>
+            <button onclick="goTempoSpiaggiaA()">Tempo in spiaggia</button>
             <button onclick="goToPomeriggioA()">Indietro</button>
             <button onclick="goToIntro()">Torna all'inizio</button>
         </div>
 
         <!-- 15. A9 - Tempo in Spiaggia -->
-<div id="tempoSpiaggiaA" class="hidden">
-    <h2>Tempo in Spiaggia</h2>
-    <p>Descrizione di attività in spiaggia...</p>
-    <button onclick="goToAttivitaSpiaggiaA()">Attività in Spiaggia</button>
-    <button onclick="goToPomeriggioA()">Indietro</button>
-    <button onclick="goToIntro()">Torna all'inizio</button>
-</div>
+        <div id="tempoSpiaggiaA" class="hidden">
+             <h2>Tempo in Spiaggia</h2>
+             <p>Descrizione di attività in spiaggia...</p>
+             <button onclick="goToAttivitaSpiaggiaA()">Attività in Spiaggia</button>
+             <button onclick="goToBaiaDelTonoA()">Indietro</button>
+             <button onclick="goToIntro()">Torna all'inizio</button>
+        </div>
 
-<!-- 16. A10 - Attività in Spiaggia -->
-<div id="attivitaSpiaggiaA" class="hidden">
-    <h2>Attività in Spiaggia</h2>
-    <p>Attività da fare in spiaggia, sport acquatici, ecc...</p>
-    <button onclick="goToTramontoTonoA()">Tramonto alla Baia del Tono</button>
-    <button onclick="goToTempoSpiaggiaA()">Indietro</button>
-    <button onclick="goToIntro()">Torna all'inizio</button>
-</div>
+        <!-- 16. A10 - Attività in Spiaggia -->
+        <div id="attivitaSpiaggiaA" class="hidden">
+             <h2>Attività in Spiaggia</h2>
+             <p>Attività da fare in spiaggia, sport acquatici, ecc...</p>
+             <button onclick="goToTramontoTonoA()">Tramonto alla Baia del Tono</button>
+             <button onclick="goToTempoSpiaggiaA()">Indietro</button>
+             <button onclick="goToIntro()">Torna all'inizio</button>
+        </div>
 
 <!-- 17. A11 - Tramonto alla Baia del Tono -->
 <div id="tramontoTonoA" class="hidden">
@@ -433,7 +433,6 @@ function goToAttivitaSpiaggiaA() {
     document.getElementById('attivitaSpiaggiaA').classList.remove('hidden');
 }
 
-
 function goToTramontoTonoA() {
     hideAllSections();
     document.getElementById('tramontoTonoA').classList.remove('hidden');
@@ -469,9 +468,7 @@ function fineGiornata() {
     document.getElementById('fineGiornata').classList.remove('hidden');
 }
 
-
-
-      // 15. A9 - Tempo in Spiaggia
+// 15. A9 - Tempo in Spiaggia
 function goToTempoSpiaggiaA() {
     hideAllSections();
     document.getElementById('tempoSpiaggiaA').classList.remove('hidden');
