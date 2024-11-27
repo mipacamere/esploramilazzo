@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itinerario a Milazzo</title>
+    <link rel="stylesheet" href="style.css"> <!-- Collega il file CSS -->
+</head>
+<body>
+    <div class="container">
+        <!-- 1. Pagina Introduttiva -->
+        <div id="intro">
+            <h1>Benvenuti a Milazzo!</h1>
+            <p>Milazzo è una splendida città sulla costa della Sicilia, famosa per la sua storia, le sue spiagge e i panorami mozzafiato.</p>
+            <button class="main" onclick="goToArrivo()">Inizia il tuo viaggio</button>
+        </div>
+
+        <!-- 2. Selezione Arrivo -->
+        <div id="arrivo" class="hidden">
+            <h2>Sei già a Milazzo?</h2>
+            <button class="main" onclick="goToColazione()">Sono già a Milazzo</button>
+            <button class="main" onclick="goToIndicazioni()">Arrivo a Milazzo</button>
+            <div class="buttons-container">
+                <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+            </div>
+        </div>
+
+        <!-- 3. Indicazioni su come arrivare a Milazzo -->
+        <div id="indicazioni" class="hidden">
+            <h2>Come arrivare a Milazzo</h2>
+            <p>Puoi arrivare a Milazzo con treno, bus o auto. Ecco le indicazioni:</p>
+            <ul>
+                <li><strong>Treno:</strong> Prendi il treno per Milazzo dalla stazione di Messina.</li>
+                <li><strong>Bus:</strong> Ci sono autobus diretti da Catania e Palermo.</li>
+                <li><strong>Auto:</strong> Segui l'autostrada A20 fino a Milazzo.</li>
+            </ul>
+            <button class="main" onclick="goToColazione()">Vai alla Colazione</button>
+            <div class="buttons-container">
+                <button class="back" onclick="goToArrivo()">Indietro</button>
+                <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+            </div>
+        </div>
+
+        <!-- 4. Colazione -->
+        <div id="colazione" class="hidden">
+            <h2>Colazione</h2>
+            <p>Fai una pausa e goditi una deliziosa colazione in uno dei caffè di Milazzo.</p>
+            <button class="main" onclick="goToItinerario()">Inizia l'itinerario</button>
+            <div class="buttons-container">
+                <button class="back" onclick="goToIndicazioni()">Indietro</button>
+                <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+            </div>
+        </div>
+
+        <!-- 5. Itinerario della Mattina -->
+        <div id="itinerario" class="hidden">
+            <h2>Itinerario della Mattinata</h2>
+            <p>Scegli la tua destinazione per la mattinata:</p>
+            <button class="main" onclick="goToCapoMilazzo()">Vai a Capo Milazzo (Scelta A)</button>
+            <button class="main" onclick="goToSpiaggiaPonente()">Vai alla Spiaggia di Ponente (Scelta B)</button>
+            <div class="buttons-container">
+                <button class="back" onclick="goToColazione()">Indietro</button>
+                <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+            </div>
+        </div>
+
+        <!-- 6. Scelta A: Capo Milazzo -->
+        <div id="capoMilazzo" class="hidden">
+            <h2>Capo Milazzo</h2>
+            <button class="main" onclick="goToIndicazioniCapoMilazzo()">Indicazioni per Capo Milazzo</button>
+            <div class="buttons-container">
+                <button class="back" onclick="goToItinerario()">Indietro</button>
+                <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+            </div>
+        </div>
+
+        <!-- 7. A1 - Indicazioni per Capo Milazzo -->
+        <div id="indicazioniCapoMilazzo" class="hidden">
+            <h2>Indicazioni per Capo Milazzo</h2>
+            <p>Dettagli su come arrivare a Capo Milazzo...</p>
+            <button class="main" onclick="goToPiscinaVenereA()">Escursione alla Piscina di Venere</button>
+            <div class="buttons-container">
+                <button class="back" onclick="goToCapoMilazzo()">Indietro</button>
+                <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+            </div>
+        </div>
+
+        <!-- 8. A2 - Escursione alla Piscina di Venere -->
+        <div id="piscinaVenereA" class="hidden">
+            <h2>Escursione alla Piscina di Venere</h2>
+            <p>Descrizione dell'escursione alla Piscina di Venere...</p>
+            <button class="main" onclick="goToPanoramicaIsoleA()">Ritorno e panoramica delle Isole Eolie</button>
+            <div class="buttons-container">
+                <button class="back" onclick="goToIndicazioniCapoMilazzo()">Indietro</button>
+                <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+            </div>
+        </div>
+
+        <!-- 9. A3 - Panoramica delle Isole Eolie -->
+        <div id="panoramicaIsoleA" class="hidden">
+            <h2>Panoramica delle Isole Eolie</h2>
+            <p>Panoramica delle Isole Eolie da Capo Milazzo...</p>
+            <button class="main" onclick="goToBorgoAnticoA()">Ritorno verso il Borgo Antico</button>
+            <div class="buttons-container">
+                <button class="back" onclick="goToPiscinaVenereA()">Indietro</button>
+                <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+            </div>
+        </div>
+
+        <!-- 10. A4 - Borgo Antico -->
+        <div id="borgoAnticoA" class="hidden">
+            <h2>Borgo Antico</h2>
+            <button class="main" onclick="goToCastelloA()">Visita del Castello</button>
+            <div class="buttons-container">
+                <button class="back" onclick="goToPanoramicaIsoleA()">Indietro</button>
+                <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Collega il file JavaScript -->
+</body>
+</html>
