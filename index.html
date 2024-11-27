@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itinerario a Milazzo</title>
+    <link rel="stylesheet" href="style.css"> <!-- Collega il file CSS -->
+</head>
+<body>
+    <div class="container">
+        <!-- 1. Pagina Introduttiva -->
+        <div id="intro">
+            <h1>Benvenuti a Milazzo!</h1>
+            <p>Milazzo è una splendida città sulla costa della Sicilia, famosa per la sua storia, le sue spiagge e i panorami mozzafiato.</p>
+            <button class="main" onclick="goToArrivo()">Inizia il tuo viaggio</button>
+        </div>
+
+        <!-- 2. Selezione Arrivo -->
+        <div id="arrivo" class="hidden">
+            <h2>Sei già a Milazzo?</h2>
+            <button class="main" onclick="goToColazione()">Sono già a Milazzo</button>
+            <button class="main" onclick="goToIndicazioni()">Arrivo a Milazzo</button>
+            <div class="buttons-container">
+                <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+            </div>
+        </div>
+
+        <!-- 3. Indicazioni su come arrivare a Milazzo -->
+        <div id="indicazioni" class="hidden">
+            <h2>Come arrivare a Milazzo</h2>
+            <p>Puoi arrivare a Milazzo con treno, bus o auto. Ecco le indicazioni:</p>
+            <ul>
+                <li><strong>Treno:</strong> Prendi il treno per Milazzo dalla stazione di Messina.</li>
+                <li><strong>Bus:</strong> Ci sono autobus diretti da Catania e Palermo.</li>
+                <li><strong>Auto:</strong> Segui l'autostrada A20 fino a Milazzo.</li>
+            </ul>
+            <button class="main" onclick="goToColazione()">Vai alla Colazione</button>
+            <div class="buttons-container">
+                <button class="back" onclick="goToArrivo()">Indietro</button>
+                <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+            </div>
+        </div>
+
+        <!-- 4. Colazione -->
+        <div id="colazione" class="hidden">
+            <h2>Colazione</h2>
+            <p>Fai una pausa e goditi una deliziosa colazione in uno dei caffè di Milazzo.</p>
+            <button class="main" onclick="goToItinerario()">Inizia l'itinerario</button>
+            <div class="buttons-container">
+                <button class="back" onclick="goToIndicazioni()">Indietro</button>
+                <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+            </div>
+        </div>
+
+        <!-- 5. Itinerario della Mattina -->
+        <div id="itinerario" class="hidden">
+            <h2>Itinerario della Mattinata</h2>
+            <p>Scegli la tua destinazione per la mattinata:</p>
+            <button class="main" onclick="goToCapoMilazzo()">Vai a Capo Milazzo (Scelta A)</button>
+            <button class="main" onclick="goToSpiaggiaPonente()">Vai alla Spiaggia di Ponente (Scelta B)</button>
+            <div class="buttons-container">
+                <button class="back" onclick="goToColazione()">Indietro</button>
+                <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+            </div>
+        </div>
+
+        <!-- 6. Scelta A: Capo Milazzo -->
+        <div id="capoMilazzo" class="hidden">
+            <h2>Capo Milazzo</h2>
+            <button class="main" onclick="goToIndicazioniCapoMilazzo()">Indicazioni per Capo Milazzo</button>
+            <div class="buttons-container">
+                <button class="back" onclick="goToItinerario()">Indietro</button>
+                <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+            </div>
+        </div>
+
+        <!-- 7. A1 - Indicazioni per Capo Milazzo -->
+        <div id="indicazioniCapoMilazzo" class="hidden">
+            <h2>Indicazioni per Capo Milazzo</h2>
+            <p>Dettagli su come arrivare a Capo Milazzo...</p>
+            <button class="main" onclick="goToPiscinaVenereA()">Escursione alla Piscina di Venere</button>
+            <div class="buttons-container">
+                <button class="back" onclick="goToCapoMilazzo()">Indietro</button>
+                <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+            </div>
+        </div>
+
+        <!-- 8. A2 - Escursione alla Piscina di Venere -->
+        <div id="piscinaVenereA" class="hidden">
+            <h2>Escursione alla Piscina di Venere</h2>
+            <p>Descrizione dell'escursione alla Piscina di Venere...</p>
+            <button class="main" onclick="goToPanoramicaIsoleA()">Ritorno e panoramica delle Isole Eolie</button>
+            <div class="buttons-container">
+                <button class="back" onclick="goToIndicazioniCapoMilazzo()">Indietro</button>
+                <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+            </div>
+        </div>
+
+        <!-- 9. A3 - Panoramica delle Isole Eolie -->
+        <div id="panoramicaIsoleA" class="hidden">
+            <h2>Panoramica delle Isole Eolie</h2>
+            <p>Panoramica delle Isole Eolie da Capo Milazzo...</p>
+            <button class="main" onclick="goToBorgoAnticoA()">Ritorno verso il Borgo Antico</button>
+            <div class="buttons-container">
+                <button class="back" onclick="goToPiscinaVenereA()">Indietro</button>
+                <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+            </div>
+        </div>
+
+        <!-- 10. A4 - Borgo Antico -->
+        <div id="borgoAnticoA" class="hidden">
+            <h2>Borgo Antico</h2>
+            <button class="main" onclick="goToCastelloA()">Visita del Castello</button>
+            <div class="buttons-container">
+                <button class="back" onclick="goToPanoramicaIsoleA()">Indietro</button>
+                <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+            </div>
+        </div>
+        
+         <!-- 11. A5 - Visita del Castello -->
+        <div id="castelloA" class="hidden">
+            <h2>castelloA</h2>
+            <button class="main" onclick="goToPranzoA()">Pranzo al borgo</button>
+            <div class="buttons-container">
+                <button class="back" onclick="goToborgoAnticoA()">Indietro</button>
+                <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+            </div>
+        </div>
+
+        <!-- 12. A6 - Pranzo al Borgo -->
+<div id="pranzoA" class="hidden">
+    <h2>Pranzo al Borgo</h2>
+    <p>Assapora un pranzo tipico nel Borgo Antico.</p>
+    <button class="main" onclick="goToPomeriggioA()">Inizia il pomeriggio</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goToCastelloA()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
+
+<!-- 13. A7 - Pomeriggio -->
+<div id="pomeriggioA" class="hidden">
+    <h2>Pomeriggio</h2>
+    <p>Preparati per un pomeriggio ricco di attività!</p>
+    <button class="main" onclick="goToBaiaDelTonoA()">Vai alla Baia del Tono</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goToPranzoA()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
+
+<!-- 14. A8 - Baia del Tono -->
+<div id="baiaDelTonoA" class="hidden">
+    <h2>Baia del Tono</h2>
+    <p>Scopri la Baia del Tono.</p>
+    <button class="main" onclick="goTempoSpiaggiaA()">Tempo in spiaggia</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goToPomeriggioA()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
+
+<!-- 15. A9 - Tempo in Spiaggia -->
+<div id="tempoSpiaggiaA" class="hidden">
+    <h2>Tempo in Spiaggia</h2>
+    <p>Descrizione di attività in spiaggia...</p>
+    <button class="main" onclick="goToAttivitaSpiaggiaA()">Attività in Spiaggia</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goToBaiaDelTonoA()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
+
+<!-- 16. A10 - Attività in Spiaggia -->
+<div id="attivitaSpiaggiaA" class="hidden">
+    <h2>Attività in Spiaggia</h2>
+    <p>Attività da fare in spiaggia, sport acquatici, ecc...</p>
+    <button class="main" onclick="goToTramontoTonoA()">Tramonto alla Baia del Tono</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goToTempoSpiaggiaA()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
+
+<!-- 17. A11 - Tramonto alla Baia del Tono -->
+<div id="tramontoTonoA" class="hidden">
+    <h2>Tramonto alla Baia del Tono</h2>
+    <p>Descrizione di cosa fare e vedere al tramonto alla Baia del Tono...</p>
+    <button class="main" onclick="goToRientroCentroA()">Rientro in Centro</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goToAttivitaSpiaggiaA()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
+
+<!-- 18. A12 - Rientro in Centro -->
+<div id="rientroCentroA" class="hidden">
+    <h2>Rientro in Centro</h2>
+    <p>Rientra in centro dopo una giornata intensa!</p>
+    <button class="main" onclick="goToCena()">Cena in Centro</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goToTramontoTonoA()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
+
+<!-- 19. B1 - Spiaggia di Ponente (Scelta B) -->
+<div id="spiaggiaPonente" class="hidden">
+    <h2>Spiaggia di Ponente</h2>
+    <button class="main" onclick="goToLido()">Vai al Lido o Spiaggia Libera?</button>
+    <div class="buttons-container">
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
+
+<!-- 20. B2 - Lido o Spiaggia Libera -->
+<div id="lidoSpiaggia" class="hidden">
+    <h2>Lido o Spiaggia Libera</h2>
+    <p>Scegli se andare in un lido o in spiaggia libera.</p>
+    <button class="main" onclick="goToAttivitaAcquaticheB()">Attività in Acqua</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goToSpiaggiaPonente()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
+
+<!-- 21. B3 - Attività in Acqua -->
+<div id="attivitaAcquaticheB" class="hidden">
+    <h2>Attività in Acqua</h2>
+    <p>Descrizione delle attività acquatiche da fare.</p>
+    <button class="main" onclick="goToPranzoB()">Pranzo nella Baia del Tono</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goToLidoSpiaggia()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
+
+<!-- 22. B4 - Pranzo nella Baia del Tono -->
+<div id="pranzoB" class="hidden">
+    <h2>Pranzo nella Baia del Tono</h2>
+    <p>Pranzo tipico in una delle baie più suggestive.</p>
+    <button class="main" onclick="goToPomeriggioB()">Inizia il Pomeriggio</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goToAttivitaAcquaticheB()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
+
+<!-- 23. B5 - Pomeriggio -->
+<div id="pomeriggioB" class="hidden">
+    <h2>Pomeriggio</h2>
+    <p>Inizia il pomeriggio con nuove attività!</p>
+    <button class="main" onclick="goToBorgoAnticoB()">Vai verso il Borgo Antico</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goToPranzoB()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
+
+<!-- 24. B6 - Borgo Antico -->
+<div id="borgoAnticoB" class="hidden">
+    <h2>Borgo Antico</h2>
+    <button class="main" onclick="goToCastelloB()">Visita del Castello</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goToPomeriggioB()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
+
+<!-- 25. B7 - Visita del Castello -->
+<div id="castelloB" class="hidden">
+    <h2>Visita del Castello</h2>
+    <p>Descrizione della visita al Castello di Milazzo...</p>
+    <button class="main" onclick="goToCapoMilazzoB()">Vai a Capo Milazzo</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goToBorgoAnticoB()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
+
+<!-- 26. B8 - Capo Milazzo -->
+<div id="capoMilazzoB" class="hidden">
+    <h2>Capo Milazzo</h2>
+    <p>Descrizione dell'escursione alla Piscina di Venere...</p>
+    <button class="main" onclick="goToIndicazionicapomilazzoB()">Indicazioni per Capo Milazzo</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goToCastelloB()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
+
+<!-- 27. B9 - Indicazioni Capo Milazzo B -->
+<div id="indicazionicapomilazzoB" class="hidden">
+    <h2>Capo Milazzo</h2>
+    <p>Descrizione dell'escursione alla Piscina di Venere...</p>
+    <button class="main" onclick="goToPiscinaVenereB()">Piscina di venere</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goTocapoMilazzoB()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
+
+<!-- 28. B10 - Escursione Piscina di Venere -->
+<div id="piscinaVenereB" class="hidden">
+    <h2>Escursione alla Piscina di Venere</h2>
+    <p>Descrizione dell'escursione alla Piscina di Venere...</p>
+    <button class="main" onclick="goToPanoramicaIsoleB()">Ritorno e panoramica delle Isole Eolie</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goToCapoMilazzoB()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
+
+<!-- 29. B11 - Panoramica delle Isole Eolie -->
+<div id="panoramicaIsoleB" class="hidden">
+    <h2>Panoramica delle Isole Eolie</h2>
+    <p>Panoramica delle Isole Eolie da Capo Milazzo...</p>
+    <button class="main" onclick="goToTramontoCapoMilazzo()">Tramonto a Capo Milazzo</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goToPiscinaVenereB()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
+
+<!-- 30. B12 - Tramonto a Capo Milazzo -->
+<div id="tramontoCapoMilazzo" class="hidden">
+    <h2>Tramonto a Capo Milazzo</h2>
+    <p>Descrizione di cosa fare e vedere al tramonto a Capo Milazzo...</p>
+    <button class="main" onclick="goToRientroCentroB()">Rientro in Centro</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goToPanoramicaIsoleB()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
+
+<!-- 31. B13 - Rientro in Centro -->
+<div id="rientroCentroB" class="hidden">
+    <h2>Rientro in Centro</h2>
+    <p>Rientra in centro dopo una giornata intensa!</p>
+    <button class="main" onclick="goToCena()">Cena in Centro</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goToTramontoCapoMilazzo()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
+
+<!-- 32. Cena in Centro -->
+<div id="cena" class="hidden">
+    <h2>Cena in Centro</h2>
+    <p>Goditi una cena tipica in uno dei ristoranti di Milazzo.</p>
+    <button class="main" onclick="goToPasseggiata()">Passeggiata sul Lungomare</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goToRientroCentroB()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
+
+<!-- 33. Passeggiata sul Lungomare -->
+<div id="passeggiata" class="hidden">
+    <h2>Passeggiata sul Lungomare</h2>
+    <p>Fai una passeggiata lungo il mare per ammirare il tramonto.</p>
+    <button class="main" onclick="goToGelato()">Gelato</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goToCena()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
+
+<!-- 34. Gelato -->
+<div id="gelato" class="hidden">
+    <h2>Gelato</h2>
+    <p>Assapora un gelato artigianale in una delle gelaterie locali.</p>
+    <button class="main" onclick="goToBar()">Bar e Vita Notturna</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goToPasseggiata()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
+
+<!-- 35. Bar e Vita Notturna -->
+<div id="bar" class="hidden">
+    <h2>Bar e Vita Notturna</h2>
+    <p>Goditi la serata nei bar e locali di Milazzo.</p>
+    <button class="main" onclick="fineGiornata()">Fine Giornata</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goToGelato()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
+
+<!-- 36. Fine Giornata -->
+<div id="fineGiornata" class="hidden">
+    <h2>Fine Giornata</h2>
+    <p>Concludi la tua giornata e torna alla tua struttura.</p>
+</div>
+        
+    </div>
+
+    <script src="script.js"></script> <!-- Collega il file JavaScript -->
+</body>
+</html>
