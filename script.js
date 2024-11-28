@@ -8,8 +8,8 @@ function goToArrivo() { hideAllSections(); document.getElementById('arrivo').cla
 function goToIndicazioni() { hideAllSections(); document.getElementById('indicazioni').classList.remove('hidden'); }
 function goToColazione() { hideAllSections(); document.getElementById('colazione').classList.remove('hidden'); }
 function goToItinerario() { hideAllSections(); document.getElementById('itinerario').classList.remove('hidden'); }
-function goToCapoMilazzo() { hideAllSections(); document.getElementById('capoMilazzo').classList.remove('hidden'); }
 function goToIndicazioniCapoMilazzo() { hideAllSections(); document.getElementById('indicazioniCapoMilazzo').classList.remove('hidden'); }
+function goToCapoMilazzo() { hideAllSections(); document.getElementById('capoMilazzo').classList.remove('hidden'); }
 function goToPiscinaVenereA() { hideAllSections(); document.getElementById('piscinaVenereA').classList.remove('hidden'); }
 function goToPanoramicaIsoleA() { hideAllSections(); document.getElementById('panoramicaIsoleA').classList.remove('hidden'); }
 function goToBorgoAnticoA() { hideAllSections(); document.getElementById('borgoAnticoA').classList.remove('hidden'); }
