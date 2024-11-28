@@ -77,16 +77,31 @@
 </div>
 
         <!-- 5. Itinerario della Mattina -->
-        <div id="itinerario" class="hidden">
-            <h2>Itinerario della Mattinata</h2>
-            <p>Scegli la tua destinazione per la mattinata:</p>
-            <button class="main" onclick="goToCapoMilazzo()">Vai a Capo Milazzo (Scelta A)</button>
-            <button class="main" onclick="goToSpiaggiaPonente()">Vai alla Spiaggia di Ponente (Scelta B)</button>
-            <div class="buttons-container">
-                <button class="back" onclick="goToColazione()">Indietro</button>
-                <button class="start" onclick="goToIntro()">Torna all'inizio</button>
-            </div>
-        </div>
+<div id="itinerario" class="hidden">
+    <h2>Itinerario della Mattinata</h2>
+    <p>Benvenuto a Milazzo! Questo itinerario è pensato per offrirti un'esperienza completa della nostra splendida città, facendoti scoprire quanto più possibile delle sue bellezze naturali, storiche e culturali. Ma c'è un'ulteriore opportunità: l'itinerario è completamente personalizzabile, così potrai adattarlo ai tuoi gusti e alle tue preferenze.</p>
+    <p>Puoi scegliere tra due opzioni, entrambe che ti porteranno a visitare le stesse meraviglie, ma in un ordine differente:</p>
+
+    <h3>Itinerario A:</h3>
+    <p>Se decidi di iniziare la giornata a <strong>Capo Milazzo</strong>, il percorso ti guiderà alla scoperta di luoghi panoramici e naturali, per poi proseguire con altre tappe della città. Alla fine della giornata, ti ritroverai a godere del tramonto <strong>alla Baia del Tono</strong>.</p>
+
+    <h3>Itinerario B:</h3>
+    <p>Se preferisci cominciare la giornata con un po' di relax in <strong>spiaggia</strong>, il percorso partirà dalla Baia del Tono per poi continuare verso le altre bellezze di Milazzo. Alla fine della giornata, ammirerai il tramonto <strong>da Capo Milazzo</strong>, con una vista spettacolare.</p>
+
+    <p>Questo itinerario è pensato per farti scoprire tante meraviglie, ma se ti innamori particolarmente di un luogo, non esitare a dedicargli più tempo o anche a passare l’intera giornata lì. L’importante è che l’esperienza sia quella che più ti soddisfa. E se hai più di un giorno a disposizione, puoi distribuire il percorso con calma, per goderti ogni angolo di Milazzo senza fretta.</p>
+
+    <p><strong>La tua avventura a Milazzo comincia ora... scegli come iniziare!</strong></p>
+
+    <!-- Link immagine (aggiungi URL immagine qui) -->
+    <img src="URL_immagine.jpg" alt="Immagine di Milazzo" style="width: 100%; margin-top: 10px;">
+
+    <div class="buttons-container">
+        <button class="main" onclick="goToCapoMilazzo()">Vai a Capo Milazzo (Scelta A)</button>
+        <button class="main" onclick="goToSpiaggiaPonente()">Vai alla Spiaggia di Ponente (Scelta B)</button>
+        <button class="back" onclick="goToColazione()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>
 
         <!-- 6. Scelta A: Capo Milazzo -->
         <div id="capoMilazzo" class="hidden">
