@@ -54,6 +54,33 @@ button.start {
 button.start:hover {
     background-color: #1976D2;
 }
+
+/* Stile per il pulsante */
+.google-maps-button {
+    background-color: #FFEB3B;  /* Colore di sfondo giallo (colore Google Maps) */
+    color: black;               /* Colore del testo (nero per contrasto) */
+    padding: 10px 20px;         /* Distanza interna del pulsante */
+    border: none;               /* Rimuove il bordo */
+    border-radius: 5px;         /* Angoli arrotondati */
+    font-size: 16px;            /* Dimensione del testo */
+    display: flex;              /* Per disporre l'icona e il testo in orizzontale */
+    align-items: center;        /* Allinea il contenuto al centro verticalmente */
+    cursor: pointer;           /* Cambia il cursore per indicare che è cliccabile */
+    text-decoration: none;      /* Rimuove la sottolineatura */
+}
+
+/* Aggiunge un po' di spazio tra l'icona e il testo */
+.google-maps-button i {
+    margin-right: 8px;         /* Distanza tra icona e testo */
+}
+
+/* Effetto hover per il pulsante */
+.google-maps-button:hover {
+    background-color: #FBC02D; /* Colore giallo più scuro al passaggio del mouse */
+    transition: background-color 0.3s ease;
+}
+
+
 /* Posizionamento dei tasti Indietro e Torna all'inizio */
 .buttons-container {
     display: flex;
