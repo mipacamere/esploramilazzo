@@ -1,0 +1,112 @@
+/* Body e impostazioni generali */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+/* Contenitore principale */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Titoli */
+h1, h2 {
+    color: #333;
+}
+
+/* Paragrafi */
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Stile per i bottoni */
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Effetto hover per tutti i bottoni */
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Bottoni principali */
+button.main {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button.main:hover {
+    background-color: #45a049;
+}
+
+/* Bottoni "Indietro" e "Torna all'inizio" */
+button.back, button.start {
+    font-size: 0.9em;
+    color: white;
+}
+
+button.back {
+    background-color: #f44336;
+}
+
+button.back:hover {
+    background-color: #e53935;
+}
+
+button.start {
+    background-color: #2196F3;
+}
+
+button.start:hover {
+    background-color: #1976D2;
+}
+
+/* Stile per il pulsante di Google Maps */
+.google-maps-button {
+    background-color: #FFEB3B;  /* Colore di sfondo giallo (colore Google Maps) */
+    color: black;               /* Colore del testo (nero per contrasto) */
+    padding: 10px 20px;         /* Distanza interna del pulsante */
+    border: none;               /* Rimuove il bordo */
+    border-radius: 5px;         /* Angoli arrotondati */
+    font-size: 16px;            /* Dimensione del testo */
+    display: flex;              /* Per disporre l'icona e il testo in orizzontale */
+    align-items: center;        /* Allinea il contenuto al centro verticalmente */
+    cursor: pointer;           /* Cambia il cursore per indicare che è cliccabile */
+    text-decoration: none;      /* Rimuove la sottolineatura */
+}
+
+.google-maps-button i {
+    margin-right: 8px;         /* Distanza tra icona e testo */
+}
+
+.google-maps-button:hover {
+    background-color: #FBC02D; /* Colore giallo più scuro al passaggio del mouse */
+    transition: background-color 0.3s ease;
+}
+
+/* Posizionamento dei tasti Indietro e Torna all'inizio */
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Nascondi gli elementi */
+.hidden {
+    display: none;
+}
