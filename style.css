@@ -78,7 +78,7 @@ button.start:hover {
 
 /* Stile per il pulsante di Google Maps */
 .google-maps-button {
-    background-color: #FFEB3B;  /* Colore di sfondo giallo (colore Google Maps) */
+    background-color: #A85CA8;  /* Colore di sfondo viola (colore Google Maps) */
     color: black;               /* Colore del testo (nero per contrasto) */
     padding: 10px 20px;         /* Distanza interna del pulsante */
     border: none;               /* Rimuove il bordo */
@@ -95,7 +95,7 @@ button.start:hover {
 }
 
 .google-maps-button:hover {
-    background-color: #FBC02D; /* Colore giallo più scuro al passaggio del mouse */
+    background-color: #975397; /* Colore giallo più scuro al passaggio del mouse */
     transition: background-color 0.3s ease;
 }
 
