@@ -13,19 +13,10 @@ function goToCapoMilazzo() { hideAllSections(); document.getElementById('capoMil
 function goToPiscinaVenereA() { hideAllSections(); document.getElementById('piscinaVenereA').classList.remove('hidden'); }
 function goToPanoramicaIsoleA() { hideAllSections(); document.getElementById('panoramicaIsoleA').classList.remove('hidden'); }
 function goToBorgoAnticoA() { hideAllSections(); document.getElementById('borgoAnticoA').classList.remove('hidden'); }
-function goToPranzoA() {
-    hideAllSections();
-    document.getElementById('pranzoA').classList.remove('hidden');
-}
+function goToPranzoA() { hideAllSections(); document.getElementById('pranzoA').classList.remove('hidden'); }
 function goToCastelloA() { hideAllSections(); document.getElementById('castelloA').classList.remove('hidden'); }
-function goToPomeriggioA() {
-    hideAllSections();
-    document.getElementById('pomeriggioA').classList.remove('hidden');
-}
-function goToBaiaDelTonoA() {
-    hideAllSections();
-    document.getElementById('baiaDelTonoA').classList.remove('hidden');
-}
+function goToPomeriggioA() { hideAllSections(); document.getElementById('pomeriggioA').classList.remove('hidden'); }
+function goToBaiaDelTonoA() { hideAllSections(); document.getElementById('baiaDelTonoA').classList.remove('hidden'); }
 function goTempoSpiaggiaA() {
     hideAllSections();
     document.getElementById('tempoSpiaggiaA').classList.remove('hidden');
