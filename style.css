@@ -1,16 +1,16 @@
 /* Body e impostazioni generali */
 body {
-    font-family: Arial, sans-serif; /* Font Arial per i titoli */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Sfondo chiaro */
-    color: #333; /* Colore del testo scuro per il contrasto */
+    background-color: #f4f4f4;
+    color: #333;
     line-height: 1.6;
     display: flex;
     justify-content: center;
-    align-items: center; /* Contenuto centrato verticalmente */
-    min-height: 100vh; /* Assicura che il body prenda almeno l'intera altezza della finestra */
+    align-items: flex-start;  /* Align content to the top */
 }
+
 
 /* Contenitore principale */
 .container {
