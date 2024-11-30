@@ -1,10 +1,10 @@
 /* Body e impostazioni generali */
 body {
-    font-family: 'Roboto', sans-serif; /* Font moderno e pulito */
+    font-family: Arial, sans-serif; /* Font Arial per i titoli */
     margin: 0;
     padding: 0;
-    background-color: #121212; /* Sfondo scuro per un tema dark */
-    color: #e0e0e0; /* Testo chiaro per contrasto */
+    background-color: #f4f4f4; /* Sfondo chiaro */
+    color: #333; /* Colore del testo scuro per il contrasto */
     line-height: 1.6;
 }
 
@@ -13,23 +13,23 @@ body {
     max-width: 1100px;
     margin: 50px auto;
     padding: 40px;
-    background-color: #1e1e1e; /* Sfondo scuro per il contenitore */
-    border-radius: 20px; /* Bordo arrotondato più marcato */
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); /* Ombra forte per dare un effetto di profondità */
+    background-color: #ffffff; /* Sfondo bianco per il contenitore */
+    border-radius: 20px; /* Bordo arrotondato */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); /* Ombra leggera per profondità */
 }
 
 /* Titoli */
 h1, h2 {
-    color: #00ffcc; /* Colore neon verde/azzurro per i titoli */
-    font-weight: 700; /* Titoli più spessi per maggiore impatto */
-    text-transform: uppercase; /* Testo maiuscolo per dare un tocco futuristico */
-    letter-spacing: 2px;
+    color: #333; /* Colore scuro per i titoli */
+    font-weight: 700; /* Più enfasi sui titoli */
+    text-transform: uppercase; /* Testo maiuscolo per un effetto distintivo */
+    letter-spacing: 2px; /* Spaziatura tra le lettere per un tocco moderno */
 }
 
 /* Paragrafi */
 p {
     font-size: 1.1em;
-    color: #bbbbbb; /* Colore del testo chiaro ma non troppo intenso */
+    color: #555; /* Colore del testo per i paragrafi */
 }
 
 /* Stile per i bottoni */
@@ -42,16 +42,16 @@ button {
     font-size: 1.1em;
     background-color: #333333; /* Fondo scuro per i bottoni */
     color: #ffffff; /* Testo bianco per contrasto */
-    box-shadow: 0 5px 20px rgba(0, 255, 204, 0.2); /* Ombra con accenti neon */
+    box-shadow: 0 5px 20px rgba(0, 255, 204, 0.2); /* Ombra neon leggera */
     transition: all 0.3s ease;
 }
 
 /* Effetto hover per tutti i bottoni */
 button:hover {
-    transform: scale(1.1);
-    background-color: #00ffcc; /* Cambia il colore a verde neon quando si passa sopra */
-    color: #121212; /* Colore del testo diventa scuro per risaltare */
-    box-shadow: 0 10px 30px rgba(0, 255, 204, 0.5); /* Ombra neon al passaggio del mouse */
+    transform: scale(1.1); /* Aumento delle dimensioni al passaggio del mouse */
+    background-color: #00ffcc; /* Colore verde neon al passaggio del mouse */
+    color: #121212; /* Colore del testo più scuro */
+    box-shadow: 0 10px 30px rgba(0, 255, 204, 0.5); /* Ombra neon più marcata */
 }
 
 /* Bottoni principali */
@@ -61,7 +61,7 @@ button.main {
 }
 
 button.main:hover {
-    background-color: #00cc99;
+    background-color: #00cc99; /* Colore più scuro al passaggio del mouse */
 }
 
 /* Bottoni "Indietro" e "Torna all'inizio" */
@@ -75,7 +75,7 @@ button.back {
 }
 
 button.back:hover {
-    background-color: #d5005c;
+    background-color: #d5005c; /* Colore più scuro al passaggio del mouse */
 }
 
 button.start {
@@ -83,7 +83,7 @@ button.start {
 }
 
 button.start:hover {
-    background-color: #3700b3;
+    background-color: #3700b3; /* Colore più scuro al passaggio del mouse */
 }
 
 /* Stile per il pulsante di Google Maps */
