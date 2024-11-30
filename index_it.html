@@ -463,7 +463,15 @@
 <!-- 19. B1 - Spiaggia di Ponente (Scelta B) -->
 <div id="spiaggiaPonente" class="hidden">
     <h2>Spiaggia di Ponente</h2>
-    <button class="main" onclick="goToLidoSpiaggia()">Vai al Lido o Spiaggia Libera?</button>
+     <p>Iniziamo il nostro percorso dedicando un po' di tempo a rilassarci in spiaggia, per poi esplorare il resto della città. Un inizio tranquillo e rigenerante, perfetto per fare il pieno di energia prima di entrare nel vivo del nostro itinerario.</p>
+    <p>Sul versante di ponente, troverai la zona balneare più amata di Milazzo. Qui, le acque cristalline e le spiagge spaziose ti aspettano. Il bello di queste spiagge è che, nonostante siano molto apprezzate, sono abbastanza ampie da non sembrare (quasi) mai affollate, quindi avrai tutto lo spazio per goderti il mare in tutta comodità.</p>
+    <p>E mentre ti rilassi, avrai davanti a te uno spettacolo che non si dimentica facilmente: il panorama sul mare e sulle isole Eolie. Una vista che ti farà sentire come se il tempo si fosse fermato, un angolo di paradiso che ti farà sicuramente apprezzare ancor di più questo angolo di Sicilia. Insomma, prendi fiato, rinfrescati e preparati ad ammirare uno dei paesaggi più belli che questa città ha da offrire!</p>
+    <p>Per arrivare al litorale di Ponente, hai diverse opzioni di trasporto:</p>
+    <ul>
+        <li><strong>Via bus:</strong> prendi la linea 6. Puoi consultare la <a href="https://cdn.prod.website-files.com/625686464e10c9be6a93fb86/66b47589758bdbda9926f2c2_2024.08.08%20Orario%20Linee%20Urbane%20Milazzo.pdf" target="_blank">tabella degli orari</a> e la <a href="https://ssl.autoroute.it/apps/sais_milazzo/index.cfm?find_closest=1" target="_blank">geolocalizzazione dei bus</a>.</li>
+        <li><strong>Via auto:</strong> puoi seguire questo <a href="https://maps.app.goo.gl/PVC2VBL9v7mFenES6" target="_blank">indirizzo su Google Maps</a>. Per il parcheggio, si consiglia di essere preparati a una ricerca un po' più lunga, specialmente durante le ore di punta. La soluzione migliore è parcheggiare negli spazi con strisce blu. I ticket per il parcheggio possono essere acquistati presso i tabacchini locali o tramite l'app <a href="https://www.easypark.com/en-it/download?utm_source=Web&utm_campaign=IT_one_web_download_app&utm_medium=marketing" target="_blank">Easy Park</a>.</li>
+    </ul>
+    <button class="main" onclick="goToLidoSpiaggia()">La baia del tono</button>
     <div class="buttons-container">
         <button class="back" onclick="goToItinerario()">Indietro</button>
         <button class="start" onclick="goToIntro()">Torna all'inizio</button>
@@ -472,22 +480,83 @@
 
 <!-- 20. B2 - Lido o Spiaggia Libera -->
 <div id="lidoSpiaggia" class="hidden">
-    <h2>Lido o Spiaggia Libera</h2>
-    <p>Scegli se andare in un lido o in spiaggia libera.</p>
-    <button class="main" onclick="goToAttivitaAcquaticheB()">Attività in Acqua</button>
+    <h2>Baia del Tono</h2>
+    <p>La Spiaggia di Ponente è il luogo ideale per chi cerca tranquillità e relax, pur non rinunciando alla bellezza di un paesaggio mozzafiato. Lunga e spaziosa, la spiaggia offre numerosi angoli dove fermarsi e godersi il mare. Se preferisci evitare la folla, puoi scegliere qualsiasi punto lungo la costa, trovando sempre una zona tranquilla dove distenderti al sole o fare una nuotata rinfrescante nelle acque cristalline. Tuttavia, ti consiglio di proseguire fino alla fine del lungomare, dove troverai la Baia del Tono, conosciuta anche come "Ngonia" in siciliano, un angolo che ti lascerà senza parole.</p>
+    <p>Questa baia è incorniciata da una natura selvaggia e incontaminata, creando una scena idilliaca che è perfetta per chi cerca pace e bellezza. Il mare qui è particolarmente limpido e le acque, che digradano dolcemente, sono perfette per fare il bagno o semplicemente passeggiare lungo la riva. Inoltre, questa zona offre una vasta gamma di servizi: bar, ristoranti e stabilimenti balneari dove è possibile noleggiare lettini e ombrelloni per un maggiore comfort.</p>
+    <p>Se ti piace praticare attività acquatiche, potrai approfittare delle offerte locali per fare sport come il kayak, il paddleboarding, o anche provare qualche escursione in barca. La combinazione di relax e possibilità di divertimento fa della Baia del Tono una tappa imperdibile per chi visita questa zona.</p>
+     <!-- Link immagine (aggiungi URL immagine qui) -->
+    <p>
+    <img src="URL_immagine.jpg" alt="Immagine di Milazzo" style="width: 100%; margin-top: 10px;">
+</p>
+
+     <!-- Link alla mappa di Google Maps -->
+<h4>Guarda Borgo Antico su Google Maps:</h4>
+<p>Puoi visualizzare Capo Milazzo sulla mappa cliccando sul seguente link:</p>
+<a href="https://maps.app.goo.gl/bP54nK5SqWxUM5Jx7" target="_blank">
+    <button class="google-maps-button">
+        <i class="fa fa-map-marker" aria-hidden="true"></i> Apri la Mappa di Capo Milazzo
+    </button>
+</a>  
+    
+    <button class="main" onclick="goToTempoSpiaggiaB()">Attività in Acqua</button>
     <div class="buttons-container">
         <button class="back" onclick="goToSpiaggiaPonente()">Indietro</button>
         <button class="start" onclick="goToIntro()">Torna all'inizio</button>
     </div>
 </div>
 
-<!-- 21. B3 - Attività in Acqua -->
+<!-- 21. B3 - Tempo in Spiaggia -->
+<div id="tempoSpiaggiaB" class="hidden">
+    <h2>Tempo in Spiaggia</h2>
+    <p>Una volta arrivati al litorale, dirigiamoci verso il punto della spiaggia che più ci aggrada. La Spiaggia di Ponente offre diverse opzioni, quindi puoi scegliere se sistemarti in uno degli stabilimenti balneari, dove potrai noleggiare un ombrellone e lettini per una giornata di completo comfort, oppure, se preferisci una soluzione più semplice e naturale, puoi optare per la spiaggia libera. In ogni caso, non dovrai preoccuparti di trovare spazio, dato che la spiaggia è ampia e accogliente.</p>
+    <p>Man mano che ci avviciniamo alla fine della baia, lo scenario diventa ancora più suggestivo. Il panorama si apre su acque cristalline e una natura selvaggia che incornicia il paesaggio, rendendo ogni angolo un posto perfetto per goderti il mare e la tranquillità. Ti consiglio di rilassarti un po' in spiaggia, approfittando delle acque fresche per rinfrescarti con una bella nuotata.</p>
+    <p>Se dopo un po' di relax hai ancora voglia di esplorare, ti consiglio di intraprendere un breve percorso che ti porterà verso gli scogli della baia. Questo percorso offre panorami spettacolari e ti permetterà di scoprire angoli nascosti del litorale. <strong>Fai attenzione durante l'escursione tra gli scogli, poiché il terreno può essere scivoloso e irregolare.</strong> Puoi iniziare il percorso da questo punto: <a href="https://maps.app.goo.gl/yXKCHSoBy88C1mZr6" target="_blank">clicca qui per la mappa</a>.</p>
+    <!-- Link immagine (aggiungi URL immagine qui) -->
+    <p>
+    <img src="URL_immagine.jpg" alt="Immagine di Milazzo" style="width: 100%; margin-top: 10px;">
+</p>
+
+     <!-- Link alla mappa di Google Maps -->
+<h4>Guarda Borgo Antico su Google Maps:</h4>
+<p>Puoi visualizzare Capo Milazzo sulla mappa cliccando sul seguente link:</p>
+<a href="https://maps.app.goo.gl/bP54nK5SqWxUM5Jx7" target="_blank">
+    <button class="google-maps-button">
+        <i class="fa fa-map-marker" aria-hidden="true"></i> Apri la Mappa di Capo Milazzo
+    </button>
+</a>  
+    
+    <button class="main" onclick="goToattivitaAcquaticheB()">Attività in Spiaggia</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goTolidoSpiaggia()">Indietro</button>
+        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+    </div>
+</div>        
+
+<!-- 22. B4 - Attività in Acqua -->
 <div id="attivitaAcquaticheB" class="hidden">
     <h2>Attività in Acqua</h2>
-    <p>Descrizione delle attività acquatiche da fare.</p>
+   <h2>Attività in Spiaggia</h2>
+    <p>Se hai voglia di qualcosa di più movimentato, in uno degli stabilimenti balneari puoi noleggiare un kayak o un paddleboard e partire alla scoperta dei dintorni. Ti consiglio di dirigerti verso la parte della baia che si trova dietro il promontorio che vedi dalla spiaggia. Supera la scogliera e poi gira verso destra, costeggiando la scogliera da quel punto in avanti.</p>
+    <p>Questa zona si trova all'interno dell'area marina protetta di Milazzo, un angolo di natura selvaggia e incontaminata, dove la flora marina è preservata e l’acqua è particolarmente limpida. Tuttavia, è importante essere cauti e <strong>prestare attenzione</strong>, poiché alcuni tratti potrebbero essere più difficili da navigare e le correnti più forti.</p>
+    <p>Pianifica il tuo percorso in modo da non allontanarti troppo. Ricorda che la tua sicurezza è la priorità, quindi cerca di misurare il tempo e l’energia a tua disposizione. Il mio consiglio è di pensare a questa attività in modo che non superi l'ora, massimo le due ore di tempo, in modo da avere il tempo di tornare senza fretta.</p>
+    <p>Mantieni sempre la cautela, facendo attenzione alla sicurezza, e goditi l’esperienza.</p>
+    <!-- Link immagine (aggiungi URL immagine qui) -->
+    <p>
+    <img src="URL_immagine.jpg" alt="Immagine di Milazzo" style="width: 100%; margin-top: 10px;">
+</p>
+
+     <!-- Link alla mappa di Google Maps -->
+<h4>Guarda Borgo Antico su Google Maps:</h4>
+<p>Puoi visualizzare Capo Milazzo sulla mappa cliccando sul seguente link:</p>
+<a href="https://maps.app.goo.gl/bP54nK5SqWxUM5Jx7" target="_blank">
+    <button class="google-maps-button">
+        <i class="fa fa-map-marker" aria-hidden="true"></i> Apri la Mappa di Capo Milazzo
+    </button>
+</a>  
+    
     <button class="main" onclick="goToPranzoB()">Pranzo nella Baia del Tono</button>
     <div class="buttons-container">
-        <button class="back" onclick="goToLidoSpiaggia()">Indietro</button>
+        <button class="back" onclick="goTotempoSpiaggiaB()">Indietro</button>
         <button class="start" onclick="goToIntro()">Torna all'inizio</button>
     </div>
 </div>
