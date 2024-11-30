@@ -1,1 +1,122 @@
+/* Body e impostazioni generali */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Cambiato il font per uno più moderno */
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f6f9; /* Colore di sfondo più chiaro per un effetto pulito */
+    color: #444; /* Colore del testo più scuro per un buon contrasto */
+}
+
+/* Contenitore principale */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px; /* Aggiunto un bordo più arrotondato */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Ombra più marcata per un effetto "sollevato" */
+}
+
+/* Titoli */
+h1, h2 {
+    color: #333;
+    font-weight: 600; /* Più enfasi sui titoli */
+}
+
+/* Paragrafi */
+p {
+    font-size: 1.15em;
+    line-height: 1.7;
+    color: #555; /* Colore leggermente più chiaro per i paragrafi */
+}
+
+/* Stile per i bottoni */
+button {
+    padding: 12px 25px;
+    margin: 12px;
+    border: none;
+    border-radius: 8px; /* Bordo più arrotondato per tutti i bottoni */
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.2s ease;
+}
+
+/* Effetto hover per tutti i bottoni */
+button:hover {
+    transform: translateY(-3px); /* Effetto di sollevamento per dare più profondità */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Ombra al passaggio del mouse per maggiore interattività */
+}
+
+/* Bottoni principali */
+button.main {
+    background-color: #28a745;
+    color: white;
+}
+
+button.main:hover {
+    background-color: #218838;
+}
+
+/* Bottoni "Indietro" e "Torna all'inizio" */
+button.back, button.start {
+    font-size: 1em;
+    color: white;
+}
+
+button.back {
+    background-color: #e74c3c;
+}
+
+button.back:hover {
+    background-color: #c0392b;
+}
+
+button.start {
+    background-color: #3498db;
+}
+
+button.start:hover {
+    background-color: #2980b9;
+}
+
+/* Stile per il pulsante di Google Maps */
+.google-maps-button {
+    background-color: #8e44ad; /* Colore di sfondo viola scuro */
+    color: white;               /* Colore del testo chiaro */
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;         /* Aggiunto angoli più arrotondati */
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.google-maps-button i {
+    margin-right: 10px;         /* Spazio maggiore tra l'icona e il testo */
+}
+
+.google-maps-button:hover {
+    background-color: #732d91; /* Colore di sfondo più scuro al passaggio del mouse */
+    transform: translateY(-3px); /* Effetto di sollevamento al passaggio del mouse */
+}
+
+/* Posizionamento dei tasti Indietro e Torna all'inizio */
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Nascondi gli elementi */
+.hidden {
+    display: none;
+}
+
+/* Aggiungi un effetto smooth per le transizioni */
+* {
+    transition: all 0.2s ease-in-out;
+}
 
