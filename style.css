@@ -159,8 +159,8 @@ button.start:hover {
 }
 
 .language-item img {
-    width: 30px; /* Ridotto a 30px per le immagini delle bandiere */
-    height: 30px; /* Altezza coerente per mantenere proporzioni uniformi */
+    width: 30px !important; /* Ridotto a 30px per le immagini delle bandiere */
+    height: 30px !important; /* Altezza coerente per mantenere proporzioni uniformi */
     border-radius: 5px;
     margin-bottom: 5px; /* Spazio più ridotto sotto le immagini */
 }
