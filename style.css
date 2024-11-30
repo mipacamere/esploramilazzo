@@ -142,7 +142,7 @@ button.start:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 20px; /* Meno spazio tra le lingue per evitare troppa dispersione */
     margin-top: 50px;
 }
 
@@ -150,17 +150,17 @@ button.start:hover {
 .language-item {
     cursor: pointer;
     text-align: center;
-    width: 100px;
+    width: 90px; /* Imposta una larghezza fissa più piccola per ogni item */
     transition: transform 0.3s ease-in-out;
 }
 
 .language-item:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* L'elemento aumenta di dimensioni al passaggio del mouse */
 }
 
 .language-item img {
-    width: 60px;
-    height: 40px;
+    width: 50px; /* Imposta una dimensione fissa e più piccola per le immagini */
+    height: 35px;
     border-radius: 5px;
     margin-bottom: 10px;
 }
@@ -174,12 +174,12 @@ button.start:hover {
 /* Responsive design */
 @media (max-width: 600px) {
     .language-item {
-        width: 80px;
+        width: 80px; /* Riduci leggermente la larghezza degli items */
     }
 
     .language-item img {
-        width: 50px;
-        height: 35px;
+        width: 45px; /* Riduci ulteriormente la dimensione delle immagini */
+        height: 30px;
     }
 
     .container {
