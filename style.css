@@ -150,17 +150,17 @@ button.start:hover {
 .language-item {
     cursor: pointer;
     text-align: center;
-    width: 80px; /* Larghezza fissa per ogni elemento */
+    width: 60px; /* Impostiamo una larghezza fissa per ogni elemento */
     transition: transform 0.3s ease-in-out;
 }
 
 .language-item:hover {
-    transform: scale(1.1); /* Effetto di ingrandimento */
+    transform: scale(1.1); /* Effetto di ingrandimento al passaggio del mouse */
 }
 
 .language-item img {
-    width: 40px; /* Ridotto a 40px per una dimensione più piccola */
-    height: auto; /* Mantieni la proporzione originale */
+    width: 40px; /* Impostiamo una larghezza fissa per le immagini delle bandiere */
+    height: 40px; /* Altezza fissa per mantenere proporzioni uniformi */
     border-radius: 5px;
     margin-bottom: 10px;
 }
@@ -185,27 +185,7 @@ button.start:hover {
 
     .language-item img {
         width: 35px; /* Immagini più piccole per schermi piccoli */
-        height: auto;
-    }
-
-    .container {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-    }
-}
-
-/* Responsive design */
-@media (max-width: 600px) {
-    .language-item {
-        width: 80px; /* Riduci leggermente la larghezza degli items */
-    }
-
-    .language-item img {
-        width: 45px; /* Riduci ulteriormente la dimensione delle immagini */
-        height: 30px;
+        height: 35px; /* Altezza coerente per mantenere la proporzione */
     }
 
     .container {
