@@ -1,6 +1,6 @@
 /* Body e impostazioni generali */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Cambiato il font per uno più moderno */
+    font-family: Arial, sans-serif; /* Ripristinato il font Arial */
     margin: 0;
     padding: 20px;
     background-color: #f4f6f9; /* Colore di sfondo più chiaro per un effetto pulito */
@@ -119,4 +119,3 @@ button.start:hover {
 * {
     transition: all 0.2s ease-in-out;
 }
-
