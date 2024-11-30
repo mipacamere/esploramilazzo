@@ -9,6 +9,12 @@ function scrollToTop() {
   window.scrollTo(0, 0);
 }
 
+function changeLanguage(languageCode) {
+    // Navigate to the respective language page
+    window.location.href = `index_${languageCode}.html`;
+}
+
+
 // Funzioni per navigazione tra le sezioni
 function goToArrivo() { hideAllSections(); document.getElementById('arrivo').classList.remove('hidden'); scrollToTop(); }
 function goToIndicazioni() { hideAllSections(); document.getElementById('indicazioni').classList.remove('hidden'); scrollToTop(); }
