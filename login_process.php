@@ -5,6 +5,11 @@ session_start();  // Avvia la sessione per mantenere lo stato di login
 $valid_username = "socio";  // Imposta l'username che vuoi usare
 $valid_password = "socio";  // Imposta la password che vuoi usare
 
+// Aggiungi un debug per vedere cosa viene inviato dal form
+echo '<pre>';
+var_dump($_POST);  // Mostra i dati inviati tramite POST
+echo '</pre>';
+
 // Recupera i dati dal form (username e password inviati tramite POST)
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -20,6 +25,5 @@ if ($username == $valid_username && $password == $valid_password) {
 } else {
     // Login fallito, mostra un messaggio di errore
     echo "<p>Invalid credentials. Please try again.</p>";
-    // Puoi anche reindirizzare a una pagina di errore o login in caso di fallimento
 }
 ?>
