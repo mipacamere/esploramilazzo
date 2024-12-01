@@ -1,3 +1,4 @@
+<?php
 session_start();  // Avvia la sessione per mantenere lo stato di login
 
 // Credenziali di esempio (username e password fissi)
