@@ -1,292 +1,284 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>Itinerario a Milazzo</title>
-    <link rel="stylesheet" href="style.css"> <!-- Collega il file CSS -->
+    <title>米拉佐行程</title>
+    <link rel="stylesheet" href="style.css"> <!-- 连接CSS文件 -->
     </head>
 <body>
     <div class="container">
-     <!-- 1. Pagina Introduttiva -->
+     <!-- 1. 介绍页面 -->
 <div id="intro">
     <div class="image-container" style="text-align: center; margin-bottom: 20px;">
-        <!-- Inserisci il link dell'immagine -->
-        <img src="https://www.ariaterra.com/wp-content/uploads/2016/07/Tindari-e-capo-milazzo-600x338.jpg" alt="Panorama di Milazzo con le Isole Eolie" style="max-width: 100%; height: auto; border-radius: 8px;">
+        <!-- 插入图片链接 -->
+        <img src="https://www.ariaterra.com/wp-content/uploads/2016/07/Tindari-e-capo-milazzo-600x338.jpg" alt="米拉佐全景，远处是艾奥利群岛" style="max-width: 100%; height: auto; border-radius: 8px;">
     </div>
 
-    <h1>Esploriamo insieme Milazzo!</h1>
-    <p>Hai fatto una scelta straordinaria nel decidere di visitare Milazzo, una città che ti affascinerà con la sua storia millenaria e la sua natura mozzafiato. Milazzo è un vero e proprio scrigno di cultura, dove il mito e la realtà si intrecciano fin dai tempi dell'antica Grecia, lasciando tracce che ancora oggi arricchiscono ogni angolo del suo territorio.</p>
-    <p>Questa è una delle poche città in Sicilia in grado di offrire un mix così straordinario: un patrimonio storico unico e panorami naturali che lasciano senza fiato. Da Milazzo, infatti, puoi ammirare un paesaggio che si estende fino alle celebri Isole Eolie, le "sette pepite" del Mediterraneo, che sembrano emergere dall'orizzonte, a testimonianza di una bellezza che non ha eguali. Milazzo è un luogo che stimola la mente e incanta il cuore, dove ogni passo ti avvicina a una nuova scoperta, tra la magia del passato e la bellezza di un paesaggio naturale senza pari.</p>
+    <h1>一起探索米拉佐！</h1>
+    <p>你做出了一个非凡的选择，决定来米拉佐旅游，这座城市将以其千年历史和令人叹为观止的大自然吸引你。米拉佐是一个真正的文化宝库，从古希腊时期起，神话与现实交织在一起，留下的痕迹至今仍然丰富着这片土地的每个角落。</p>
+    <p>这座城市是西西里岛为数不多的几座能够提供如此独特混合体验的城市之一：拥有独特的历史遗产和令人窒息的自然景观。事实上，从米拉佐，你可以欣赏到一片延伸至著名的艾奥利群岛的美丽景色，这些“地中海的七颗珍珠”仿佛从天际升起，见证着一种无与伦比的美丽。米拉佐是一个激发思维并令心灵陶醉的地方，每一步都带你走向新的发现，在过去的魔力与无与伦比的自然景观之间。</p>
     
-    <button class="main" onclick="goToArrivo()">Inizia il tuo viaggio</button>
+    <button class="main" onclick="goToArrivo()">开始你的旅程</button>
 </div>
 
-        <!-- 2. Selezione Arrivo -->
+        <!-- 2. 到达选择 -->
         <div id="arrivo" class="hidden">
-            <h2>Sei già a Milazzo?</h2>
-            <!-- Link immagine (aggiungi URL immagine qui) -->
+            <h2>你已经在米拉佐了吗？</h2>
+            <!-- 图片链接（在此插入图片URL） -->
     <p>
-    <img src="URL_immagine.jpg" alt="Immagine di Milazzo" style="width: 100%; margin-top: 10px;">
+    <img src="URL_immagine.jpg" alt="米拉佐图片" style="width: 100%; margin-top: 10px;">
     </p>
-            <button class="main" onclick="goToColazione()">Sono già a Milazzo</button>
-            <button class="main" onclick="goToIndicazioni()">Arrivo a Milazzo</button>
+            <button class="main" onclick="goToColazione()">我已经在米拉佐</button>
+            <button class="main" onclick="goToIndicazioni()">到达米拉佐</button>
             <div class="buttons-container">
-                <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+                <button class="start" onclick="goToIntro()">返回开始</button>
             </div>
         </div>
 
-        <!-- 3. Indicazioni su come arrivare a Milazzo -->
+        <!-- 3. 如何到达米拉佐 -->
 <div id="indicazioni" class="hidden">
-    <h2>Come arrivare a Milazzo</h2>
-    <p>Milazzo è facilmente raggiungibile con treno, bus o auto. Ecco le indicazioni aggiornate:</p>
+    <h2>如何到达米拉佐</h2>
+    <p>米拉佐可以通过火车、公交或自驾车轻松到达。以下是最新的交通指引：</p>
 
-    <h3>In treno</h3>
-    <p>Puoi prendere un treno per Milazzo dalla stazione di <strong>Messina</strong>. Puoi consultare gli orari e acquistare i biglietti sul sito ufficiale di Trenitalia: <a href="https://www.trenitalia.com/en.html" target="_blank">Trenitalia</a>.</p>
-    <p>Una volta arrivato alla stazione ferroviaria di Milazzo, è disponibile un collegamento diretto tra la stazione FS e il porto di Milazzo, che è anche il centro della città. Il trasporto è gestito dalla compagnia <strong>SAIS</strong>, che opera con la linea <strong>5</strong>. Puoi trovare gli orari e i dettagli dei collegamenti qui: <a href="https://cdn.prod.website-files.com/625686464e10c9be6a93fb86/66b47589758bdbda9926f2c2_2024.08.08%20Orario%20Linee%20Urbane%20Milazzo.pdf" target="_blank">Orario SAIS - Linee Urbane Milazzo</a>.</p>
+    <h3>火车</h3>
+    <p>你可以从<strong>美西拿</strong>火车站乘坐火车前往米拉佐。你可以在意大利国铁官网查询时刻表并购买车票：<a href="https://www.trenitalia.com/en.html" target="_blank">Trenitalia</a>。</p>
+    <p>一旦到达米拉佐火车站，有一个直达米拉佐港口（也是市中心）的连接，公交由<strong>SAIS</strong>公司运营，线路为<strong>5号线</strong>。你可以在这里查看时刻表和连接的详细信息：<a href="https://cdn.prod.website-files.com/625686464e10c9be6a93fb86/66b47589758bdbda9926f2c2_2024.08.08%20Orario%20Linee%20Urbane%20Milazzo.pdf" target="_blank">SAIS - 米拉佐市区线路时刻表</a>。</p>
 
-    <h3>In bus</h3>
-    <p><strong>Da Messina a Milazzo</strong>: Ci sono autobus diretti che collegano Messina a Milazzo, gestiti dalla compagnia <strong>Giuntabus</strong>. Puoi consultare gli orari qui: <a href="https://giuntabus.com/messina-milazzo" target="_blank">Giuntabus - Messina-Milazzo</a>.</p>
+    <h3>公交车</h3>
+    <p><strong>从美西拿到米拉佐</strong>：有直达公交车连接美西拿和米拉佐，由<strong>Giuntabus</strong>公司运营。你可以在这里查看时刻表：<a href="https://giuntabus.com/messina-milazzo" target="_blank">Giuntabus - 美西拿-米拉佐</a>。</p>
 
-    <p><strong>Dall'aeroporto di Catania a Milazzo</strong>: Se arrivi in aereo, puoi prendere un autobus che collega l'aeroporto di Catania a Milazzo. Per il collegamento ti consiglio di controllare gli orari specifici sul sito per maggiori dettagli: <a href="https://giuntabus.com/aeroporto-catania-milazzo/" target="_blank">Aereoporto-Milazzo</a> .</p>
+    <p><strong>从卡塔尼亚机场到米拉佐</strong>：如果你是坐飞机抵达，可以乘坐连接卡塔尼亚机场和米拉佐的公交。你可以在官网查看具体时刻以获得更多信息：<a href="https://giuntabus.com/aeroporto-catania-milazzo/" target="_blank">机场-米拉佐</a>。</p>
 
-    <h3>In auto</h3>
-    <p>Se preferisci arrivare in auto, segui l’autostrada <strong>A20</strong> e prendi l'uscita per <strong>Milazzo</strong>. Da lì, continua sulla <strong>tangenziale verso il centro città</strong> (Viale Sicilia). Per parcheggiare in centro, puoi utilizzare i parcheggi con strisce blu e gestire il pagamento tramite l'applicazione <strong>EasyPark</strong>. Scarica l'app o accedi al sito per ulteriori informazioni: <a href="https://invite.easypark.net/QWx59aNoxyb" target="_blank">EasyPark</a>.</p>
+    <h3>自驾车</h3>
+    <p>如果你选择自驾，可以沿着<strong>A20高速公路</strong>行驶，并在<strong>米拉佐</strong>出口下车。从那里继续沿着<strong>市区环道</strong>（Viale Sicilia）行驶。市中心有蓝色划线的停车位，你可以使用<strong>EasyPark</strong>应用程序支付停车费。下载应用或访问网站获取更多信息：<a href="https://invite.easypark.net/QWx59aNoxyb" target="_blank">EasyPark</a>。</p>
 
-    <h3>Immagine</h3>
-    <p>Di seguito, un'immagine che mostra il treno diretto a Milazzo:</p>
+    <h3>图片</h3>
+    <p>以下是展示前往米拉佐的火车的图片：</p>
     <p>
-    <img src="https://www.oggimilazzo.it/wp-content/uploads/2019/03/ultimo-treno-750x400.jpg" alt="Ultimo treno per Milazzo" style="max-width: 100%; height: auto; border-radius: 8px;"></p>
-    <button class="main" onclick="goToColazione()">Colazione</button>
+    <img src="https://www.oggimilazzo.it/wp-content/uploads/2019/03/ultimo-treno-750x400.jpg" alt="最后一班前往米拉佐的火车" style="max-width: 100%; height: auto; border-radius: 8px;"></p>
+    <button class="main" onclick="goToColazione()">早餐</button>
     <div class="buttons-container">
-        <button class="back" onclick="goToArrivo()">Indietro</button>
-        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+        <button class="back" onclick="goToArrivo()">返回</button>
+        <button class="start" onclick="goToIntro()">返回开始</button>
     </div>
 </div>
 
-                <!-- 4. Colazione -->
+                <!-- 4. 早餐 -->
 <div id="colazione" class="hidden">
-    <h2>Raccogliamo pò di energie</h2>
-    <p>Prima di iniziare a scoprire le meraviglie di Milazzo, prenditi un attimo per ricaricare le energie con una colazione tipica siciliana. Sebbene la tradizione sia decisamente dolce e calorica, i piatti sono sempre a base vegetale, per un risveglio ricco di sapori locali. In estate, un siciliano doc non rinuncerebbe mai alla granita con la briosche da inzuppare, ma le delizie non finiscono qui: cannoli, cassate e cornetti sono solo alcune delle prelibatezze che puoi gustare, magari accompagnati da un buon espresso o una fresca spremuta di arance siciliane. Siediti in un bar del centro e lasciati conquistare da questo dolce inizio di giornata.</p>
+    <h2>补充一下能量</h2>
+    <p>在开始探索米拉佐的美丽之前，先花点时间享受一顿典型的西西里早餐。虽然传统上早餐非常甜腻且热量高，但这些食物通常以植物为主，为你提供丰富的地方风味。夏天的时候，一个正宗的西西里人永远不会错过用甜面包蘸冰沙，但美味并不止于此：卡诺利、卡萨塔和羊角面包是你可以品尝的一些美食，当然最好配上一杯浓缩咖啡或新鲜的西西里橙汁。在市中心的咖啡馆坐下来，享受这一天的甜美开始。</p>
     
-    <!-- Immagine della granita con brioche -->
+    <!-- 冰沙和甜面包的图片 -->
    <p>
-    <img src="URL_immagine.jpg" alt="Immagine di Milazzo" style="width: 100%; margin-top: 10px;">
+    <img src="URL_immagine.jpg" alt="米拉佐图片" style="width: 100%; margin-top: 10px;">
 </p>
-    <button class="main" onclick="goToItinerario()">Inizia l'itinerario</button>
+    <button class="main" onclick="goToItinerario()">开始行程</button>
     <div class="buttons-container">
-        <button class="back" onclick="goToIndicazioni()">Indietro</button>
-        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+        <button class="back" onclick="goToIndicazioni()">返回</button>
+        <button class="start" onclick="goToIntro()">返回开始</button>
     </div>
 </div>
 
-       <!-- 5. Inizio Itinerario -->
+       <!-- 5. 行程开始 -->
 <div id="itinerario" class="hidden">
-    <h2>Iniziamo</h2>
-    <p>Siamo pronti! Questo itinerario è pensato per offrirti un'esperienza completa della nostra splendida città, facendoti scoprire quanto più possibile delle sue bellezze naturali, storiche e culturali. Ma c'è un'ulteriore opportunità: l'itinerario è completamente personalizzabile, così potrai adattarlo ai tuoi gusti e alle tue preferenze.</p>
-    <p>Puoi scegliere tra due opzioni, entrambe ti porteranno a visitare le stesse meraviglie, ma in un ordine differente:</p>
+    <h2>开始吧</h2>
+    <p>我们准备好了！这个行程旨在为你提供一次全面的米拉佐体验，让你尽可能多地发现这座城市的自然、历史和文化之美。不过，还有一个额外的机会：这个行程是完全可以自定义的，你可以根据自己的兴趣和喜好来调整。</p>
+    <p>你可以选择两条路线，它们都将带你参观同样的奇观，但顺序不同：</p>
 
-    <h3>Itinerario A:</h3>
-    <p>Se decidi di iniziare la giornata a <strong>Capo Milazzo</strong>, il percorso ti guiderà alla scoperta di luoghi panoramici e naturali, per poi proseguire con altre tappe della città. Alla fine della giornata, ti ritroverai a godere del tramonto <strong>alla Baia del Tono</strong>.</p>
+    <h3>路线A：</h3>
+    <p>如果你决定从<strong>米拉佐角</strong>开始这一天，路线将引导你探索自然和风景如画的地方，之后继续参观城市的其他景点。一天结束时，你将欣赏到在<strong>巴亚·德尔·托诺</strong>的日落美景。</p>
 
-    <h3>Itinerario B:</h3>
-    <p>Se preferisci cominciare la giornata con un po' di relax in <strong>spiaggia</strong>, il percorso partirà dalla Baia del Tono per poi continuare verso le altre bellezze di Milazzo. Alla fine della giornata, ammirerai il tramonto <strong>da Capo Milazzo</strong>, con una vista spettacolare.</p>
+    <h3>路线B：</h3>
+    <p>路线B则带你首先前往历史和文化遗址，你将参观米拉佐城堡、圣尼古拉教堂等著名景点。随后，你将参观米拉佐港和海滨区。</p>
 
-    <p>Questo itinerario è pensato per farti scoprire tante meraviglie, ma se ti innamori particolarmente di un luogo, non esitare a dedicargli più tempo o anche a passare l’intera giornata lì. L’importante è che l’esperienza sia quella che più ti soddisfa. E se hai più di un giorno a disposizione, puoi distribuire il percorso con calma, per goderti ogni angolo di Milazzo senza fretta.</p>
+  <!-- 插入图片链接（在此添加图片URL） -->
+<p>
+    <img src="URL_immagine.jpg" alt="米拉佐图片" style="width: 100%; margin-top: 10px;">
+</p>
 
-    <p><strong>La tua avventura a Milazzo comincia ora... scegli come iniziare!</strong></p>
+<div class="buttons-container">
+    <button class="main" onclick="goToIndicazioniCapoMilazzo()">前往米拉佐角（选项A）</button>
+    <button class="main" onclick="goToSpiaggiaPonente()">前往西海滩（选项B）</button>
+</div>
 
-    <!-- Link immagine (aggiungi URL immagine qui) -->
+<div class="buttons-container">
+    <button class="back" onclick="goToColazione()">返回</button>
+    <button class="start" onclick="goToIntro()">返回开始</button>
+</div>
+<!-- 6. 选项A：前往米拉佐角的路线 -->
+<div id="indicazioniCapoMilazzo" class="hidden">
+    <h2>如何到达米拉佐角</h2>
+    <p><strong>米拉佐角：距离市中心仅一步之遥的自然奇观</strong></p>
+    <p>米拉佐角是米拉佐最自然和最迷人的区域，距离市中心不远。这个美丽的“宝石”是寻求自然体验的人们的理想之地，同时又能保持靠近城市的便利。这里有一系列活动和景点等待你去探索，拥有令人叹为观止的景色、自然小道，以及享受宁静的独特机会，远离城市的喧嚣。</p>
+
+    <p><strong>如何到达：</strong></p>
+    <ul>
+        <li><strong>乘坐公交：</strong>你可以通过公共交通轻松到达米拉佐角。连接米拉佐港和米拉佐角的公交线路是<strong>6号线</strong>。你可以通过此<a href="https://cdn.prod.website-files.com/625686464e10c9be6a93fb86/66b47589758bdbda9926f2c2_2024.08.08%20Orario%20Linee%20Urbane%20Milazzo.pdf" target="_blank">时刻表链接</a>查看公交时刻。此外，如果你希望实时跟踪公交车的位置，可以使用此<a href="https://ssl.autoroute.it/apps/sais_milazzo/index.cfm?find_closest=1" target="_blank">公交地图链接</a>。</li>
+        <li><strong>开车：</strong>如果你更喜欢开车到达米拉佐角，那也很简单：只需沿着壮观的海岸公路行驶，直接到达该区域。到达后，你会发现许多<strong>免费的路边停车位</strong>，可以停车并开始你的探险。</li>
+    </ul>
+    <!-- 插入图片链接（在此添加图片URL） -->
     <p>
-    <img src="URL_immagine.jpg" alt="Immagine di Milazzo" style="width: 100%; margin-top: 10px;">
+    <img src="URL_immagine.jpg" alt="米拉佐图片" style="width: 100%; margin-top: 10px;">
+    </p>
+    <!-- Google地图链接 -->
+    <h4>在Google地图上查看米拉佐角：</h4>
+    <p>你可以点击以下链接，在地图上查看米拉佐角：</p>
+    <a href="https://maps.app.goo.gl/BhhYJJpnSUQNdQuB9" target="_blank">
+        <button class="google-maps-button">
+            <i class="fa fa-map-marker" aria-hidden="true"></i> 打开米拉佐角地图
+        </button>
+    </a>
+    
+    <button class="main" onclick="goToCapoMilazzo()">到达米拉佐角</button>
+    <div class="buttons-container">
+        <button class="back" onclick="goToItinerario()">返回</button>
+        <button class="start" onclick="goToIntro()">返回开始</button>
+    </div>
+</div>
+
+<!-- 7. A1 - 米拉佐角 -->
+<div id="capoMilazzo" class="hidden">
+    <h2>我们来到了米拉佐角</h2>
+    <p>米拉佐角是米拉佐半岛的最尖端，无疑是城市中最自然和最迷人的区域。距离市中心不远，提供了一种沉浸在自然中的体验，同时也很容易到达。</p>
+    <p>这个岬角是半岛两侧的交汇点，提供了令人惊叹的景色，可以看到<strong>七座艾奥利群岛</strong>。这里茂密的植被是生物多样性的宝库，孕育了一种被称为<strong>“地中海机器”</strong>的生态系统，它因其非凡的适应能力而著称。在这里，远离城市的喧嚣，你可以完全沉浸在大自然中。</p>
+    <p>米拉佐角的主要景点包括壮观的<strong>圣安东尼奥·帕奥拉教堂</strong>，这座教堂是雕刻在岩石中的，为景观增添了精神的氛围。附近还有<strong>吉利奥波利</strong>，一座私人别墅，可按要求参观，发现一个未经破坏的自然保护角落。</p>
+    <p>但米拉佐角的真正瑰宝是<strong>维纳斯池</strong>，一个迷人的天然海湾，海水清澈，岩石与海水融合，创造出一种罕见的美丽景象。<strong>我们将前往那里。</strong></p>
+    <!-- 插入图片链接（在此添加图片URL） -->
+    <p>
+    <img src="URL_immagine.jpg" alt="米拉佐图片" style="width: 100%; margin-top: 10px;">
     </p>
 
+    <button class="main" onclick="goToPiscinaVenereA()">前往维纳斯池的远足</button>
     <div class="buttons-container">
-        <button class="main" onclick="goToIndicazioniCapoMilazzo()">Vai a Capo Milazzo (Scelta A)</button>
-        <button class="main" onclick="goToSpiaggiaPonente()">Vai alla Spiaggia di Ponente (Scelta B)</button>
-    </div>
-    
-    <div class="buttons-container">
-        <button class="back" onclick="goToColazione()">Indietro</button>
-        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+        <button class="back" onclick="goToIndicazioniCapoMilazzo()">返回</button>
+        <button class="start" onclick="goToIntro()">返回开始</button>
     </div>
 </div>
 
-
-       <!-- 6. Scelta A: Indicazioni per Capo Milazzo -->
-<div id="indicazioniCapoMilazzo" class="hidden">
-    <h2>Come raggiungere Capo Milazzo</h2>
-    <p><strong>Capo Milazzo: La Meraviglia Naturale a Due Passi dal Centro</strong></p>
-    <p>Capo Milazzo è la zona più naturale e affascinante di Milazzo, situata a breve distanza dal centro urbano. Questa splendida "gemma" è il posto ideale per chi cerca un'esperienza immersa nella natura, pur restando vicino alla città. Qui troverai una serie di attività e luoghi da esplorare, tra panorami mozzafiato, sentieri naturali e la possibilità di godere di una pace unica, lontano dal trambusto cittadino.</p>
-
-    <p><strong>Come arrivarci:</strong></p>
-    <ul>
-        <li><strong>Con il bus:</strong> Puoi raggiungere Capo Milazzo facilmente con il servizio di trasporto pubblico. La linea che collega il porto di Milazzo a Capo Milazzo è la <strong>linea 6</strong>. Puoi consultare gli orari dei bus tramite questo <a href="https://cdn.prod.website-files.com/625686464e10c9be6a93fb86/66b47589758bdbda9926f2c2_2024.08.08%20Orario%20Linee%20Urbane%20Milazzo.pdf" target="_blank">link alla tabella degli orari</a>. Inoltre, se vuoi seguire il bus in tempo reale, puoi utilizzare la geolocalizzazione dei mezzi tramite questo <a href="https://ssl.autoroute.it/apps/sais_milazzo/index.cfm?find_closest=1" target="_blank">link alla mappa dei bus</a>.</li>
-        <li><strong>In auto:</strong> Se preferisci usare la tua auto, raggiungere Capo Milazzo è semplice: basta seguire la spettacolare strada panoramica che ti condurrà direttamente alla zona. Una volta arrivato, troverai numerosi <strong>parcheggi liberi su strada</strong> dove potrai lasciare l'auto e iniziare la tua avventura.</li>
-    </ul>
-     <!-- Link immagine (aggiungi URL immagine qui) -->
-    <p>
-    <img src="URL_immagine.jpg" alt="Immagine di Milazzo" style="width: 100%; margin-top: 10px;">
-</p>
-     <!-- Link alla mappa di Google Maps -->
-<h4>Guarda Capo Milazzo su Google Maps:</h4>
-<p>Puoi visualizzare Capo Milazzo sulla mappa cliccando sul seguente link:</p>
-<a href="https://maps.app.goo.gl/BhhYJJpnSUQNdQuB9" target="_blank">
-    <button class="google-maps-button">
-        <i class="fa fa-map-marker" aria-hidden="true"></i> Apri la Mappa di Capo Milazzo
-    </button>
-</a>
-    
-    <button class="main" onclick="goToCapoMilazzo()">Arrivo a Capo Milazzo</button>
-    <div class="buttons-container">
-        <button class="back" onclick="goToItinerario()">Indietro</button>
-        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
-    </div>
-</div>
-
-        <!-- 7. A1 - Capo Milazzo -->
-<div id="capoMilazzo" class="hidden">
-    <h2>Eccoci a Capo Milazzo</h2>
-    <p>Capo Milazzo è la punta della penisola di Milazzo ed è senza dubbio la zona più naturale e affascinante della città. A breve distanza dal centro, offre un'esperienza immersa nella natura, pur restando facilmente accessibile.</p>
-    <p>Questo promontorio segna il punto di incontro tra i due versanti della penisola e regala panorami mozzafiato, con una vista che spazia fino alle <strong>sette isole Eolie</strong>. La sua vegetazione rigogliosa è un vero e proprio scrigno di biodiversità, che dà vita a un ecosistema chiamato <strong>"macchina mediterranea"</strong> per la sua straordinaria capacità di adattarsi e prosperare. Qui, lontano dal caos della città, puoi vivere un'esperienza di completa immersione nella natura.</p>
-    <p>Tra le principali attrazioni di Capo Milazzo, trovi la suggestiva <strong>Chiesa di Sant'Antonio di Paola</strong>, scavata nella roccia, che offre una dimensione spirituale al paesaggio. Non lontano, c'è <strong>Gigliopoli</strong>, una villa privata che, su richiesta, può essere visitata per scoprire un angolo di natura incontaminata e protetta.</p>
-    <p>Ma la vera perla di Capo Milazzo è la <strong>Piscina di Venere</strong>, un'incantevole insenatura naturale, dove il mare cristallino e la roccia si fondono per creare uno scenario di rara bellezza. <strong>E’ proprio lì che ci dirigeremo.</strong></p>
-      <!-- Link immagine (aggiungi URL immagine qui) -->
-    <p>
-    <img src="URL_immagine.jpg" alt="Immagine di Milazzo" style="width: 100%; margin-top: 10px;">
-</p>
-
-    <button class="main" onclick="goToPiscinaVenereA()">Escursione alla Piscina di Venere</button>
-    <div class="buttons-container">
-        <button class="back" onclick="goToIndicazioniCapoMilazzo()">Indietro</button>
-        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
-    </div>
-</div>
-
-       <!-- 8. A2 - Escursione alla Piscina di Venere -->
+<!-- 8. A2 - 前往维纳斯池的远足 -->
 <div id="piscinaVenereA" class="hidden">
-    <h2>Escursione alla Piscina di Venere</h2>
-    <p><strong>Attenzione:</strong> Il percorso che ci porterà alla <strong>Piscina di Venere</strong> include una scalinata che potrebbe risultare faticosa, specialmente al ritorno. Prima di intraprendere il cammino, considera lo sforzo che dovrai affrontare e, soprattutto, ricordati di idratarti, poiché le alte temperature della zona possono aumentare la fatica del percorso.</p>
+    <h2>前往维纳斯池的远足</h2>
+    <p><strong>注意：</strong>前往<strong>维纳斯池</strong>的路线包括一段阶梯路，尤其是在返回时可能会感到疲惫。在开始旅程之前，请考虑你将面临的体力挑战，特别是要记得补充水分，因为该地区的高温可能会增加行程的困难。</p>
     
-    <p>Dirigiamoci ora verso la <strong>Piscina di Venere</strong>, un incantevole angolo naturale immerso nel cuore dell'area marina protetta. Il sentiero è ben tracciato e ben conservato, attraversando una zona incontaminata che ha visto un’importante opera di recupero ecologico. Grazie all’impegno di alcuni volontari, la <strong>macchina mediterranea</strong> e la biodiversità marina, come la flora marina e i coralli, sono stati restaurati, creando le condizioni ideali affinché la vita marina potesse rifiorire e prosperare.</p>
+    <p>现在我们将前往<strong>维纳斯池</strong>，这是一个迷人的自然角落，位于受保护的海洋区内。小道清晰可见，维护良好，穿越一片未经破坏的区域，这里曾进行过重要的生态恢复工作。在一些志愿者的努力下，<strong>地中海机器</strong>和海洋生物多样性，如海洋植物和珊瑚，被恢复，为海洋生物的复苏创造了理想的条件。</p>
     
-    <p>Una volta arrivati, lasciamoci affascinare dal panorama mozzafiato che ci circonda. Potremmo sistemarci su uno degli scogli per godere della bellezza del luogo. Se lo desideriamo, possiamo anche immergerci con cautela nella piscina naturale, un luogo dove il mare cristallino si fonde perfettamente con le rocce circostanti, creando un ambiente idilliaco. È davvero un posto unico, un angolo di paradiso che merita di essere vissuto in tutta la sua bellezza.</p>
-     <!-- Link immagine (aggiungi URL immagine qui) -->
+    <p>到达后，让我们陶醉于周围的壮丽景色。我们可以在岩石上停留，享受这个地方的美丽。如果我们愿意，也可以小心地在天然泳池中游泳，这里海水清澈，与周围的岩石完美融合，创造出一个理想的环境。这里真是一个独特的地方，一个天堂角落，值得我们在其美丽中徜徉。</p>
+     <!-- 插入图片链接（在此添加图片URL） -->
     <p>
-    <img src="URL_immagine.jpg" alt="Immagine di Milazzo" style="width: 100%; margin-top: 10px;">
-</p>
+    <img src="URL_immagine.jpg" alt="米拉佐图片" style="width: 100%; margin-top: 10px;">
+    </p>
 
-     <!-- Link alla mappa di Google Maps -->
-<h4>Guarda Capo Milazzo su Google Maps:</h4>
-<p>Puoi visualizzare Capo Milazzo sulla mappa cliccando sul seguente link:</p>
-<a href="https://maps.app.goo.gl/bP54nK5SqWxUM5Jx7" target="_blank">
-    <button class="google-maps-button">
-        <i class="fa fa-map-marker" aria-hidden="true"></i> Apri la Mappa di Capo Milazzo
-    </button>
-</a>
+    <!-- Google地图链接 -->
+    <h4>在Google地图上查看米拉佐角：</h4>
+    <p>你可以点击以下链接，在地图上查看米拉佐角：</p>
+    <a href="https://maps.app.goo.gl/bP54nK5SqWxUM5Jx7" target="_blank">
+        <button class="google-maps-button">
+            <i class="fa fa-map-marker" aria-hidden="true"></i> 打开米拉佐角地图
+        </button>
+    </a>
     
-    <button class="main" onclick="goToPanoramicaIsoleA()">Ritorno e panoramica delle Isole Eolie</button>
+    <button class="main" onclick="goToPanoramicaIsoleA()">返回并观看艾奥利群岛全景</button>
     <div class="buttons-container">
-        <button class="back" onclick="goToIndicazioniCapoMilazzo()">Indietro</button>
-        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+        <button class="back" onclick="goToIndicazioniCapoMilazzo()">返回</button>
+        <button class="start" onclick="goToIntro()">返回开始</button>
     </div>
 </div>
 
-        <!-- 9. A3 - Panoramica delle Isole Eolie -->
+       <!-- 9. A3 - 伊奥利群岛概览 -->
 <div id="panoramicaIsoleA" class="hidden">
-    <h2>Torniamo su e Panorama</h2>
-    <p>È il momento di lasciare questa meravigliosa oasi naturale e iniziare il nostro ritorno. La scalinata che ci ha condotto fin qui potrebbe risultare un po’ faticosa durante il ritorno, soprattutto sotto il caldo estivo. Pertanto, ti consiglio di procedere con calma e di non dimenticare di idratarti lungo il cammino.</p>
+    <h2>返回与全景</h2>
+    <p>现在是时候离开这个美丽的自然绿洲，开始我们的返程了。通往这里的楼梯可能在回程时会有些累人，尤其是在夏季的炎热天气下。因此，我建议你慢慢走，记得在路上保持水分。</p>
 
-    <p>Una volta tornati sulla cima, fermiamoci un attimo per assaporare il panorama mozzafiato che Capo Milazzo ci offre. La vista sulla costa e sul mare aperto è davvero unica, e potremmo approfittarne per scattare qualche foto e immortalare questo momento speciale.</p>
+    <p>一旦我们回到山顶，我们停下来片刻，享受卡波·米拉佐带给我们的壮丽全景。这里的海岸线和辽阔的大海景色真是独一无二，我们可以借此机会拍几张照片，记录下这个特别的时刻。</p>
 
-    <p>Quando ci sentiamo pronti, possiamo continuare il nostro viaggio.</p>
+    <p>当我们准备好时，我们可以继续我们的旅程。</p>
 
-      <!-- Link immagine (aggiungi URL immagine qui) -->
+    <!-- 图片链接 (在这里添加图片URL) -->
     <p>
-    <img src="URL_immagine.jpg" alt="Immagine di Milazzo" style="width: 100%; margin-top: 10px;">
-</p>
+    <img src="URL_immagine.jpg" alt="米拉佐图片" style="width: 100%; margin-top: 10px;">
+    </p>
     
-    <button class="main" onclick="goToBorgoAnticoA()">Verso il Borgo Antico</button>
+    <button class="main" onclick="goToBorgoAnticoA()">前往古老的村庄</button>
     <div class="buttons-container">
-        <button class="back" onclick="goToPiscinaVenereA()">Indietro</button>
-        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+        <button class="back" onclick="goToPiscinaVenereA()">返回</button>
+        <button class="start" onclick="goToIntro()">返回首页</button>
     </div>
 </div>
 
-
-        <!-- 10. A4 - Borgo Antico -->
+<!-- 10. A4 - 古老的村庄 -->
 <div id="borgoAnticoA" class="hidden">
-    <h2>Arrivare all'antico Borgo</h2>
-    <p>Proseguendo nel nostro itinerario, ci addentriamo nel cuore più antico della città, il borgo storico, situato ai piedi dell'imponente Castello. Questa zona conserva un fascino senza tempo, con le sue stradine acciottolate, le case in pietra e una vista mozzafiato sul mare. Passeggiando tra queste vie, è facile immaginare come si doveva vivere secoli fa, quando il borgo era il centro pulsante della vita cittadina. L'atmosfera che si respira qui è un perfetto equilibrio tra storia, tradizione e la tranquillità di un luogo che sembra essersi fermato nel tempo.</p>
+    <h2>到达古老的村庄</h2>
+    <p>继续我们的行程，我们深入城市最古老的中心，那个位于雄伟城堡脚下的历史村庄。这片区域保持着无时无刻的魅力，有着鹅卵石铺成的小巷、石砌的房屋以及令人叹为观止的海景。在这些街道上漫步，我们很容易就能想象出几个世纪前这里的生活方式，那时这个村庄是城市生活的核心。这里的氛围是历史、传统和宁静完美的结合，让人仿佛置身于一个停滞的时光之中。</p>
     
-    <h3>Come arrivare al borgo:</h3>
-    <p><strong>Con i mezzi pubblici:</strong> Se preferisci usare i mezzi pubblici, puoi prendere la linea 6. Qui trovi la tabella degli orari aggiornata: <a href="https://cdn.prod.website-files.com/625686464e10c9be6a93fb86/66b47589758bdbda9926f2c2_2024.08.08%20Orario%20Linee%20Urbane%20Milazzo.pdf" target="_blank">Orari Linea 6</a>. Inoltre, i bus sono geolocalizzati, così puoi sempre verificare la loro posizione in tempo reale: <a href="https://ssl.autoroute.it/apps/sais_milazzo/index.cfm?find_closest=1" target="_blank">Geolocalizzazione Bus</a>.</p>
+    <h3>如何到达古村庄：</h3>
+    <p><strong>乘坐公共交通：</strong>如果你喜欢使用公共交通工具，可以乘坐6号线。这里是最新的时刻表： <a href="https://cdn.prod.website-files.com/625686464e10c9be6a93fb86/66b47589758bdbda9926f2c2_2024.08.08%20Orario%20Linee%20Urbane%20Milazzo.pdf" target="_blank">6号线时刻表</a>。此外，公交车还配备了地理定位功能，所以你可以实时查看它们的位置： <a href="https://ssl.autoroute.it/apps/sais_milazzo/index.cfm?find_closest=1" target="_blank">公交车定位</a>。</p>
     
-    <p><strong>In auto:</strong> Se preferisci muoverti con l'auto, puoi seguire questo link per la posizione esatta: <a href="https://maps.app.goo.gl/CjvJv9UYSLeXToaA8" target="_blank">Posizione Borgo Storico</a>. Per quanto riguarda il parcheggio, si consiglia di essere preparati a una ricerca un po' più lunga, soprattutto nelle ore di punta. Tuttavia, la soluzione migliore è parcheggiare negli spazi con strisce blu. I ticket per il parcheggio possono essere acquistati presso i tabacchini locali o, per maggiore comodità, puoi utilizzare l'app Easy Park: <a href="https://www.easypark.com/en-it/download?utm_source=Web&utm_campaign=IT_one_web_download_app&utm_medium=marketing" target="_blank">Scarica Easy Park</a>.</p>
+    <p><strong>自驾车：</strong>如果你更喜欢自驾，可以通过以下链接找到精确位置： <a href="https://maps.app.goo.gl/CjvJv9UYSLeXToaA8" target="_blank">古老村庄位置</a>。关于停车，建议你做好稍微寻找停车位的准备，尤其是在高峰时段。不过，最好的选择是在蓝色停车线的区域停车。停车票可以在当地的烟草店购买，或者你可以使用Easy Park应用程序，方便快捷： <a href="https://www.easypark.com/en-it/download?utm_source=Web&utm_campaign=IT_one_web_download_app&utm_medium=marketing" target="_blank">下载Easy Park</a>。</p>
 
-  <!-- Link immagine (aggiungi URL immagine qui) -->
+    <!-- 图片链接 (在这里添加图片URL) -->
     <p>
-    <img src="URL_immagine.jpg" alt="Immagine di Milazzo" style="width: 100%; margin-top: 10px;">
-</p>
+    <img src="URL_immagine.jpg" alt="米拉佐图片" style="width: 100%; margin-top: 10px;">
+    </p>
 
-     <!-- Link alla mappa di Google Maps -->
-<h4>Guarda Borgo Antico su Google Maps:</h4>
-<p>Puoi visualizzare Capo Milazzo sulla mappa cliccando sul seguente link:</p>
-<a href="https://maps.app.goo.gl/bP54nK5SqWxUM5Jx7" target="_blank">
-    <button class="google-maps-button">
-        <i class="fa fa-map-marker" aria-hidden="true"></i> Apri la Mappa di Capo Milazzo
-    </button>
-</a>    
-    <button class="main" onclick="goToPranzoA()">Prendiamoci una pausa</button>
+    <!-- Google Maps 链接 -->
+    <h4>在Google地图上查看古老的村庄：</h4>
+    <p>你可以通过以下链接在地图上查看卡波·米拉佐：</p>
+    <a href="https://maps.app.goo.gl/bP54nK5SqWxUM5Jx7" target="_blank">
+        <button class="google-maps-button">
+            <i class="fa fa-map-marker" aria-hidden="true"></i> 打开卡波·米拉佐地图
+        </button>
+    </a>    
+    <button class="main" onclick="goToPranzoA()">休息一下</button>
     <div class="buttons-container">
-        <button class="back" onclick="goTopanoramicaIsoleA()">Indietro</button>
-        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+        <button class="back" onclick="goTopanoramicaIsoleA()">返回</button>
+        <button class="start" onclick="goToIntro()">返回首页</button>
     </div>
 </div>
 
-       <!-- 11. A5 - Pranzo al Borgo -->
+<!-- 11. A5 - 古老村庄的午餐 -->
 <div id="pranzoA" class="hidden">
-    <h2>Pranzo al Borgo</h2>
-    <p>Arrivati al borgo di Milazzo, lasciamoci rapire dall'atmosfera unica di questo angolo antico e vibrante della città. Sebbene sia la zona più storica di Milazzo, il borgo è tutt'altro che sonnolento. Anzi, è un quartiere animato da numerosi ristoranti e caffè dove potrai gustare piatti tipici o semplicemente sorseggiare un drink. Se desideri un pranzo completo, perché non provare un piatto di pesce freschissimo, pescato direttamente dalle acque circostanti? Se invece vuoi vivere un'esperienza ancora più "locale", un piatto di pasta con un buon sugo siciliano ti regalerà un’autentica delizia per il palato.</p>
+    <h2>在古老村庄的午餐</h2>
+    <p>到了米拉佐的村庄，我们将沉浸在这个古老而充满活力的城市角落的独特氛围中。尽管这是米拉佐最古老的区域，但这个村庄绝不沉寂。事实上，这里有许多餐馆和咖啡馆，你可以品尝到地道的菜肴，或者只是享受一杯饮品。如果你想要一顿完整的午餐，不妨尝试一下刚捕捞的鲜美海鲜。如果你更想体验更“本地化”的风味，一道正宗的西西里酱汁意大利面定会让你大快朵颐。</p>
 
-    <p>Per chi ha poco tempo o ha portato il pranzo con sé, c'è un angolo speciale che vale la pena scoprire: un punto panoramico che offre una vista spettacolare. Da qui, potrai ammirare il Castello di Milazzo da una prospettiva inedita, con una visuale mozzafiato sulla spiaggia sottostante e le isole all'orizzonte. Un'ottima occasione per una pausa rilassante e un po' di tranquillità immersi nella storia. La posizione di questo belvedere è facilmente raggiungibile a piedi: <a href="https://maps.app.goo.gl/RJwyGCecydGwXQQ27" target="_blank">Punto Panoramico</a>.</p>
+    <p>对于那些时间紧迫或带了自己午餐的人，这里有一个特别的角落值得一探：一个能欣赏壮丽景色的观景点。从这里，你可以从一个新的角度欣赏米拉佐城堡，眼前是令人叹为观止的海滩和远处的岛屿。这里是一个理想的放松休息的好地方，沉浸在历史的宁静之中。这个观景点可以步行轻松到达： <a href="https://maps.app.goo.gl/RJwyGCecydGwXQQ27" target="_blank">观景点</a>。</p>
 
-    <p>Dopo esserti ristorato e aver apprezzato la bellezza del panorama, sarai pronto a riprendere il nostro itinerario e ad affrontare il maestoso Castello di Milazzo, che non vediamo l'ora di esplorare, per scoprire insieme i suoi segreti e la sua storia secolare!</p>
+    <p>在休息并享受美丽的全景后，你将准备好继续我们的行程，探索雄伟的米拉佐城堡，我们迫不及待地要一起发现它的秘密和它几百年的历史！</p>
 
-    <!-- Link immagine (aggiungi URL immagine qui) -->
+    <!-- 图片链接 (在这里添加图片URL) -->
     <p>
-    <img src="URL_immagine.jpg" alt="Immagine di Milazzo" style="width: 100%; margin-top: 10px;">
-</p>
+    <img src="URL_immagine.jpg" alt="米拉佐图片" style="width: 100%; margin-top: 10px;">
+    </p>
     
-    
-    <button class="main" onclick="goToCastelloA()">Visitiamo il Castello</button>
+    <button class="main" onclick="goToCastelloA()">参观城堡</button>
     <div class="buttons-container">
-        <button class="back" onclick="goToBorgoAnticoA()">Indietro</button>
-        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+        <button class="back" onclick="goToBorgoAnticoA()">返回</button>
+        <button class="start" onclick="goToIntro()">返回首页</button>
     </div>
 </div>
-       
-         <!-- 12. A6 - Visita del Castello -->
+
+<!-- 12. A6 - 城堡参观 -->
 <div id="castelloA" class="hidden">
-    <h2>Alla scoperta del Castello di Milazzo: tra storia e panorami mozzafiato</h2>
-    <p>Eccoci finalmente in uno dei luoghi più affascinanti e storicamente ricchi di Milazzo: il suo Castello. Situato su un promontorio che domina il mare e la città, questo maestoso castello ha attraversato secoli di storia, dai primi insediamenti greci e romani fino alle imponenti fortificazioni medievali.</p>
-    <p>Durante i secoli, il castello ha avuto molteplici funzioni, tra cui quella di fortificazione difensiva, residenza dei signori locali e prigione. È stato teatro di numerosi conflitti, tra cui assedi, battaglie e invasioni, soprattutto durante le guerre per il controllo della Sicilia. Oggi, il Castello di Milazzo è un luogo ideale per immergersi nel passato, passeggiando tra torri medievali, camminamenti di ronda e panorami spettacolari sul golfo e le isole Eolie.</p>
-    <p>Se desideri approfondire la storia affascinante di questo luogo, ti consigliamo di visitare il <a href="https://www.comune.milazzo.me.it/argomenti-2/turismo/il-castello-citta-murata/" target="_blank">sito ufficiale del Castello di Milazzo</a>, dove troverai ulteriori dettagli sulla sua lunga e variegata storia, che attraversa secoli di conquiste, battaglie e trasformazioni.</p>
-    <p>All'interno del castello, avrai l'opportunità di esplorare diversi punti d'interesse. In particolare, non perdere la <strong>Cittadella Fortificata</strong>, un affascinante esempio di architettura difensiva medievale. Inoltre, all'interno del castello si trova il <strong>Museo del Mare (MUMA)</strong>, inaugurato negli ultimi anni grazie all'impegno di alcuni appassionati volontari. Se vuoi scoprire maggiori dettagli sulla storia di questo museo e delle sue collezioni, puoi visitare il <a href="https://www.mumamilazzo.com/site/?page_id=248" target="_blank">sito ufficiale del MUMA</a>.</p>
-    <p>Il castello è una struttura imponente, una delle <strong>più grandi d'Europa</strong>, quindi prenditi tutto il tempo che ti serve per esplorarlo. Normalmente, una visita completa richiede circa <strong>due ore</strong>. All'ingresso troverai informazioni utili su cosa vedere e come orientarti all'interno, così da non perdere nessun dettaglio di questo incredibile monumento storico.</p>
+    <h2>探索米拉佐城堡：历史与壮丽景色</h2>
+    <p>我们终于来到了米拉佐最迷人、历史最丰富的地方之一：它的城堡。城堡坐落在一个俯瞰大海和城市的悬崖上，这座宏伟的城堡经历了几个世纪的历史，从最早的希腊和罗马定居到中世纪的坚固防御工事。</p>
+    <p>在这些年里，城堡承担了多种功能，包括防御堡垒、地方贵族的住所以及监狱。它曾经是许多冲突的战场，包括围城、战斗和入侵，特别是在争夺西西里岛控制权的战争期间。如今，米拉佐城堡是一个理想的地方，可以让人沉浸在过去的历史中，漫步在中世纪的塔楼、城墙和壮丽的海湾及伊奥利群岛的景色中。</p>
+    <p>如果你想深入了解这个地方迷人的历史，我们建议你访问米拉佐城堡的<a href="https://www.comune.milazzo.me.it/argomenti-2/turismo/il-castello-citta-murata/" target="_blank">官方网站</a>，这里有更多关于它漫长且丰富的历史的详细信息，跨越几个世纪的征服、战斗和变革。</p>
+    <p>在城堡内，你将有机会探索多个有趣的景点。尤其不要错过<strong>防御堡垒</strong>，它是中世纪防御建筑的迷人范例。此外，城堡内还设有<strong>海洋博物馆 (MUMA)</strong>，这是近年来由一些热心志愿者发起的项目。如果你想了解更多关于该博物馆及其收藏的细节，可以访问<a href="https://www.mumamilazzo.com/site/?page_id=248" target="_blank">MUMA官网</a>。</p>
+    <p>这座城堡是一座雄伟的建筑，是欧洲最大的城堡之一，因此请给自己足够的时间去探索。通常情况下，完整参观大约需要<strong>两个小时</strong>。在入口处，你将看到关于城堡参观的有用信息，以确保你不会错过任何一个历史细节。</p>
 
-    <!-- Link immagine (aggiungi URL immagine qui) -->
+    <!-- 图片链接 (在这里添加图片URL) -->
     <p>
-    <img src="URL_immagine.jpg" alt="Immagine di Milazzo" style="width: 100%; margin-top: 10px;">
-</p>
+    <img src="URL_immagine.jpg" alt="米拉佐图片" style="width: 100%; margin-top: 10px;">
+    </p>
     
-    <button class="main" onclick="goToPomeriggioA()">Verso la spiaggia</button>
+    <button class="main" onclick="goToPomeriggioA()">前往海滩</button>
     <div class="buttons-container">
-        <button class="back" onclick="goTopranzoA()">Indietro</button>
-        <button class="start" onclick="goToIntro()">Torna all'inizio</button>
+        <button class="back" onclick="goTopranzoA()">返回</button>
+        <button class="start" onclick="goToIntro()">返回首页</button>
     </div>
 </div>
+
        
 <!-- 13. A7 - Pomeriggio -->
 <div id="pomeriggioA" class="hidden">
