@@ -9,8 +9,6 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 }
 ?>
 
-<a href="logout.php">Logout</a>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
