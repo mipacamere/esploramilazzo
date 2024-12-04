@@ -1,14 +1,18 @@
-# Usa una base immagine PHP
+# Usa una base immagine di PHP con Apache
 FROM php:8.2-apache
 
-# Copia il contenuto della tua app nella cartella di lavoro del container
+# Copia i file del progetto nella directory di Apache
 COPY . /var/www/html/
 
-# Abilita il mod_rewrite di Apache (se necessario per il tuo sito)
+# Abilita mod_rewrite per Apache (se necessario)
 RUN a2enmod rewrite
 
-# Espone la porta 80 per il web
-EXPOSE 80
+# Esponi la porta 10000 (Render usa questa porta per i web service)
+EXPOSE 10000
 
-# Comando per avviare Apache con PHP
+# Modifica la configurazione di Apache per ascoltare sulla porta 10000
+RUN echo "Listen 10000" >> /etc/apache2/ports.conf
+RUN sed -i 's/80/10000/' /etc/apache2/sites-available/000-default.conf
+
+# Avvia Apache
 CMD ["apache2-foreground"]
