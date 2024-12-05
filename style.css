@@ -11,7 +11,6 @@ body {
     align-items: flex-start;  /* Align content to the top */
 }
 
-
 /* Contenitore principale */
 .container {
     max-width: 1100px;
@@ -150,7 +149,7 @@ button.start:hover {
 .language-item {
     cursor: pointer;
     text-align: center;
-    width: 50px; /* Impostiamo una larghezza fissa più piccola per ogni elemento */
+    width: 80px; /* Impostiamo una larghezza fissa più piccola per ogni elemento */
     transition: transform 0.3s ease-in-out;
 }
 
@@ -159,8 +158,8 @@ button.start:hover {
 }
 
 .language-item img {
-    width: 30px !important; /* Ridotto a 30px per le immagini delle bandiere */
-    height: 30px !important; /* Altezza coerente per mantenere proporzioni uniformi */
+    width: 50px !important; /* Ridotto a 50px per le immagini delle bandiere */
+    height: 50px !important; /* Altezza coerente per mantenere proporzioni uniformi */
     border-radius: 5px;
     margin-bottom: 5px; /* Spazio più ridotto sotto le immagini */
 }
@@ -184,8 +183,8 @@ button.start:hover {
     }
 
     .language-item img {
-        width: 25px; /* Immagini ancora più piccole per schermi piccoli */
-        height: 25px; /* Altezza coerente per mantenere la proporzione */
+        width: 40px; /* Immagini più piccole per schermi piccoli */
+        height: 40px; /* Altezza coerente per mantenere la proporzione */
     }
 
     .container {
@@ -194,5 +193,25 @@ button.start:hover {
 
     h1 {
         font-size: 1.5rem;
+    }
+}
+
+/* Responsive design per schermi ancora più piccoli */
+@media (max-width: 480px) {
+    .language-item {
+        width: 50px; /* Ridotto ulteriormente la larghezza per schermi molto piccoli */
+    }
+
+    .language-item img {
+        width: 30px; /* Immagini molto più piccole per schermi piccoli */
+        height: 30px; /* Altezza proporzionata */
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.2rem; /* Ancora più piccolo per dispositivi molto piccoli */
     }
 }
