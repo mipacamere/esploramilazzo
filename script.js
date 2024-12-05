@@ -14,44 +14,7 @@ function changeLanguage(languageCode) {
     window.location.href = `index_${languageCode}.html`;
 }
 
-function toggleTheme() {
-    const body = document.body;
-    const themeButton = document.getElementById('theme-toggle');
-
-    // Cambia la classe dark-mode
-    body.classList.toggle('dark-mode');
-
-    // Cambia il testo del pulsante a seconda del tema
-    if (body.classList.contains('dark-mode')) {
-        themeButton.innerText = 'Cambia al Tema Chiaro';
-    } else {
-        themeButton.innerText = 'Cambia al Tema Scuro';
-    }
-}
-
-function nextPage(pageNumber) {
-    // Nascondi tutte le pagine
-    document.querySelectorAll('.container > div').forEach(div => {
-        div.style.display = 'none';
-    });
-
-    // Mostra la pagina desiderata
-    document.getElementById('pagina' + pageNumber).style.display = 'block';
-}
-
-
-// Funzione per nascondere tutte le sezioni e mostrare solo quella selezionata
-function showPage(pageId) {
-    // Nascondi tutte le sezioni
-    const sections = document.querySelectorAll('.page');
-    sections.forEach((section) => {
-        section.classList.add('hidden');
-    });
-
-    // Mostra la sezione selezionata
-    const pageToShow = document.getElementById(pageId);
-    pageToShow.classList.remove('hidden');
-}
+function toggleTheme() { const body = document.body; const themeButton = document.getElementById('theme-toggle');
 
 
 // Funzioni per navigazione tra le sezioni
