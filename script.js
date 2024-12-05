@@ -14,9 +14,6 @@ function changeLanguage(languageCode) {
     window.location.href = `index_${languageCode}.html`;
 }
 
-function toggleTheme() { const body = document.body; const themeButton = document.getElementById('theme-toggle');
-
-
 // Funzioni per navigazione tra le sezioni
 function goToArrivo() { hideAllSections(); document.getElementById('arrivo').classList.remove('hidden'); scrollToTop(); }
 function goToIndicazioni() { hideAllSections(); document.getElementById('indicazioni').classList.remove('hidden'); scrollToTop(); }
