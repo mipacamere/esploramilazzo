@@ -40,6 +40,20 @@ function nextPage(pageNumber) {
 }
 
 
+// Funzione per nascondere tutte le sezioni e mostrare solo quella selezionata
+function showPage(pageId) {
+    // Nascondi tutte le sezioni
+    const sections = document.querySelectorAll('.page');
+    sections.forEach((section) => {
+        section.classList.add('hidden');
+    });
+
+    // Mostra la sezione selezionata
+    const pageToShow = document.getElementById(pageId);
+    pageToShow.classList.remove('hidden');
+}
+
+
 // Funzioni per navigazione tra le sezioni
 function goToArrivo() { hideAllSections(); document.getElementById('arrivo').classList.remove('hidden'); scrollToTop(); }
 function goToIndicazioni() { hideAllSections(); document.getElementById('indicazioni').classList.remove('hidden'); scrollToTop(); }
