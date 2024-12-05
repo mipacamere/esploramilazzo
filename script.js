@@ -14,20 +14,14 @@ function changeLanguage(languageCode) {
     window.location.href = `index_${languageCode}.html`;
 }
 
-let lastScrollTop = 0;
-const navbar = document.getElementById("navbar");
+let navbar = document.getElementById("navbar");
 
 window.addEventListener("scroll", function() {
-    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (currentScroll > lastScrollTop) {
-        // Se scorre verso il basso, nascondi la navbar
-        navbar.style.top = "-60px";  // Nascondi la navbar (puoi cambiare l'offset)
+    if (window.scrollY > 50) {  // Se scorre più di 50px
+        navbar.classList.add("shrink"); // Aggiungi la classe shrink
     } else {
-        // Se scorre verso l'alto, mostra la navbar
-        navbar.style.top = "0";
+        navbar.classList.remove("shrink"); // Rimuovi la classe shrink
     }
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
 
 
