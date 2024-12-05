@@ -23,7 +23,7 @@ body {
     overflow: hidden;
 }
 
-/* Barra di navigazione fissa */
+/* Barra di navigazione normale */
 .navbar {
     position: fixed;
     top: 0;
@@ -32,21 +32,13 @@ body {
     background-color: #333;
     color: white;
     z-index: 1000;
-    padding: 10px 0;
-    transition: top 0.3s; /* Aggiunge una transizione per la barra */
+    padding: 20px 0;  /* Altezza maggiore quando la pagina è in cima */
+    transition: top 0.3s, padding 0.3s; /* Aggiunta della transizione per l'altezza */
 }
 
-/* Stile per la lista dei collegamenti */
-.navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.navbar ul li {
-    margin: 0 10px; /* Distanza ravvicinata tra i link */
+/* Barra di navigazione "compatta" quando si scrolla */
+.navbar.shrink {
+    padding: 10px 0; /* Altezza più piccola quando si scorre */
 }
 
 .navbar ul li a {
@@ -60,6 +52,7 @@ body {
 .navbar ul li a:hover {
     color: #f4f4f5;
 }
+
 
 /* Contenuto sotto la navbar */
 .content {
