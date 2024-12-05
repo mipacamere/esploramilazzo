@@ -14,6 +14,21 @@ function changeLanguage(languageCode) {
     window.location.href = `index_${languageCode}.html`;
 }
 
+function toggleTheme() {
+    const body = document.body;
+    const themeButton = document.getElementById('theme-toggle');
+
+    // Cambia la classe dark-mode
+    body.classList.toggle('dark-mode');
+
+    // Cambia il testo del pulsante a seconda del tema
+    if (body.classList.contains('dark-mode')) {
+        themeButton.innerText = 'Cambia al Tema Chiaro';
+    } else {
+        themeButton.innerText = 'Cambia al Tema Scuro';
+    }
+}
+
 
 // Funzioni per navigazione tra le sezioni
 function goToArrivo() { hideAllSections(); document.getElementById('arrivo').classList.remove('hidden'); scrollToTop(); }
