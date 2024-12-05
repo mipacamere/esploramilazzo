@@ -1,26 +1,26 @@
 /* Body e impostazioni generali */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Font predefiniti di iOS */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7; /* Colore di sfondo chiaro e neutro */
-    color: #1c1c1e; /* Colore del testo, grigio scuro */
+    background-color: #f7f7f7;
+    color: #b13c4b; /* Colore del testo cambiato in rosso scuro */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Schermata piena per centrare il contenuto */
+    min-height: 100vh;
 }
 
 /* Contenitore principale */
 .container {
     width: 100%;
-    max-width: 460px; /* Massima larghezza per schermi più piccoli */
+    max-width: 460px;
     padding: 24px;
     background-color: white;
-    border-radius: 16px; /* Angoli arrotondati */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombra morbida, più sottile */
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
-    overflow: hidden; /* Evita il sovrapporsi degli elementi */
+    overflow: hidden;
 }
 
 /* Titoli */
@@ -36,7 +36,7 @@ h1, h2 {
 p {
     font-size: 17px;
     line-height: 1.6;
-    color: #3c3c3c; /* Testo di colore grigio scuro */
+    color: #b13c4b; /* Colore del testo cambiato in rosso scuro per paragrafi */
     margin-bottom: 24px;
 }
 
@@ -54,26 +54,26 @@ p {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    transition: transform 0.2s ease-in-out; /* Transizione fluida per l'effetto hover */
+    transition: transform 0.2s ease-in-out;
 }
 
 /* Ingrandimento al passaggio del mouse */
 .language-item:hover {
-    transform: scale(1.05); /* Ingrandisce leggermente al passaggio del mouse */
+    transform: scale(1.05);
 }
 
 /* Immagine della bandiera */
 .language-item img {
     width: 70px;
     height: 70px;
-    border-radius: 12px; /* Angoli arrotondati per un look più morbido */
+    border-radius: 12px;
     margin-bottom: 8px;
 }
 
 /* Testo sotto la bandiera */
 .language-item p {
     font-size: 16px;
-    color: #8e8e93; /* Colore più chiaro per il testo sotto la bandiera */
+    color: #8e8e93;
 }
 
 /* Bottoni principali */
@@ -88,31 +88,41 @@ button {
     transition: all 0.3s ease;
     background-color: #007aff; /* Colore blu di iOS */
     color: white;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Ombra molto leggera */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
     text-transform: uppercase;
 }
 
 /* Hover per i bottoni */
 button:hover {
-    background-color: #0051a8; /* Colore blu più scuro per hover */
-    transform: translateY(-1px); /* Effetto di elevazione per dare un feedback visivo */
+    background-color: #0051a8;
+    transform: translateY(-1px);
 }
 
 /* Bottoni di azioni secondarie */
 button.back, button.start {
-    background-color: #f4f4f5; /* Colore grigio molto chiaro per i bottoni secondari */
-    color: #007aff; /* Colore blu per il testo */
+    background-color: #f4f4f5;
+    color: #007aff;
     font-weight: 400;
 }
 
 button.back:hover, button.start:hover {
-    background-color: #e0e0e2; /* Colore più scuro per hover */
+    background-color: #e0e0e2;
     transform: translateY(-1px);
+}
+
+/* Modifica per il tasto "Indietro" */
+button.back {
+    background-color: #f44336; /* Colore rosso per il tasto Indietro */
+    color: white; /* Testo bianco */
+}
+
+button.back:hover {
+    background-color: #e53935; /* Colore rosso più scuro per hover */
 }
 
 /* Stile per il pulsante di Google Maps */
 .google-maps-button {
-    background-color: #34c759; /* Colore verde Apple */
+    background-color: #34c759;
     color: white;
     padding: 14px 24px;
     border-radius: 12px;
@@ -125,11 +135,11 @@ button.back:hover, button.start:hover {
 }
 
 .google-maps-button i {
-    margin-right: 8px; /* Spaziatura tra icona e testo */
+    margin-right: 8px;
 }
 
 .google-maps-button:hover {
-    background-color: #28a745; /* Colore più scuro al passaggio del mouse */
+    background-color: #28a745;
     transform: translateY(-1px);
 }
 
