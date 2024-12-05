@@ -14,15 +14,22 @@ function changeLanguage(languageCode) {
     window.location.href = `index_${languageCode}.html`;
 }
 
-let navbar = document.getElementById("navbar");
+let lastScrollTop = 0; // Memorizza la posizione dello scroll precedente
+const navbar = document.getElementById("navbar");
 
 window.addEventListener("scroll", function() {
-    if (window.scrollY > 50) {  // Se scorre più di 50px
-        navbar.classList.add("shrink"); // Aggiungi la classe shrink
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+        // Se si scorre verso il basso, nascondi la navbar
+        navbar.style.top = "-60px";  // Nascondi la navbar, 60px può variare in base all'altezza della navbar
     } else {
-        navbar.classList.remove("shrink"); // Rimuovi la classe shrink
+        // Se si scorre verso l'alto, mostra la navbar
+        navbar.style.top = "0";
     }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Assicurati che scrollTop non diventi negativo
 });
+
 
 
 
