@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f7f7f7;
-    color: #b13c4b; /* Colore del testo cambiato in rosso scuro */
+    color: #333333b; /* Colore del testo cambiato in rosso scuro */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +36,7 @@ h1, h2 {
 p {
     font-size: 17px;
     line-height: 1.6;
-    color: #b13c4b; /* Colore del testo cambiato in rosso scuro per paragrafi */
+    color: #333333; /* Colore del testo cambiato in rosso scuro per paragrafi */
     margin-bottom: 24px;
 }
 
