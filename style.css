@@ -3,45 +3,46 @@ body {
     font-family: 'Roboto', sans-serif; /* Font principale di Material Design */
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5; /* Colore di sfondo chiaro */
+    background-color: #fafafa; /* Colore di sfondo molto chiaro */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh; /* Assicura che il contenuto sia centrato verticalmente */
-    color: #333; /* Colore del testo principale */
+    color: #212121; /* Colore del testo principale */
 }
 
 /* Contenitore principale */
 .container {
     width: 100%;
-    max-width: 600px; /* Larghezza massima per somigliare a uno schermo di app mobile */
+    max-width: 500px; /* Larghezza massima per schermi più piccoli */
     padding: 20px;
     background-color: white;
     border-radius: 16px; /* Angoli arrotondati */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Ombra leggera per un effetto di elevazione */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Ombra più soft per un effetto più delicato */
     text-align: center;
+    overflow: hidden; /* Nasconde gli elementi che escono dal contenitore */
 }
 
 /* Titoli */
 h1, h2 {
-    color: #212121; /* Colore scuro per i titoli */
+    color: #424242; /* Colore scuro ma non troppo intenso per i titoli */
     font-weight: 500;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 /* Paragrafi */
 p {
     font-size: 1.1rem;
-    line-height: 1.6;
-    color: #757575; /* Grigio per il testo */
-    margin-bottom: 20px;
+    line-height: 1.7;
+    color: #757575; /* Grigio chiaro per il testo */
+    margin-bottom: 24px; /* Distanza maggiore tra i paragrafi */
 }
 
 /* Sezione di selezione lingua */
 .language-selection {
     display: flex;
-    justify-content: space-around;
-    gap: 15px; /* Spazio tra le lingue */
+    justify-content: space-between;
+    gap: 20px;
     margin-bottom: 30px;
 }
 
@@ -51,7 +52,7 @@ p {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    transition: transform 0.2s ease-in-out; /* Transizione per l'effetto di hover */
+    transition: transform 0.3s ease-in-out; /* Transizione fluida per l'effetto hover */
 }
 
 /* Effetto hover per la lingua */
@@ -63,8 +64,8 @@ p {
 .language-item img {
     width: 70px;
     height: 70px;
-    border-radius: 10px;
-    margin-bottom: 8px; /* Distanza tra immagine e testo */
+    border-radius: 12px; /* Angoli arrotondati per un aspetto più morbido */
+    margin-bottom: 8px;
 }
 
 /* Testo sotto la bandiera */
@@ -76,25 +77,25 @@ p {
 
 /* Bottoni principali */
 button {
-    padding: 12px 20px;
+    padding: 14px 24px;
     margin: 12px 0;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     cursor: pointer;
     font-size: 1rem;
-    text-transform: uppercase; /* Trasformazione maiuscola per un look più deciso */
-    transition: transform 0.2s ease-in-out, background-color 0.3s ease; /* Transizione per l'effetto di hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+    text-transform: uppercase;
+    transition: all 0.3s ease; /* Transizione fluida per effetti di hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Ombra leggera */
 }
 
 /* Bottoni principali - Material Design */
 button.main {
-    background-color: #6200ea; /* Colore principale Material Design (indigo-500) */
+    background-color: #03a9f4; /* Colore azzurro chiaro */
     color: white;
 }
 
 button.main:hover {
-    background-color: #3700b3; /* Colore al passaggio del mouse (indigo-700) */
+    background-color: #0288d1; /* Colore più scuro per hover */
     transform: translateY(-2px); /* Effetto di elevazione */
 }
 
@@ -102,39 +103,39 @@ button.main:hover {
 button.back, button.start {
     font-size: 1rem;
     color: white;
-    text-transform: none; /* Rimuove il maiuscolo per questi bottoni */
+    text-transform: none; /* Nessuna trasformazione in maiuscolo per questi bottoni */
 }
 
 button.back {
-    background-color: #d32f2f; /* Colore rosso Material Design (red-600) */
+    background-color: #e91e63; /* Colore rosa */
 }
 
 button.back:hover {
-    background-color: #c62828; /* Colore al passaggio del mouse (red-700) */
-    transform: translateY(-2px); /* Effetto di elevazione */
+    background-color: #c2185b; /* Colore più scuro per hover */
+    transform: translateY(-2px);
 }
 
 button.start {
-    background-color: #1976d2; /* Colore blu Material Design (blue-600) */
+    background-color: #8bc34a; /* Colore verde */
 }
 
 button.start:hover {
-    background-color: #1565c0; /* Colore al passaggio del mouse (blue-700) */
-    transform: translateY(-2px); /* Effetto di elevazione */
+    background-color: #7cb342; /* Colore più scuro per hover */
+    transform: translateY(-2px);
 }
 
 /* Stile per il pulsante di Google Maps */
 .google-maps-button {
-    background-color: #6200ea; /* Colore di sfondo viola Material Design */
+    background-color: #03a9f4; /* Colore azzurro chiaro */
     color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
+    padding: 14px 24px;
+    border-radius: 12px;
     font-size: 1rem;
     display: flex;
     align-items: center;
     cursor: pointer;
     text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .google-maps-button i {
@@ -142,7 +143,7 @@ button.start:hover {
 }
 
 .google-maps-button:hover {
-    background-color: #3700b3; /* Colore scuro al passaggio del mouse */
+    background-color: #0288d1; /* Colore più scuro al passaggio del mouse */
     transform: translateY(-2px); /* Effetto di elevazione */
 }
 
