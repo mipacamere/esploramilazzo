@@ -14,6 +14,23 @@ function changeLanguage(languageCode) {
     window.location.href = `index_${languageCode}.html`;
 }
 
+let lastScrollTop = 0; // Memorizza la posizione dello scroll precedente
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", function() {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+        // Se si scorre verso il basso, nascondi la navbar
+        navbar.style.top = "-60px";  // Nascondi la navbar, 60px può variare in base all'altezza della navbar
+    } else {
+        // Se si scorre verso l'alto, mostra la navbar
+        navbar.style.top = "0";
+    }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Assicurati che scrollTop non diventi negativo
+});
+
+
 // Funzioni per navigazione tra le sezioni
 function goToArrivo() { hideAllSections(); document.getElementById('arrivo').classList.remove('hidden'); scrollToTop(); }
 function goToIndicazioni() { hideAllSections(); document.getElementById('indicazioni').classList.remove('hidden'); scrollToTop(); }
