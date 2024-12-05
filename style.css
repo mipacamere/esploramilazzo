@@ -1,0 +1,146 @@
+/* Body e impostazioni generali */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Font predefiniti di iOS */
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7; /* Colore di sfondo chiaro e neutro */
+    color: #1c1c1e; /* Colore del testo, grigio scuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Schermata piena per centrare il contenuto */
+}
+
+/* Contenitore principale */
+.container {
+    width: 100%;
+    max-width: 460px; /* Massima larghezza per schermi più piccoli */
+    padding: 24px;
+    background-color: white;
+    border-radius: 16px; /* Angoli arrotondati */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombra morbida, più sottile */
+    text-align: center;
+    overflow: hidden; /* Evita il sovrapporsi degli elementi */
+}
+
+/* Titoli */
+h1, h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1c1c1e;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* Paragrafi */
+p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #3c3c3c; /* Testo di colore grigio scuro */
+    margin-bottom: 24px;
+}
+
+/* Sezione di selezione lingua */
+.language-selection {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+/* Singola voce della lingua */
+.language-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out; /* Transizione fluida per l'effetto hover */
+}
+
+/* Ingrandimento al passaggio del mouse */
+.language-item:hover {
+    transform: scale(1.05); /* Ingrandisce leggermente al passaggio del mouse */
+}
+
+/* Immagine della bandiera */
+.language-item img {
+    width: 70px;
+    height: 70px;
+    border-radius: 12px; /* Angoli arrotondati per un look più morbido */
+    margin-bottom: 8px;
+}
+
+/* Testo sotto la bandiera */
+.language-item p {
+    font-size: 16px;
+    color: #8e8e93; /* Colore più chiaro per il testo sotto la bandiera */
+}
+
+/* Bottoni principali */
+button {
+    padding: 14px 24px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #007aff; /* Colore blu di iOS */
+    color: white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Ombra molto leggera */
+    text-transform: uppercase;
+}
+
+/* Hover per i bottoni */
+button:hover {
+    background-color: #0051a8; /* Colore blu più scuro per hover */
+    transform: translateY(-1px); /* Effetto di elevazione per dare un feedback visivo */
+}
+
+/* Bottoni di azioni secondarie */
+button.back, button.start {
+    background-color: #f4f4f5; /* Colore grigio molto chiaro per i bottoni secondari */
+    color: #007aff; /* Colore blu per il testo */
+    font-weight: 400;
+}
+
+button.back:hover, button.start:hover {
+    background-color: #e0e0e2; /* Colore più scuro per hover */
+    transform: translateY(-1px);
+}
+
+/* Stile per il pulsante di Google Maps */
+.google-maps-button {
+    background-color: #34c759; /* Colore verde Apple */
+    color: white;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.google-maps-button i {
+    margin-right: 8px; /* Spaziatura tra icona e testo */
+}
+
+.google-maps-button:hover {
+    background-color: #28a745; /* Colore più scuro al passaggio del mouse */
+    transform: translateY(-1px);
+}
+
+/* Posizionamento dei tasti Indietro e Torna all'inizio */
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Nascondi gli elementi */
+.hidden {
+    display: none;
+}
