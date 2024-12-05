@@ -23,46 +23,47 @@ body {
     overflow: hidden;
 }
 
-/* Barra di navigazione fissa in cima */
+/* Barra di navigazione fissa */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #007aff; /* Colore di sfondo */
+    background-color: #333;
+    color: white;
+    z-index: 1000;
     padding: 10px 0;
-    z-index: 1000; /* Assicurati che sia sopra il contenuto */
+    transition: top 0.3s; /* Aggiunge una transizione per la barra */
 }
 
+/* Stile per la lista dei collegamenti */
 .navbar ul {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
 }
 
-.navbar li {
-    margin: 0 15px;
+.navbar ul li {
+    margin: 0 10px; /* Distanza ravvicinata tra i link */
 }
 
-.navbar a {
-    text-decoration: none;
+.navbar ul li a {
     color: white;
-    font-size: 16px;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
     font-weight: 600;
-    padding: 5px 15px;
-    transition: background-color 0.3s ease;
 }
 
-.navbar a:hover {
-    background-color: #0051a8; /* Cambia il colore quando l'utente passa sopra il link */
-    border-radius: 5px;
+.navbar ul li a:hover {
+    color: #f4f4f5;
 }
 
-/* Aggiungi margine superiore al contenuto per evitare che la navbar copra il contenuto */
-.container {
-    margin-top: 60px; /* Spazio per la navbar fissa */
+/* Contenuto sotto la navbar */
+.content {
+    margin-top: 80px; /* Distanza dal bordo superiore per evitare che il contenuto si sovrapponga alla barra */
 }
 
 
