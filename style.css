@@ -8,7 +8,7 @@ body {
     line-height: 1.6;
     display: flex;
     justify-content: center;
-    align-items: flex-start;  /* Align content to the top */
+    align-items: flex-start;  /* Allinea il contenuto verso l'alto */
 }
 
 /* Contenitore del pulsante "Torna alla Home" allineato a destra */
@@ -24,23 +24,20 @@ body {
 
 /* Stile personalizzato per il pulsante "Torna alla Home" */
 .right-button-container button {
-    background-color: #ff3333; /* Colore rosso per il background */
+    background-color: #007bff; /* Colore blu per il bottone */
     color: #ffffff; /* Colore del testo bianco per contrasto */
     padding: 15px 30px;
     border: none;
     border-radius: 8px;
     font-size: 1.1em;
     cursor: pointer;
-    box-shadow: 0 5px 20px rgba(255, 0, 0, 0.2); /* Ombra leggera rossa */
     transition: all 0.3s ease;
 }
 
 /* Effetto hover per il pulsante "Torna alla Home" */
 .right-button-container button:hover {
-    background-color: #ff1a1a; /* Colore rosso più scuro al passaggio del mouse */
-    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5); /* Ombra più marcata */
+    background-color: #0056b3; /* Colore blu più scuro al passaggio del mouse */
 }
-
 
 /* Contenitore principale */
 .container {
@@ -81,28 +78,24 @@ button {
     border-radius: 8px;
     cursor: pointer;
     font-size: 1.1em;
-    background-color: #333333; /* Fondo scuro per i bottoni */
+    background-color: #28a745; /* Verde per i bottoni principali */
     color: #ffffff; /* Testo bianco per contrasto */
-    box-shadow: 0 5px 20px rgba(0, 255, 204, 0.2); /* Ombra neon leggera */
     transition: all 0.3s ease;
 }
 
 /* Effetto hover per tutti i bottoni */
 button:hover {
-    transform: scale(1.1); /* Aumento delle dimensioni al passaggio del mouse */
-    background-color: #00ffcc; /* Colore verde neon al passaggio del mouse */
-    color: #121212; /* Colore del testo più scuro */
-    box-shadow: 0 10px 30px rgba(0, 255, 204, 0.5); /* Ombra neon più marcata */
+    background-color: #218838; /* Verde più scuro al passaggio del mouse */
 }
 
 /* Bottoni principali */
 button.main {
-    background-color: #00ffcc; /* Colore verde neon per il bottone principale */
-    color: #121212;
+    background-color: #28a745; /* Verde per il bottone principale */
+    color: #ffffff;
 }
 
 button.main:hover {
-    background-color: #00cc99; /* Colore più scuro al passaggio del mouse */
+    background-color: #218838; /* Colore verde scuro al passaggio del mouse */
 }
 
 /* Bottoni "Indietro" e "Torna all'inizio" */
@@ -112,19 +105,19 @@ button.back, button.start {
 }
 
 button.back {
-    background-color: #ff007f; /* Colore neon rosa per il bottone "Indietro" */
+    background-color: #dc3545; /* Rosso per il bottone "Indietro" */
 }
 
 button.back:hover {
-    background-color: #d5005c; /* Colore più scuro al passaggio del mouse */
+    background-color: #c82333; /* Colore rosso scuro al passaggio del mouse */
 }
 
 button.start {
-    background-color: #6200ea; /* Colore neon viola per il bottone "Torna all'inizio" */
+    background-color: #007bff; /* Blu per il bottone "Torna all'inizio" */
 }
 
 button.start:hover {
-    background-color: #3700b3; /* Colore più scuro al passaggio del mouse */
+    background-color: #0056b3; /* Colore blu scuro al passaggio del mouse */
 }
 
 /* Stile per il pulsante di Google Maps */
