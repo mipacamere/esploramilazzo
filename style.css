@@ -17,6 +17,93 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* CSS base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Sezione di selezione lingua */
+.language-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Singola voce della lingua */
+.language-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Ingrossamento della bandiera al passaggio del mouse */
+.language-item:hover {
+    transform: scale(1.1);
+}
+
+/* Immagine della bandiera */
+.language-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Testo sotto la bandiera */
+.language-item p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+
+/* Design responsivo */
+@media (max-width: 480px) {
+    .language-selection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .language-item {
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .language-item img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
 /* Titoli */
 h1, h2 {
     color: #333;
