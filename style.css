@@ -48,7 +48,6 @@ h1 {
 /* Sezione di selezione lingua */
 .language-selection {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
@@ -80,27 +79,6 @@ h1 {
     font-size: 1rem;
     color: #555;
     margin: 0;
-}
-
-/* Design responsivo */
-@media (max-width: 480px) {
-    .language-selection {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .language-item {
-        margin-bottom: 15px;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    .language-item img {
-        width: 60px;
-        height: 60px;
-    }
 }
 
 
