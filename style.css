@@ -112,8 +112,8 @@ button.back:hover, button.start:hover {
 
 /* Modifica per il tasto "Indietro" */
 button.back {
-    background-color: #f44336; /* Colore rosso per il tasto Indietro */
-    color: white; /* Testo bianco */
+    background-color: #f4f4f5; /* Colore rosso per il tasto Indietro */
+    color: #f44336; /* Testo bianco */
 }
 
 button.back:hover {
