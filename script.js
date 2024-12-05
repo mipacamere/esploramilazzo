@@ -29,6 +29,16 @@ function toggleTheme() {
     }
 }
 
+function nextPage(pageNumber) {
+    // Nascondi tutte le pagine
+    document.querySelectorAll('.container > div').forEach(div => {
+        div.style.display = 'none';
+    });
+
+    // Mostra la pagina desiderata
+    document.getElementById('pagina' + pageNumber).style.display = 'block';
+}
+
 
 // Funzioni per navigazione tra le sezioni
 function goToArrivo() { hideAllSections(); document.getElementById('arrivo').classList.remove('hidden'); scrollToTop(); }
