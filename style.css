@@ -1,0 +1,159 @@
+/* Body e impostazioni generali */
+body {
+    font-family: 'Roboto', sans-serif; /* Font principale di Material Design */
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Colore di sfondo chiaro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Assicura che il contenuto sia centrato verticalmente */
+    color: #333; /* Colore del testo principale */
+}
+
+/* Contenitore principale */
+.container {
+    width: 100%;
+    max-width: 600px; /* Larghezza massima per somigliare a uno schermo di app mobile */
+    padding: 20px;
+    background-color: white;
+    border-radius: 16px; /* Angoli arrotondati */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Ombra leggera per un effetto di elevazione */
+    text-align: center;
+}
+
+/* Titoli */
+h1, h2 {
+    color: #212121; /* Colore scuro per i titoli */
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+/* Paragrafi */
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #757575; /* Grigio per il testo */
+    margin-bottom: 20px;
+}
+
+/* Sezione di selezione lingua */
+.language-selection {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px; /* Spazio tra le lingue */
+    margin-bottom: 30px;
+}
+
+/* Singola voce della lingua */
+.language-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out; /* Transizione per l'effetto di hover */
+}
+
+/* Effetto hover per la lingua */
+.language-item:hover {
+    transform: scale(1.1); /* Ingrandimento al passaggio del mouse */
+}
+
+/* Immagine della bandiera */
+.language-item img {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    margin-bottom: 8px; /* Distanza tra immagine e testo */
+}
+
+/* Testo sotto la bandiera */
+.language-item p {
+    font-size: 1rem;
+    color: #616161; /* Colore del testo più chiaro */
+    margin: 0;
+}
+
+/* Bottoni principali */
+button {
+    padding: 12px 20px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase; /* Trasformazione maiuscola per un look più deciso */
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease; /* Transizione per l'effetto di hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+}
+
+/* Bottoni principali - Material Design */
+button.main {
+    background-color: #6200ea; /* Colore principale Material Design (indigo-500) */
+    color: white;
+}
+
+button.main:hover {
+    background-color: #3700b3; /* Colore al passaggio del mouse (indigo-700) */
+    transform: translateY(-2px); /* Effetto di elevazione */
+}
+
+/* Bottoni "Indietro" e "Torna all'inizio" */
+button.back, button.start {
+    font-size: 1rem;
+    color: white;
+    text-transform: none; /* Rimuove il maiuscolo per questi bottoni */
+}
+
+button.back {
+    background-color: #d32f2f; /* Colore rosso Material Design (red-600) */
+}
+
+button.back:hover {
+    background-color: #c62828; /* Colore al passaggio del mouse (red-700) */
+    transform: translateY(-2px); /* Effetto di elevazione */
+}
+
+button.start {
+    background-color: #1976d2; /* Colore blu Material Design (blue-600) */
+}
+
+button.start:hover {
+    background-color: #1565c0; /* Colore al passaggio del mouse (blue-700) */
+    transform: translateY(-2px); /* Effetto di elevazione */
+}
+
+/* Stile per il pulsante di Google Maps */
+.google-maps-button {
+    background-color: #6200ea; /* Colore di sfondo viola Material Design */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+}
+
+.google-maps-button i {
+    margin-right: 10px; /* Distanza tra l'icona e il testo */
+}
+
+.google-maps-button:hover {
+    background-color: #3700b3; /* Colore scuro al passaggio del mouse */
+    transform: translateY(-2px); /* Effetto di elevazione */
+}
+
+/* Posizionamento dei tasti Indietro e Torna all'inizio */
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Nascondi gli elementi */
+.hidden {
+    display: none;
+}
