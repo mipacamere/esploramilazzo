@@ -11,6 +11,37 @@ body {
     align-items: flex-start;  /* Align content to the top */
 }
 
+/* Contenitore del pulsante "Torna alla Home" allineato a destra */
+.right-button-container {
+    display: flex;
+    justify-content: flex-end; /* Allinea il bottone a destra */
+    margin-top: 20px; /* Distanza tra il pulsante "Inizia il tuo viaggio" e "Torna alla Home" */
+}
+
+.right-button-container a {
+    text-decoration: none; /* Rimuove la sottolineatura del link */
+}
+
+/* Stile personalizzato per il pulsante "Torna alla Home" */
+.right-button-container button {
+    background-color: #ff3333; /* Colore rosso per il background */
+    color: #ffffff; /* Colore del testo bianco per contrasto */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(255, 0, 0, 0.2); /* Ombra leggera rossa */
+    transition: all 0.3s ease;
+}
+
+/* Effetto hover per il pulsante "Torna alla Home" */
+.right-button-container button:hover {
+    background-color: #ff1a1a; /* Colore rosso più scuro al passaggio del mouse */
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5); /* Ombra più marcata */
+}
+
+
 /* Contenitore principale */
 .container {
     max-width: 1100px;
