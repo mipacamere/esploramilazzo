@@ -2,43 +2,25 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     background-color: #f0f8ff;
     color: #333;
+    display: flex;  /* Usato per centrare orizzontalmente */
+    justify-content: center;  /* Centra il contenuto sull'asse X */
 }
 
 /* Contenitore principale */
 .container {
+    width: 90%; /* Imposta una larghezza massima */
     max-width: 900px;
-    margin: 0 auto;
     padding: 20px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px; /* Margine sopra il contenitore per non farlo aderire alla parte superiore */
 }
 
-/* CSS base */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.container {
-    text-align: center;
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 600px;
-}
-
+/* CSS base per la struttura della pagina */
 h1 {
     font-size: 2rem;
     color: #333;
@@ -80,7 +62,6 @@ h1 {
     color: #555;
     margin: 0;
 }
-
 
 /* Titoli */
 h1, h2 {
