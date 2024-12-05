@@ -1,0 +1,162 @@
+/* Body e impostazioni generali */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px; /* Padding generale per dare spazio ai bordi */
+    background: linear-gradient(to right, #f0f8ff, #e6f7ff); /* Sfondo gradiente chiaro */
+    color: #333;
+    display: flex;  /* Usato per centrare orizzontalmente */
+    justify-content: center;  /* Centra il contenuto sull'asse X */
+    align-items: center;  /* Centra verticalmente */
+    min-height: 100vh; /* Assicura che il contenuto si centri anche su schermi più grandi */
+}
+
+/* Contenitore principale */
+.container {
+    width: 100%; /* Imposta una larghezza massima */
+    max-width: 900px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px; /* Raggio più ampio per angoli arrotondati */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Ombra più morbida */
+    margin-top: 50px;
+    text-align: center; /* Allineamento centrale del contenuto */
+}
+
+/* Titoli */
+h1, h2 {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Paragrafi */
+p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px; /* Aggiungi spazio sotto i paragrafi */
+}
+
+/* Sezione di selezione lingua */
+.language-selection {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Maggiore distanza tra le voci */
+    margin-bottom: 30px; /* Distanza tra lingua e altri contenuti */
+}
+
+/* Singola voce della lingua */
+.language-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Aggiunto effetto di trasparenza */
+}
+
+/* Ingrossamento della bandiera al passaggio del mouse */
+.language-item:hover {
+    transform: scale(1.1);
+    opacity: 0.9; /* Aggiungi effetto di opacità al passaggio del mouse */
+}
+
+/* Immagine della bandiera */
+.language-item img {
+    width: 90px;
+    height: 90px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Testo sotto la bandiera */
+.language-item p {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 0;
+}
+
+/* Bottoni principali */
+button {
+    padding: 12px 24px;
+    margin: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiungi ombra ai pulsanti */
+}
+
+/* Effetto hover per tutti i bottoni */
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Bottoni principali */
+button.main {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button.main:hover {
+    background-color: #45a049;
+}
+
+/* Bottoni "Indietro" e "Torna all'inizio" */
+button.back, button.start {
+    font-size: 1em;
+    color: white;
+}
+
+button.back {
+    background-color: #f44336;
+}
+
+button.back:hover {
+    background-color: #e53935;
+}
+
+button.start {
+    background-color: #2196F3;
+}
+
+button.start:hover {
+    background-color: #1976D2;
+}
+
+/* Stile per il pulsante di Google Maps */
+.google-maps-button {
+    background-color: #A85CA8;  /* Colore di sfondo viola (colore Google Maps) */
+    color: black;               /* Colore del testo (nero per contrasto) */
+    padding: 12px 24px;         /* Distanza interna del pulsante */
+    border: none;               /* Rimuove il bordo */
+    border-radius: 8px;         /* Angoli arrotondati */
+    font-size: 1.1em;            /* Dimensione del testo */
+    display: flex;              /* Per disporre l'icona e il testo in orizzontale */
+    align-items: center;        /* Allinea il contenuto al centro verticalmente */
+    cursor: pointer;           /* Cambia il cursore per indicare che è cliccabile */
+    text-decoration: none;      /* Rimuove la sottolineatura */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra per il pulsante di Google Maps */
+}
+
+.google-maps-button i {
+    margin-right: 8px;         /* Distanza tra icona e testo */
+}
+
+.google-maps-button:hover {
+    background-color: #975397; /* Colore giallo più scuro al passaggio del mouse */
+    transition: background-color 0.3s ease;
+}
+
+/* Posizionamento dei tasti Indietro e Torna all'inizio */
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px; /* Maggiore distanza tra il contenuto e i tasti */
+}
+
+/* Nascondi gli elementi */
+.hidden {
+    display: none;
+}
