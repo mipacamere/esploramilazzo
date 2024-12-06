@@ -16,7 +16,7 @@ body {
     width: 100%;
     max-width: 460px;
     padding: 24px;
-    background-color: #1f1f1f; /* Colore scuro per il contenitore */
+    background-color: #000000; /* Colore scuro per il contenitore */
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombra più forte per contrasto */
     text-align: center;
@@ -157,7 +157,7 @@ button.back {
 }
 
 button.back:hover {
-    background-color: #444;
+    background-color: #e53935;
     color: #f4f4f5;
 }
 
