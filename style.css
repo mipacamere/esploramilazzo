@@ -1,0 +1,197 @@
+/* Body e impostazioni generali - Dark Mode */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Colore scuro per il background */
+    color: #e6e6e6; /* Colore chiaro per il testo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenitore principale */
+.container {
+    width: 100%;
+    max-width: 460px;
+    padding: 24px;
+    background-color: #1f1f1f; /* Colore scuro per il contenitore */
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombra più forte per contrasto */
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Barra di navigazione fissa */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Scuro ma più chiaro rispetto al body */
+    color: white;
+    z-index: 1000;
+    padding: 10px 0;
+    transition: top 0.3s;
+}
+
+/* Stile per la lista dei collegamenti */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.navbar ul li a:hover {
+    color: #f4f4f5;
+}
+
+/* Contenuto sotto la navbar */
+.content {
+    margin-top: 80px;
+}
+
+/* Titoli */
+h1, h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #e6e6e6; /* Colore chiaro per i titoli */
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* Paragrafi */
+p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #e6e6e6; /* Colore chiaro per il testo */
+    margin-bottom: 24px;
+}
+
+/* Sezione di selezione lingua */
+.language-selection {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+/* Singola voce della lingua */
+.language-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.language-item:hover {
+    transform: scale(1.05);
+}
+
+.language-item img {
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+
+.language-item p {
+    font-size: 16px;
+    color: #e6e6e6; /* Colore chiaro per il testo */
+}
+
+/* Bottoni principali */
+button {
+    padding: 14px 24px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #007aff;
+    color: white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+}
+
+/* Hover per i bottoni */
+button:hover {
+    background-color: #0051a8;
+    transform: translateY(-1px);
+}
+
+/* Bottoni di azioni secondarie */
+button.back, button.start {
+    background-color: #333;
+    color: #007aff;
+    font-weight: 400;
+}
+
+button.back:hover, button.start:hover {
+    background-color: #555;
+    transform: translateY(-1px);
+}
+
+/* Modifica per il tasto "Indietro" */
+button.back {
+    background-color: #333; /* Colore scuro per il tasto Indietro */
+    color: #f44336;
+}
+
+button.back:hover {
+    background-color: #444;
+    color: #f4f4f5;
+}
+
+/* Stile per il pulsante di Google Maps */
+.google-maps-button {
+    background-color: #34c759;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.google-maps-button i {
+    margin-right: 8px;
+}
+
+.google-maps-button:hover {
+    background-color: #28a745;
+    transform: translateY(-1px);
+}
+
+/* Posizionamento dei tasti Indietro e Torna all'inizio */
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Nascondi gli elementi */
+.hidden {
+    display: none;
+}
