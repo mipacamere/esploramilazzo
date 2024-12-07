@@ -163,8 +163,8 @@ button.start:hover {
 
 /* Stile per il pulsante di Google Maps */
 .google-maps-button {
-    background-color: #34c759;
-    color: white;
+    background-color: #34c759; /* Verde iOS per il pulsante */
+    color: white; /* Testo bianco */
     padding: 14px 24px;
     border-radius: 12px;
     font-size: 17px;
@@ -180,7 +180,7 @@ button.start:hover {
 }
 
 .google-maps-button:hover {
-    background-color: #28a745;
+    background-color: #28a745; /* Verde più scuro per l'hover */
     transform: translateY(-1px);
 }
 
