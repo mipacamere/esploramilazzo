@@ -9,6 +9,17 @@ function scrollToTop() {
     window.scrollTo(0, 0);
 }
 
+// Esempio per alternare il tema con un pulsante
+const themeToggleButton = document.querySelector('.theme-toggle');
+
+themeToggleButton.addEventListener('click', () => {
+    const body = document.body;
+    body.classList.toggle('dark-theme');
+    const container = document.querySelector('.container');
+    container.classList.toggle('dark-theme');
+});
+
+
 // Funzione per il cambio tema
 function toggleTheme() {
     const body = document.body;
