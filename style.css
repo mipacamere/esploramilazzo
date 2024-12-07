@@ -17,7 +17,7 @@ body.dark-theme {
     margin: 0;
     padding: 0;
     background-color: #3f3f3f; /* Sfondo nero per display OLED */
-    color: #e6e6e6; /* Testo chiaro per contrasto */
+    color: #000000; /* Testo chiaro per contrasto */
     display: flex;
     justify-content: center;
     align-items: center;
