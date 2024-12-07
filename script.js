@@ -1,13 +1,8 @@
 // Funzione per nascondere tutte le sezioni
-function hideAllSections() {
-  const sections = document.querySelectorAll('.container > div');
-  sections.forEach(section => section.classList.add('hidden'));
-}
+function hideAllSections() { const sections = document.querySelectorAll('.container > div'); sections.forEach(section => section.classList.add('hidden')); }
 
 // Funzione per scrollare in cima alla pagina
-function scrollToTop() {
-  window.scrollTo(0, 0);
-}
+function scrollToTop() { window.scrollTo(0, 0);}
 
 function changeLanguage(languageCode) {
     // Navigate to the respective language page
