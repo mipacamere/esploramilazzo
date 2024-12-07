@@ -31,38 +31,47 @@ window.addEventListener("scroll", function() {
 });
 
 <script>
-    // Funzione per cambiare il tema
-    function toggleTheme() {
-        const body = document.body;
-        const themeButton = document.querySelector('.theme-toggle');
-        
-        // Cambia tra modalità chiara e scura
-        body.classList.toggle('dark-mode');
-        
-        // Cambia l'icona del tema
-        if (body.classList.contains('dark-mode')) {
-            themeButton.innerHTML = "🌞"; // Icona per la modalità chiara
-        } else {
-            themeButton.innerHTML = "🌙"; // Icona per la modalità scura
-        }
+ // Funzione per cambiare il tema
+function toggleTheme() {
+    const body = document.body;
+    const themeButton = document.querySelector('.theme-toggle');
 
-        // Salva la preferenza dell'utente nel localStorage
-        if (body.classList.contains('dark-mode')) {
-            localStorage.setItem('theme', 'dark');
-        } else {
-            localStorage.setItem('theme', 'light');
-        }
+    // Cambia tra modalità chiara e scura
+    body.classList.toggle('dark-mode');
+    body.classList.toggle('light-mode');
+
+    // Cambia l'icona del tema
+    if (body.classList.contains('dark-mode')) {
+        themeButton.innerHTML = "🌞"; // Icona per la modalità chiara
+    } else {
+        themeButton.innerHTML = "🌙"; // Icona per la modalità scura
     }
 
-    // Carica la preferenza salvata al caricamento della pagina
-    window.addEventListener('DOMContentLoaded', (event) => {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            document.body.classList.add('dark-mode');
-            document.querySelector('.theme-toggle').innerHTML = "🌞"; // Modifica l'icona in modalità chiara
-        }
-    });
-</script>
+    // Salva la preferenza dell'utente nel localStorage
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+}
+
+// Carica la preferenza salvata al caricamento della pagina
+window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    const body = document.body;
+    const themeButton = document.querySelector('.theme-toggle');
+    
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+        body.classList.remove('light-mode');
+        themeButton.innerHTML = "🌞"; // Icona per la modalità chiara
+    } else {
+        body.classList.add('light-mode');
+        body.classList.remove('dark-mode');
+        themeButton.innerHTML = "🌙"; // Icona per la modalità scura
+    }
+});
+
 
 
 
