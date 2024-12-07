@@ -25,7 +25,7 @@ body.dark-theme {
 }
 
 /* Contenitore principale */
-.container {
+container {
     width: 100%;
     max-width: 460px;
     padding: 24px;
@@ -37,7 +37,7 @@ body.dark-theme {
 }
 
 /* Contenitore principale per il tema scuro */
-.container.dark-theme {
+container.dark-theme {
     background-color: #000000; /* Colore scuro per il contenitore */
     color: #ffffff; /* Testo chiaro per contrasto */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
