@@ -29,7 +29,7 @@ body.dark-theme {
     width: 100%;
     max-width: 460px;
     padding: 24px;
-    background-color: f000000;
+    background-color: #000000;
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(242, 242, 242, 0.1);
     text-align: center;
