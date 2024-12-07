@@ -55,10 +55,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Esempio per alternare il tema con un pulsante
-const themeToggleButton = document.querySelector('.theme-toggle');
-themeToggleButton.addEventListener('click', toggleTheme);
-
 // Funzioni per navigazione tra le sezioni
 function goToArrivo() { hideAllSections(); document.getElementById('arrivo').classList.add('visible'); scrollToTop(); }
 function goToIndicazioni() { hideAllSections(); document.getElementById('indicazioni').classList.add('visible'); scrollToTop(); }
