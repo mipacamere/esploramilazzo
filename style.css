@@ -36,6 +36,45 @@ body {
     transition: top 0.3s;
 }
 
+/* Posizionamento della barra di navigazione */
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+/* Pulsante del tema (angolo in alto a destra) */
+.theme-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 100; /* Per assicurarsi che sia sopra gli altri elementi */
+}
+
+/* Pulsante del tema */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0;
+}
+
+/* Modalità Chiara (Light Mode) */
+body {
+    background-color: #fff;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modalità Scura (Dark Mode) */
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+
 /* Stile per la lista dei collegamenti */
 .navbar ul {
     list-style: none;
