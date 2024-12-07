@@ -23,9 +23,9 @@ body.light-mode {
     width: 100%;
     max-width: 460px;
     padding: 24px;
-    background-color: #000000; /* Colore scuro per il contenitore */
+    background-color: #ffffff; /* Colore chiaro per il contenitore */
     border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombra più forte per contrasto */
+    box-shadow: 0 4px 12px rgba(242, 242, 242, 0.3); /* Ombra più leggera per contrasto */
     text-align: center;
     overflow: hidden;
 }
@@ -103,9 +103,9 @@ button {
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
-    background-color: #007aff; /* Colore chiaro per i pulsanti */
+    background-color: #007aff; /* Colore blu di iOS nella modalità chiara */
     color: white;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Ombra leggera */
     text-transform: uppercase;
 }
 
@@ -129,25 +129,25 @@ button:hover {
 
 /* Bottoni di azioni secondarie */
 button.back, button.start {
-    background-color: #333;
+    background-color: #f4f4f5;
     color: #007aff;
     font-weight: 400;
 }
 
 button.back:hover, button.start:hover {
-    background-color: #555;
+    background-color: #e0e0e2;
     transform: translateY(-1px);
 }
 
 /* Modifica per il tasto "Indietro" */
 button.back {
-    background-color: #333; /* Colore scuro per il tasto Indietro */
-    color: #f44336;
+    background-color: #f4f4f5; /* Colore rosso per il tasto Indietro */
+    color: #f44336; /* Testo rosso */
 }
 
 button.back:hover {
-    background-color: #e53935;
-    color: #f4f4f5;
+    background-color: #e53935; /* Colore rosso più scuro per hover */
+    color: #f4f4f5; /* Testo bianco */
 }
 
 /* Stile per il pulsante di Google Maps */
@@ -161,7 +161,7 @@ button.back:hover {
     align-items: center;
     cursor: pointer;
     text-decoration: none;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
 .google-maps-button i {
@@ -181,15 +181,4 @@ button.back:hover {
 /* Funzione per cambiare tema */
 .theme-toggle {
     font-size: 20px;
-}
-
-/* Modifica per il pulsante "Indietro" */
-button.back {
-    background-color: #333; /* Colore scuro per il tasto Indietro */
-    color: #f44336;
-}
-
-button.back:hover {
-    background-color: #e53935;
-    color: #f4f4f5;
 }
