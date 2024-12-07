@@ -1,0 +1,102 @@
+/* Reset base per rimuovere margini e padding di default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Impostazioni base per il corpo della pagina */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Stile della navbar */
+.navbar {
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    text-align: center;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: #f0b400;
+}
+
+/* Stile dei bottoni */
+button.main, button.back, button.start, button.google-maps-button {
+    background-color: #f0b400;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+button.main:hover, button.back:hover, button.start:hover, button.google-maps-button:hover {
+    background-color: #c78e00;
+}
+
+/* Stile dei contenitori per le immagini */
+.image-container {
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Stile per i vari contenuti delle pagine */
+#intro, #arrivo, #indicazioni, #colazione, #itinerario, #indicazioniCapoMilazzo, #capoMilazzo, #piscinaVenereA, #panoramicaIsoleA {
+    display: none;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Stile per i temi scuri */
+body.dark-theme {
+    background-color: #2d2d2d;
+    color: white;
+}
+
+body.dark-theme .navbar {
+    background-color: #444;
+}
+
+body.dark-theme button.main, body.dark-theme button.back, body.dark-theme button.start {
+    background-color: #444;
+}
+
+body.dark-theme button.main:hover, body.dark-theme button.back:hover, body.dark-theme button.start:hover {
+    background-color: #666;
+}
+
+body.dark-theme .navbar a {
+    color: #f0b400;
+}
