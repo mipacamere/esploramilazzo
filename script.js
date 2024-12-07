@@ -13,17 +13,17 @@ function scrollToTop() {
 function toggleTheme() {
     const body = document.body;
     const themeButton = document.querySelector('.theme-toggle');
-    body.classList.toggle('dark-mode');
-    body.classList.toggle('light-mode');
+    body.classList.toggle('dark-theme');
+    body.classList.toggle('light-theme');
     
-    if (body.classList.contains('dark-mode')) {
+    if (body.classList.contains('dark-theme')) {
         themeButton.innerHTML = "🌞"; // Icona per la modalità chiara
     } else {
         themeButton.innerHTML = "🌙"; // Icona per la modalità scura
     }
 
     // Salva la preferenza dell'utente nel localStorage
-    localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+    localStorage.setItem('theme', body.classList.contains('dark-theme') ? 'dark' : 'light');
 }
 
 // Carica la preferenza salvata al caricamento della pagina
@@ -33,15 +33,16 @@ window.addEventListener('DOMContentLoaded', () => {
     const themeButton = document.querySelector('.theme-toggle');
     
     if (savedTheme === 'dark') {
-        body.classList.add('dark-mode');
-        body.classList.remove('light-mode');
+        body.classList.add('dark-theme');
+        body.classList.remove('light-theme');
         themeButton.innerHTML = "🌞"; // Icona per la modalità chiara
     } else {
-        body.classList.add('light-mode');
-        body.classList.remove('dark-mode');
+        body.classList.add('light-theme');
+        body.classList.remove('dark-theme');
         themeButton.innerHTML = "🌙"; // Icona per la modalità scura
     }
 });
+
 
 
 // Funzioni per navigazione tra le sezioni
