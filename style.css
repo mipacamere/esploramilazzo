@@ -86,6 +86,13 @@ body.dark-theme {
     margin-top: 80px; /* Distanza dal bordo superiore per evitare sovrapposizioni */
 }
 
+.theme-toggle {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 /* Titoli */
 h1, h2 {
     font-size: 24px;
