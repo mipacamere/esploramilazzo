@@ -42,12 +42,12 @@ body {
     padding: 10px 20px;
 }
 
-/* Pulsante del tema (angolo in alto a destra) */
+/* Pulsante del tema (posizionato sotto la navbar) */
 .theme-container {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 100; /* Per assicurarsi che sia sopra gli altri elementi */
+    position: fixed;
+    top: 60px;  /* Posiziona il pulsante 60px sotto il bordo superiore della pagina (modifica in base all'altezza della navbar) */
+    right: 20px; /* Posiziona il pulsante a destra con un margine di 20px */
+    z-index: 100; /* Assicura che il pulsante rimanga sopra gli altri contenuti */
 }
 
 /* Pulsante del tema */
@@ -55,7 +55,7 @@ body {
     background: none;
     border: none;
     color: inherit;
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
     padding: 10px;
     margin: 0;
