@@ -3,7 +3,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212; /* Colore scuro per il background */
+    background-color: #000000; /* Colore scuro per il background (nero assoluto) */
     color: #e6e6e6; /* Colore chiaro per il testo */
     display: flex;
     justify-content: center;
@@ -64,7 +64,7 @@ body.light-mode {
 
 /* Modalità scura */
 body.dark-mode {
-    background-color: #121212;
+    background-color: #000000; /* Sfondo nero assoluto */
     color: #fff;
 }
 
@@ -103,7 +103,7 @@ button {
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
-    background-color: #007aff; /* Colore blu di iOS nella modalità chiara */
+    background-color: #007aff; /* Blu iOS per i tasti principali */
     color: white;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Ombra leggera */
     text-transform: uppercase;
@@ -117,8 +117,8 @@ body.light-mode button {
 
 /* Modalità scura - Pulsanti */
 body.dark-mode button {
-    background-color: #333; /* Pulsanti scuri nella modalità scura */
-    color: #fff;
+    background-color: #007aff; /* Pulsanti blu iOS nella modalità scura */
+    color: white;
 }
 
 /* Hover per i bottoni */
@@ -141,13 +141,24 @@ button.back:hover, button.start:hover {
 
 /* Modifica per il tasto "Indietro" */
 button.back {
-    background-color: #f4f4f5; /* Colore rosso per il tasto Indietro */
-    color: #f44336; /* Testo rosso */
+    background-color: #f44336; /* Rosso iOS per il tasto "Indietro" */
+    color: #fff; /* Testo bianco */
 }
 
 button.back:hover {
     background-color: #e53935; /* Colore rosso più scuro per hover */
     color: #f4f4f5; /* Testo bianco */
+}
+
+/* Pulsante "Torna alla home" */
+button.start {
+    background-color: #007aff; /* Sfondo blu iOS per "Torna alla home" */
+    color: #007aff; /* Testo blu iOS */
+}
+
+button.start:hover {
+    background-color: #0051a8; /* Hover blu più scuro */
+    color: white;
 }
 
 /* Stile per il pulsante di Google Maps */
