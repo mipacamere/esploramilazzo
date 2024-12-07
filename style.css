@@ -231,8 +231,13 @@ button.back:hover {
 }
 
 /* Sezioni visibili */
-#intro, #arrivo, #indicazioni {
-    display: block;
+#intro, #arrivo, #indicazioni, #colazione {
+    display: none; /* Inizialmente tutte le sezioni sono nascoste */
+}
+
+/* Sezione visibile */
+#intro.visible, #arrivo.visible, #indicazioni.visible, #colazione.visible {
+    display: block; /* Le sezioni con la classe .visible sono mostrate */
 }
 
 /* Stile per le immagini */
