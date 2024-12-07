@@ -2,8 +2,8 @@
 function hideAllSections() {
     const sections = document.querySelectorAll('.container > div');
     sections.forEach(section => {
-        section.classList.remove('visible');
-        section.classList.add('hidden');
+        section.classList.add('hidden');  // Aggiungi la classe 'hidden' per nascondere
+        section.classList.remove('visible');  // Rimuovi la classe 'visible'
     });
 }
 
