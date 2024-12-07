@@ -1,0 +1,261 @@
+/* Body e impostazioni generali per il tema chiaro */
+body.light-theme {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6e6e6; /* Sfondo chiaro */
+    color: #333333; /* Colore del testo scuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Body e impostazioni generali per il tema scuro */
+body.dark-theme {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Sfondo scuro per display OLED */
+    color: #ffffff; /* Testo chiaro per contrasto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenitore principale */
+.container {
+    width: 100%;
+    max-width: 460px;
+    padding: 24px;
+    background-color: #ffffff; /* Sfondo chiaro per il tema chiaro */
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(242, 242, 242, 0.1);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Contenitore principale per il tema scuro */
+.container.dark-theme {
+    background-color: #121212; /* Colore scuro per il contenitore nel tema scuro */
+    color: #ffffff; /* Testo chiaro per contrasto */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Ombra più scura */
+}
+
+/* Barra di navigazione fissa */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    z-index: 1000;
+    padding: 10px 0;
+    transition: top 0.3s;
+}
+
+/* Stile per la lista dei collegamenti */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.navbar ul li a:hover {
+    color: #f4f4f5;
+}
+
+/* Contenuto sotto la navbar */
+.content {
+    margin-top: 80px; /* Distanza dal bordo superiore per evitare sovrapposizioni */
+}
+
+/* Titoli */
+h1, h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* Titoli per il tema scuro */
+h1.dark-theme, h2.dark-theme {
+    color: #e6e6e6; /* Titoli chiari per il tema scuro */
+}
+
+/* Paragrafi */
+p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #333333; /* Colore del testo scuro per il tema chiaro */
+    margin-bottom: 24px;
+}
+
+/* Paragrafi per il tema scuro */
+p.dark-theme {
+    color: #e6e6e6; /* Testo chiaro per il tema scuro */
+}
+
+/* Sezione di selezione lingua */
+.language-selection {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+/* Singola voce della lingua */
+.language-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Ingrandimento al passaggio del mouse */
+.language-item:hover {
+    transform: scale(1.05);
+}
+
+/* Immagine della bandiera */
+.language-item img {
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+
+/* Testo sotto la bandiera */
+.language-item p {
+    font-size: 16px;
+    color: #333333;
+}
+
+/* Bottoni principali */
+button {
+    padding: 14px 24px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #007aff;
+    color: white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+}
+
+/* Hover per i bottoni */
+button:hover {
+    background-color: #0051a8;
+    transform: translateY(-1px);
+}
+
+/* Bottoni di azioni secondarie */
+button.back, button.start {
+    background-color: #f4f4f5;
+    color: #007aff;
+    font-weight: 400;
+}
+
+button.back:hover, button.start:hover {
+    background-color: #e0e0e2;
+    transform: translateY(-1px);
+}
+
+/* Bottoni per il tema scuro */
+button.dark-theme {
+    background-color: #444444;
+    color: #f4f4f5;
+}
+
+button.dark-theme:hover {
+    background-color: #333333;
+}
+
+/* Modifica per il tasto "Indietro" */
+button.back {
+    background-color: #f4f4f5;
+    color: #f44336;
+}
+
+button.back:hover {
+    background-color: #e53935;
+    color: #f4f4f5;
+}
+
+/* Tasto "Indietro" per il tema scuro */
+button.back.dark-theme {
+    background-color: #f4f4f5;
+    color: #f44336;
+}
+
+button.back.dark-theme:hover {
+    background-color: #e53935;
+    color: #f4f4f5;
+}
+
+/* Pulsante di Google Maps */
+.google-maps-button {
+    background-color: #34c759;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.google-maps-button i {
+    margin-right: 8px;
+}
+
+.google-maps-button:hover {
+    background-color: #28a745;
+    transform: translateY(-1px);
+}
+
+/* Pulsante di Google Maps per il tema scuro */
+.google-maps-button.dark-theme {
+    background-color: #28a745;
+    color: #f4f4f5;
+}
+
+.google-maps-button.dark-theme:hover {
+    background-color: #1c8e3e;
+}
+
+/* Posizionamento dei tasti Indietro e Torna all'inizio */
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Nascondi gli elementi */
+.hidden {
+    display: none;
+}
