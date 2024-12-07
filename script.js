@@ -1,31 +1,30 @@
 // Funzione per nascondere tutte le sezioni
-function hideAllSections() { 
+function hideAllSections() {
     const sections = document.querySelectorAll('.container > div');
     sections.forEach(section => section.classList.add('hidden'));
 }
 
 // Funzione per scrollare in cima alla pagina
-function scrollToTop() { 
+function scrollToTop() {
     window.scrollTo(0, 0);
 }
 
 // Esempio per alternare il tema con un pulsante
 const themeToggleButton = document.querySelector('.theme-toggle');
-
 themeToggleButton.addEventListener('click', () => {
     const body = document.body;
-    body.classList.toggle('dark-theme');
     const container = document.querySelector('.container');
+    body.classList.toggle('dark-theme');
     container.classList.toggle('dark-theme');
 });
-
 
 // Funzione per il cambio tema
 function toggleTheme() {
     const body = document.body;
+    const container = document.querySelector('.container');
     const themeButton = document.querySelector('.theme-toggle');
     body.classList.toggle('dark-theme');
-    body.classList.toggle('light-theme');
+    container.classList.toggle('dark-theme');
     
     if (body.classList.contains('dark-theme')) {
         themeButton.innerHTML = "🌞"; // Icona per la modalità chiara
@@ -41,20 +40,19 @@ function toggleTheme() {
 window.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme');
     const body = document.body;
+    const container = document.querySelector('.container');
     const themeButton = document.querySelector('.theme-toggle');
     
     if (savedTheme === 'dark') {
         body.classList.add('dark-theme');
-        body.classList.remove('light-theme');
+        container.classList.add('dark-theme');
         themeButton.innerHTML = "🌞"; // Icona per la modalità chiara
     } else {
         body.classList.add('light-theme');
-        body.classList.remove('dark-theme');
+        container.classList.remove('dark-theme');
         themeButton.innerHTML = "🌙"; // Icona per la modalità scura
     }
 });
-
-
 
 // Funzioni per navigazione tra le sezioni
 function goToArrivo() { hideAllSections(); document.getElementById('arrivo').classList.remove('hidden'); scrollToTop(); }
