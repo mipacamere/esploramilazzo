@@ -9,23 +9,18 @@ function scrollToTop() {
     window.scrollTo(0, 0);
 }
 
-// Esempio per alternare il tema con un pulsante
-const themeToggleButton = document.querySelector('.theme-toggle');
-themeToggleButton.addEventListener('click', () => {
-    const body = document.body;
-    const container = document.querySelector('.container');
-    body.classList.toggle('dark-theme');
-    container.classList.toggle('dark-theme');
-});
-
 // Funzione per il cambio tema
 function toggleTheme() {
     const body = document.body;
     const container = document.querySelector('.container');
     const themeButton = document.querySelector('.theme-toggle');
+
+    // Toggle del tema tra scuro e chiaro
     body.classList.toggle('dark-theme');
+    body.classList.toggle('light-theme');
     container.classList.toggle('dark-theme');
-    
+
+    // Modifica dell'icona in base al tema
     if (body.classList.contains('dark-theme')) {
         themeButton.innerHTML = "🌞"; // Icona per la modalità chiara
     } else {
@@ -43,16 +38,23 @@ window.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('.container');
     const themeButton = document.querySelector('.theme-toggle');
     
+    // Imposta il tema salvato all'apertura della pagina
     if (savedTheme === 'dark') {
         body.classList.add('dark-theme');
+        body.classList.remove('light-theme');
         container.classList.add('dark-theme');
         themeButton.innerHTML = "🌞"; // Icona per la modalità chiara
     } else {
         body.classList.add('light-theme');
+        body.classList.remove('dark-theme');
         container.classList.remove('dark-theme');
         themeButton.innerHTML = "🌙"; // Icona per la modalità scura
     }
 });
+
+// Esempio per alternare il tema con un pulsante
+const themeToggleButton = document.querySelector('.theme-toggle');
+themeToggleButton.addEventListener('click', toggleTheme);
 
 // Funzioni per navigazione tra le sezioni
 function goToArrivo() { hideAllSections(); document.getElementById('arrivo').classList.remove('hidden'); scrollToTop(); }
