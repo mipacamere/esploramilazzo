@@ -85,6 +85,24 @@ body.dark-theme {
     margin-top: 80px; /* Distanza dal bordo superiore per evitare che il contenuto si sovrapponga alla barra */
 }
 
+/* Pulsante del tema (posizionato sotto la navbar) */
+.theme-container {
+    position: fixed;
+    top: 60px;  /* Posiziona il pulsante 60px sotto il bordo superiore della pagina (modifica in base all'altezza della navbar) */
+    right: 20px; /* Posiziona il pulsante a destra con un margine di 20px */
+    z-index: 100; /* Assicura che il pulsante rimanga sopra gli altri contenuti */
+}
+
+/* Pulsante del tema */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0;
+
 /* Titoli */
 h1, h2 {
     font-size: 24px;
