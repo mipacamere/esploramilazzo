@@ -1,4 +1,4 @@
-/* Body e impostazioni generali - Dark Mode */
+/* Body e impostazioni generali - Modalità scura */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     margin: 0;
@@ -9,6 +9,13 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modalità chiara */
+body.light-mode {
+    background-color: #fff;
+    color: #000;
 }
 
 /* Contenitore principale */
@@ -36,12 +43,6 @@ body {
     transition: top 0.3s;
 }
 
-/* Posizionamento della barra di navigazione */
-.navbar {
-    background-color: #333;
-    padding: 10px 20px;
-}
-
 /* Pulsante del tema (posizionato sotto la navbar) */
 .theme-container {
     position: fixed;
@@ -61,19 +62,11 @@ body {
     margin: 0;
 }
 
-/* Modalità Chiara (Light Mode) */
-body {
-    background-color: #fff;
-    color: #000;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-/* Modalità Scura (Dark Mode) */
+/* Modalità scura */
 body.dark-mode {
     background-color: #121212;
     color: #fff;
 }
-
 
 /* Stile per la lista dei collegamenti */
 .navbar ul {
@@ -100,62 +93,7 @@ body.dark-mode {
     color: #f4f4f5;
 }
 
-/* Contenuto sotto la navbar */
-.content {
-    margin-top: 80px;
-}
-
-/* Titoli */
-h1, h2 {
-    font-size: 24px;
-    font-weight: 600;
-    color: #e6e6e6; /* Colore chiaro per i titoli */
-    margin-bottom: 20px;
-    line-height: 1.4;
-}
-
-/* Paragrafi */
-p {
-    font-size: 17px;
-    line-height: 1.6;
-    color: #e6e6e6; /* Colore chiaro per il testo */
-    margin-bottom: 24px;
-}
-
-/* Sezione di selezione lingua */
-.language-selection {
-    display: flex;
-    justify-content: space-between;
-    gap: 24px;
-    margin-bottom: 30px;
-}
-
-/* Singola voce della lingua */
-.language-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-}
-
-.language-item:hover {
-    transform: scale(1.05);
-}
-
-.language-item img {
-    width: 70px;
-    height: 70px;
-    border-radius: 12px;
-    margin-bottom: 8px;
-}
-
-.language-item p {
-    font-size: 16px;
-    color: #e6e6e6; /* Colore chiaro per il testo */
-}
-
-/* Bottoni principali */
+/* Pulsanti generali - Modalità chiara */
 button {
     padding: 14px 24px;
     margin: 12px 0;
@@ -165,10 +103,22 @@ button {
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
-    background-color: #007aff;
+    background-color: #007aff; /* Colore chiaro per i pulsanti */
     color: white;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
     text-transform: uppercase;
+}
+
+/* Modalità chiara - Pulsanti */
+body.light-mode button {
+    background-color: #007aff; /* Pulsanti blu nella modalità chiara */
+    color: white;
+}
+
+/* Modalità scura - Pulsanti */
+body.dark-mode button {
+    background-color: #333; /* Pulsanti scuri nella modalità scura */
+    color: #fff;
 }
 
 /* Hover per i bottoni */
@@ -223,14 +173,23 @@ button.back:hover {
     transform: translateY(-1px);
 }
 
-/* Posizionamento dei tasti Indietro e Torna all'inizio */
-.buttons-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
 /* Nascondi gli elementi */
 .hidden {
     display: none;
+}
+
+/* Funzione per cambiare tema */
+.theme-toggle {
+    font-size: 20px;
+}
+
+/* Modifica per il pulsante "Indietro" */
+button.back {
+    background-color: #333; /* Colore scuro per il tasto Indietro */
+    color: #f44336;
+}
+
+button.back:hover {
+    background-color: #e53935;
+    color: #f4f4f5;
 }
