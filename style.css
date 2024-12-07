@@ -1,27 +1,27 @@
-/* Body e impostazioni generali - Modalità scura */
-body {
+/* Body e impostazioni generali per il tema chiaro */
+body.light-theme {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000000; /* Colore scuro per il background (nero assoluto) */
-    color: #e6e6e6; /* Colore chiaro per il testo */
+    background-color: #e6e6e6;
+    color: #333333; /* Colore del testo */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Modalità chiara */
-body.light-mode {
-    background-color: #f4f4f5; /* Grigio chiaro per il background principale */
-    color: #000;
-}
-
-/* Modalità scura */
-body.dark-mode {
-    background-color: #000000; /* Sfondo nero assoluto per il corpo principale */
-    color: #fff;
+/* Body e impostazioni generali per il tema scuro */
+body.dark-theme {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Sfondo nero per display OLED */
+    color: #e6e6e6; /* Testo chiaro per contrasto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 /* Contenitore principale */
@@ -29,11 +29,17 @@ body.dark-mode {
     width: 100%;
     max-width: 460px;
     padding: 24px;
-    background-color: #ffffff; /* Colore chiaro per il contenitore (bianco) */
+    background-color: white;
     border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(242, 242, 242, 0.3); /* Ombra più leggera per contrasto */
+    box-shadow: 0 4px 12px rgba(242, 242, 242, 0.1);
     text-align: center;
     overflow: hidden;
+}
+
+/* Contenitore principale per il tema scuro */
+.container.dark-theme {
+    background-color: #1a1a1a; /* Colore scuro per il contenitore */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 /* Barra di navigazione fissa */
@@ -42,45 +48,19 @@ body.dark-mode {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333; /* Scuro ma più chiaro rispetto al body */
+    background-color: #333;
     color: white;
     z-index: 1000;
     padding: 10px 0;
     transition: top 0.3s;
 }
 
-/* Pulsante del tema (posizionato sotto la navbar) */
-.theme-container {
-    position: fixed;
-    top: 60px;  /* Posiziona il pulsante 60px sotto il bordo superiore della pagina (modifica in base all'altezza della navbar) */
-    right: 20px; /* Posiziona il pulsante a destra con un margine di 20px */
-    z-index: 100; /* Assicura che il pulsante rimanga sopra gli altri contenuti */
+/* Barra di navigazione fissa per il tema scuro */
+.navbar.dark-theme {
+    background-color: #222222; /* Barra più scura per il tema scuro */
 }
 
-/* Pulsante del tema */
-.theme-toggle {
-    background: none;
-    border: none;
-    color: inherit;
-    font-size: 30px;
-    cursor: pointer;
-    padding: 10px;
-    margin: 0;
-}
-
-/* Stile per la lista dei collegamenti */
-.navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.navbar ul li {
-    margin: 0 10px;
-}
-
+/* Link della navbar */
 .navbar ul li a {
     color: white;
     text-decoration: none;
@@ -93,7 +73,75 @@ body.dark-mode {
     color: #f4f4f5;
 }
 
-/* Pulsanti generali - Modalità chiara */
+/* Contenuto sotto la navbar */
+.content {
+    margin-top: 80px;
+}
+
+/* Titoli */
+h1, h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* Titoli per il tema scuro */
+h1.dark-theme, h2.dark-theme {
+    color: #e6e6e6; /* Titoli chiari per il tema scuro */
+}
+
+/* Paragrafi */
+p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #333333; /* Colore del testo cambiato in rosso scuro per paragrafi */
+    margin-bottom: 24px;
+}
+
+/* Paragrafi per il tema scuro */
+p.dark-theme {
+    color: #e6e6e6; /* Testo chiaro per il tema scuro */
+}
+
+/* Sezione di selezione lingua */
+.language-selection {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+/* Singola voce della lingua */
+.language-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Ingrandimento al passaggio del mouse */
+.language-item:hover {
+    transform: scale(1.05);
+}
+
+/* Immagine della bandiera */
+.language-item img {
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+
+/* Testo sotto la bandiera */
+.language-item p {
+    font-size: 16px;
+    color: #333333;
+}
+
+/* Bottoni principali */
 button {
     padding: 14px 24px;
     margin: 12px 0;
@@ -103,22 +151,10 @@ button {
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
-    background-color: #007aff; /* Blu iOS per i tasti principali */
+    background-color: #007aff; /* Colore blu di iOS */
     color: white;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
     text-transform: uppercase;
-}
-
-/* Modalità chiara - Pulsanti */
-body.light-mode button {
-    background-color: #007aff; /* Pulsanti blu nella modalità chiara */
-    color: white;
-}
-
-/* Modalità scura - Pulsanti */
-body.dark-mode button {
-    background-color: #007aff; /* Pulsanti blu iOS nella modalità scura */
-    color: white;
 }
 
 /* Hover per i bottoni */
@@ -139,32 +175,42 @@ button.back:hover, button.start:hover {
     transform: translateY(-1px);
 }
 
+/* Bottoni per il tema scuro */
+button.dark-theme {
+    background-color: #444444; /* Colore scuro per il bottone nel tema dark */
+    color: #f4f4f5; /* Testo chiaro */
+}
+
+button.dark-theme:hover {
+    background-color: #333333; /* Hover più scuro */
+}
+
 /* Modifica per il tasto "Indietro" */
 button.back {
-    background-color: #f44336; /* Rosso iOS per il tasto "Indietro" */
-    color: #fff; /* Testo bianco */
+    background-color: #f4f4f5;
+    color: #f44336;
 }
 
 button.back:hover {
-    background-color: #e53935; /* Colore rosso più scuro per hover */
-    color: #f4f4f5; /* Testo bianco */
+    background-color: #e53935;
+    color: #f4f4f5;
 }
 
-/* Pulsante "Torna alla home" */
-button.start {
-    background-color: #007aff; /* Sfondo blu iOS per "Torna alla home" */
-    color: #007aff; /* Testo blu iOS */
+/* Tasto "Indietro" per il tema scuro */
+button.back.dark-theme {
+    background-color: #f4f4f5;
+    color: #f44336;
 }
 
-button.start:hover {
-    background-color: #0051a8; /* Hover blu più scuro */
-    color: white;
+button.back.dark-theme:hover {
+    background-color: #e53935;
+    color: #f4f4f5;
 }
 
-/* Stile per il pulsante di Google Maps */
+/* Pulsante di Google Maps */
 .google-maps-button {
-    background-color: #34c759; /* Verde iOS per il pulsante */
-    color: white; /* Testo bianco */
+    background-color: #34c759;
+    color: white;
     padding: 14px 24px;
     border-radius: 12px;
     font-size: 17px;
@@ -180,16 +226,28 @@ button.start:hover {
 }
 
 .google-maps-button:hover {
-    background-color: #28a745; /* Verde più scuro per l'hover */
+    background-color: #28a745;
     transform: translateY(-1px);
+}
+
+/* Pulsante di Google Maps per il tema scuro */
+.google-maps-button.dark-theme {
+    background-color: #28a745;
+    color: #f4f4f5;
+}
+
+.google-maps-button.dark-theme:hover {
+    background-color: #1c8e3e;
+}
+
+/* Posizionamento dei tasti Indietro e Torna all'inizio */
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 /* Nascondi gli elementi */
 .hidden {
     display: none;
-}
-
-/* Funzione per cambiare tema */
-.theme-toggle {
-    font-size: 20px;
 }
