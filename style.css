@@ -15,7 +15,7 @@ body.light-theme {
     font-family: 'Roboto', sans-serif; /* Font Android */
     margin: 0;
     padding: 0;
-    padding-top: 50px; /* Spazio per la navbar */
+    padding-top: 60px; /* Spazio per la navbar */
 }
 
 /* Tema Dark */
@@ -25,40 +25,19 @@ body.dark-theme {
     font-family: 'Roboto', sans-serif; /* Font Android */
     margin: 0;
     padding: 0;
-    padding-top: 50px; /* Spazio per la navbar */
+    padding-top: 60px; /* Spazio per la navbar */
 }
 
-/* Contenitore principale */
-.container {
-    width: 100%;
-    max-width: 600px; /* Limita la larghezza per dispositivi mobili */
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #f5f5f5; /* Sfondo bianco per il tema light */
-    color: #525252; /* Testo scuro per il tema light */
-    border-radius: 16px; /* Bordo arrotondato per il look Android */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Ombra più forte per un look moderno */
-}
-
-/* Modifica per il tema Dark */
-.dark-theme .container {
-    background-color: #000000; /* Sfondo scuro per il tema dark */
-    color:  #e8e8e8; /* Testo chiaro per il tema dark */
-}
-
-/* Navbar ottimizzata */
+/* Navbar orizzontale scura */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #6200ea; /* Colore principale per navbar */
+    background-color: #333333; /* Colore scuro per navbar */
     text-align: center;
     padding: 10px 0;
-    border-radius: 12px 12px 0 0; /* Bordo arrotondato in alto */
     z-index: 9999; /* Assicurati che la navbar stia sopra il resto del contenuto */
-    transition: top 0.3s ease; /* Transizione fluida quando la navbar scompare */
 }
 
 .navbar ul {
@@ -69,7 +48,7 @@ body.dark-theme {
 
 .navbar li {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .navbar li a {
@@ -85,33 +64,26 @@ body.dark-theme {
     background-color: #3700b3;
 }
 
-/* Sezione di selezione lingue */
-.language-selection {
-    position: fixed;
-    top: 50px; /* Distanza dalla navbar */
-    left: 0;
-    width: 100%;
-    background-color: #f5f5f5;
-    padding: 10px 0;
-    z-index: 9998; /* Appare sotto la navbar */
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Ombra per la striscia */
-    transition: top 0.3s ease;
+/* Contenitore principale (allargato) */
+.container {
+    width: 90%; /* Maggiore larghezza rispetto a prima */
+    max-width: 700px; /* Limite massimo per la larghezza */
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f5f5f5; /* Sfondo bianco per il tema light */
+    color: #525252; /* Testo scuro per il tema light */
+    border-radius: 16px; /* Bordo arrotondato per il look Android */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Ombra più forte per un look moderno */
 }
 
-.language-selection.hidden {
-    top: -60px; /* Nascondi la striscia quando non visibile */
+/* Modifica per il tema Dark */
+.dark-theme .container {
+    background-color: #000000; /* Sfondo scuro per il tema dark */
+    color: #e8e8e8; /* Testo chiaro per il tema dark */
 }
 
-/* Stili per le immagini */
-.language-flag {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin: 0 10px;
-}
-
-/* Pulsante con bordi arrotondati, più grande e con effetti di hover più leggeri */
+/* Stili per i pulsanti: uno sopra l'altro e larghezza del 100% */
 button.main, button.start, button.back, button.google-maps-button {
     font-size: 16px;
     padding: 16px 28px; /* Più spazio per una migliore interazione */
@@ -120,77 +92,78 @@ button.main, button.start, button.back, button.google-maps-button {
     cursor: pointer;
     text-align: center;
     width: 100%; /* I pulsanti occupano tutta la larghezza disponibile */
+    margin-bottom: 10px; /* Spazio tra i pulsanti */
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Nuovo colore dei tasti in Light Theme */
+/* Pulsante con colore personalizzato nel tema chiaro */
 body.light-theme button.start {
-    background-color: #e1e1e1; /* Blu intenso */
-    color: #1e88e5; /* Testo bianco */
+    background-color: #e1e1e1;
+    color: #1e88e5;
 }
 body.light-theme button.start:hover {
-    background-color: #1565c0; /* Blu più scuro per hover */
-    color: white; /* Testo bianco */
+    background-color: #1565c0;
+    color: white;
 }
 
 body.light-theme button.main {
-    background-color: #388e3c; /* Verde chiaro */
-    color: white; /* Testo bianco */
+    background-color: #388e3c;
+    color: white;
 }
 body.light-theme button.main:hover {
-    background-color: #2c6c2f; /* Verde più scuro per hover */
+    background-color: #2c6c2f;
 }
 
 body.light-theme button.back {
-    background-color: #e1e1e1; /* Rosso acceso */
-    color: #d32f2f; /* Testo bianco */
+    background-color: #e1e1e1;
+    color: #d32f2f;
 }
 body.light-theme button.back:hover {
-    background-color: #c62828; /* Rosso più scuro per hover */
-    color: white; /* Testo bianco */
+    background-color: #c62828;
+    color: white;
 }
 
 body.light-theme button.google-maps-button {
-    background-color: #fbc02d; /* Giallo brillante */
-    color: #525252; /* Testo bianco */
+    background-color: #fbc02d;
+    color: #525252;
 }
 body.light-theme button.google-maps-button:hover {
-    background-color: #f9a825; /* Giallo più scuro per hover */
+    background-color: #f9a825;
 }
 
-/* Nuovo colore dei tasti in Dark Theme */
+/* Pulsante con colore personalizzato nel tema scuro */
 body.dark-theme button.start {
-    background-color: #333333; /* Blu intenso */
-    color: #1e88e5; /* Testo bianco */
+    background-color: #333333;
+    color: #1e88e5;
 }
 body.dark-theme button.start:hover {
-    background-color: #1565c0; /* Blu più scuro per hover */
-    color: white; /* Testo bianco */
+    background-color: #1565c0;
+    color: white;
 }
 
 body.dark-theme button.main {
-    background-color: #388e3c; /* Verde chiaro */
-    color: white; /* Testo bianco */
+    background-color: #388e3c;
+    color: white;
 }
 body.dark-theme button.main:hover {
-    background-color: #2c6c2f; /* Verde più scuro per hover */
+    background-color: #2c6c2f;
 }
 
 body.dark-theme button.back {
-    background-color: #333333; /* Rosso acceso */
-    color: #d32f2f; /* Testo bianco */
+    background-color: #333333;
+    color: #d32f2f;
 }
 body.dark-theme button.back:hover {
-    background-color: #c62828; /* Rosso più scuro per hover */
-    color: white; /* Testo bianco */
+    background-color: #c62828;
+    color: white;
 }
 
 body.dark-theme button.google-maps-button {
-    background-color: #fbc02d; /* Giallo brillante */
-    color: #525252; /* Testo bianco */
+    background-color: #fbc02d;
+    color: #525252;
 }
 body.dark-theme button.google-maps-button:hover {
-    background-color: #f9a825; /* Giallo più scuro per hover */
+    background-color: #f9a825;
 }
 
 /* Pulsante Google Maps (posizionato sopra gli altri pulsanti) */
@@ -198,53 +171,17 @@ button.google-maps-button {
     margin-bottom: 15px;
 }
 
-/* Pulsante per il tema */
-.theme-toggle {
-    background: none;
-    border: none;
-    font-size: 30px;
-    color: inherit;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 10px;
-    transition: color 0.3s ease;
-}
-
-/* Aggiungi un'animazione per il cambiamento delle icone */
-.theme-toggle i {
-    transition: opacity 0.3s ease;
-}
-
-.theme-toggle i.sun {
-    opacity: 0;
-}
-
-body.light-theme .theme-toggle i.sun {
-    opacity: 1;
-}
-
-.theme-toggle i.moon {
-    opacity: 0;
-}
-
-body.dark-theme .theme-toggle i.moon {
-    opacity: 1;
-}
-
-/* Media queries per smartphone */
+/* Navbar per piccoli schermi */
 @media (max-width: 768px) {
     .container {
-        width: 90%; /* Più spazio sui dispositivi mobili */
-        padding: 15px;
+        width: 95%; /* Più spazio sui dispositivi mobili */
     }
 
     button.main, button.start, button.back, button.google-maps-button {
-        font-size: 18px;
+        font-size: 16px;
         padding: 14px 20px;
         width: 100%; /* I pulsanti occupano tutta la larghezza disponibile */
-        margin-bottom: 10px; /* Aggiungi uno spazio tra i pulsanti */
+        margin-bottom: 10px; /* Spazio tra i pulsanti */
     }
 
     /* Navbar per piccoli schermi */
@@ -254,43 +191,17 @@ body.dark-theme .theme-toggle i.moon {
     }
 }
 
-/* Ottimizzazione per la visibilità delle sezioni */
-.hidden {
-    display: none;
-}
-
-/* Miglioramenti generali */
-body, h1, h2, h3, p {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-/* Piccole ottimizzazioni per la larghezza della finestra */
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-    button.main, button.start, button.back, button.google-maps-button {
-        width: 48%; /* I pulsanti sono affiancati (non impilati) */
-        font-size: 14px;
-        padding: 10px;
-    }
-}
-
-/* Nuove regole per il layout delle lingue (due righe, orizzontali) */
-
 /* Sezione di selezione lingue */
 .language-selection {
     position: fixed;
-    top: 50px; /* Distanza dalla navbar */
+    top: 60px; /* Distanza dalla navbar */
     left: 0;
     width: 100%;
     background-color: #f5f5f5;
     padding: 10px 0;
     z-index: 9998; /* Appare sotto la navbar */
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Ombra per la striscia */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     transition: top 0.3s ease;
 }
 
