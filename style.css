@@ -38,6 +38,10 @@ body.dark-theme {
     border-radius: 16px; /* Bordo arrotondato per il look Android */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Ombra più forte per un look moderno */
 }
+/* Modifica per il tema Dark */
+.dark-theme .container {
+    background-color: #000000; /* Sfondo scuro per il tema dark */
+    color:  #e8e8e8; /* Testo chiaro per il tema dark */
 
 /* Navbar ottimizzata */
 .navbar {
