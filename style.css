@@ -167,11 +167,15 @@ body.dark-theme button.home-button:hover {
     width: 100%;
 }
 
-.button-container .back-home-buttons {
+.back-home-buttons {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding-top: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
 }
 
 /* Pulsanti fissi in fondo alla pagina */
@@ -190,16 +194,19 @@ body.dark-theme button.home-button:hover {
     button.back,
     button.google-maps-button,
     button.home-button {
-        width: 100%; /* Pulsanti full-width su dispositivi mobili */
+        width: auto; /* Pulsanti non full-width, per avere spazi tra di loro */
     }
 
     .itinerary-buttons {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: row;
+        gap: 10px;
     }
 
     .back-home-buttons {
-        flex-direction: column;
-        gap: 15px;
+        position: fixed;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        padding: 0 20px;
     }
 }
