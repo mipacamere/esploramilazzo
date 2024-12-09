@@ -61,7 +61,7 @@ button.main, button.start, button.back, button.google-maps-button {
 
 /* Pulsante "Torna alla Home" con blu */
 body.light-theme button.start {
-    background-color: #bbbbbb; /* Blu intenso */
+    background-color: #e1e1e1; /* Blu intenso */
     color: #1e88e5; /* Testo bianco */
 }
 body.light-theme button.start:hover {
@@ -79,7 +79,7 @@ body.light-theme button.main:hover {
 }
 
 body.light-theme button.back {
-    background-color: #bbbbbb; /* Rosso acceso */
+    background-color: #e1e1e1; /* Rosso acceso */
     color: #d32f2f; /* Testo bianco */
 }
 body.light-theme button.back:hover {
