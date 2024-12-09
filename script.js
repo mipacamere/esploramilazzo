@@ -55,7 +55,9 @@ function goToIntro() { hideAllSections(); document.getElementById('intro').class
 function toggleTheme() {
     const body = document.body;
     body.classList.toggle('dark-theme');
-    
+    body.classList.toggle('light-theme');
+     }
+
     const button = document.querySelector('.theme-toggle');
     if (body.classList.contains('dark-theme')) {
         button.textContent = '🌙';  // Icona tema chiaro
@@ -63,7 +65,6 @@ function toggleTheme() {
         button.textContent = '🌞';  // Icona tema scuro
     }
 }
-
 
 // Aggiungi una classe "visible" alla sezione iniziale per mostrarla al caricamento della pagina
 window.addEventListener('load', function() {
