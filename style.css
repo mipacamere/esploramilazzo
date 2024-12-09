@@ -15,6 +15,7 @@ body.light-theme {
     font-family: 'Roboto', sans-serif; /* Font Android */
     margin: 0;
     padding: 0;
+    padding-top: 50px; /* Spazio per la navbar */
 }
 
 /* Tema Dark */
@@ -24,6 +25,7 @@ body.dark-theme {
     font-family: 'Roboto', sans-serif; /* Font Android */
     margin: 0;
     padding: 0;
+    padding-top: 50px; /* Spazio per la navbar */
 }
 
 /* Contenitore principale */
@@ -38,6 +40,7 @@ body.dark-theme {
     border-radius: 16px; /* Bordo arrotondato per il look Android */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Ombra più forte per un look moderno */
 }
+
 /* Modifica per il tema Dark */
 .dark-theme .container {
     background-color: #000000; /* Sfondo scuro per il tema dark */
@@ -54,7 +57,7 @@ body.dark-theme {
     text-align: center;
     padding: 10px 0;
     border-radius: 12px 12px 0 0; /* Bordo arrotondato in alto */
-    z-index: 1000; /* Assicurati che la navbar stia sopra il resto del contenuto */
+    z-index: 9999; /* Assicurati che la navbar stia sopra il resto del contenuto */
     transition: top 0.3s ease; /* Transizione fluida quando la navbar scompare */
 }
 
@@ -90,7 +93,7 @@ body.dark-theme {
     width: 100%;
     background-color: #f5f5f5;
     padding: 10px 0;
-    z-index: 999; /* Appare sotto la navbar */
+    z-index: 9998; /* Appare sotto la navbar */
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Ombra per la striscia */
     transition: top 0.3s ease;
@@ -100,21 +103,11 @@ body.dark-theme {
     top: -60px; /* Nascondi la striscia quando non visibile */
 }
 
-.language-row {
-    display: flex;
-    justify-content: center; /* Allinea gli elementi al centro */
-    gap: 20px; /* Distanza tra le immagini */
-}
-
-.language-item {
-    display: inline-block;
-    text-align: center;
-}
-
+/* Stili per le immagini */
 .language-flag {
     width: 100px;
     height: 100px;
-    object-fit: cover; /* Mantiene l'aspect ratio, senza distorcere l'immagine */
+    object-fit: cover;
     margin: 0 10px;
 }
 
@@ -283,4 +276,44 @@ body, h1, h2, h3, p {
         font-size: 14px;
         padding: 10px;
     }
+}
+
+/* Nuove regole per il layout delle lingue (due righe, orizzontali) */
+
+/* Sezione di selezione lingue */
+.language-selection {
+    position: fixed;
+    top: 50px; /* Distanza dalla navbar */
+    left: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 10px 0;
+    z-index: 9998; /* Appare sotto la navbar */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Ombra per la striscia */
+    transition: top 0.3s ease;
+}
+
+.language-selection.hidden {
+    top: -60px; /* Nascondi la striscia quando non visibile */
+}
+
+/* Righe di lingue, disposte orizzontalmente */
+.language-row {
+    display: flex;
+    justify-content: center; /* Allinea gli elementi al centro */
+    gap: 20px; /* Distanza tra le immagini */
+}
+
+/* Elementi di lingua */
+.language-item {
+    display: inline-block;
+    text-align: center;
+}
+
+/* Ridimensionamento delle immagini */
+.language-flag {
+    width: 100px; /* Larghezza dell'immagine */
+    height: 100px; /* Altezza dell'immagine */
+    object-fit: cover; /* Mantiene l'aspect ratio, senza distorcere l'immagine */
 }
