@@ -51,6 +51,17 @@ function fineGiornata() { hideAllSections(); document.getElementById('fineGiorna
 function goToIntro() { hideAllSections(); document.getElementById('intro').classList.add('visible'); scrollToTop(); }
 
 // Funzione per gestire l'attivazione del tema scuro
+function toggleTheme() {
+    const body = document.body;
+    if (body.classList.contains('light-theme')) {
+        body.classList.remove('light-theme');
+        body.classList.add('dark-theme');
+    } else {
+        body.classList.remove('dark-theme');
+        body.classList.add('light-theme');
+    }
+}
+
 document.querySelector('.theme-toggle').addEventListener('click', function() {
     // Alterna la classe di tema tra light e dark
     document.body.classList.toggle('dark-theme');
