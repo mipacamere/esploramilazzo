@@ -195,17 +195,12 @@ button.google-maps-button {
         padding: 10px;
     }
 
-    /* Disporre i pulsanti affiancati, sfruttando al massimo lo spazio */
+    /* Disporre i pulsanti uno sopra l'altro, ognuno occupa tutta la larghezza */
     button.main, button.start, button.back, button.google-maps-button {
-        width: 48%;  /* Pulsanti affiancati */
+        width: 100%;  /* Ogni pulsante prende tutta la larghezza */
         font-size: 18px;  /* Più grande per una migliore visibilità */
         padding: 14px 20px;  /* Più spazio per una buona interazione */
-        margin-right: 4%; /* Distanza tra i pulsanti */
-    }
-
-    /* Rimuovi il margine destro dal pulsante a destra (per evitare overflow) */
-    button.google-maps-button {
-        margin-right: 0;
+        margin-bottom: 10px; /* Aggiungi spazio tra i pulsanti */
     }
 
     /* Navbar per piccoli schermi */
@@ -233,7 +228,7 @@ body, h1, h2, h3, p {
         padding: 10px;
     }
     button.main, button.start, button.back, button.google-maps-button {
-        width: 48%; /* I pulsanti sono affiancati (non impilati) */
+        width: 100%; /* Ogni pulsante prende tutta la larghezza */
         font-size: 14px;
         padding: 10px;
     }
