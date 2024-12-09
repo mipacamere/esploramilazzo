@@ -90,7 +90,7 @@ body.light-theme button.back:hover {
 /* Pulsante Google Maps con giallo */
 body.light-theme button.google-maps-button {
     background-color: #fbc02d; /* Giallo brillante */
-    color: white; /* Testo bianco */
+    color: #525252; /* Testo bianco */
 }
 body.light-theme button.google-maps-button:hover {
     background-color: #f9a825; /* Giallo più scuro per hover */
@@ -129,7 +129,7 @@ body.dark-theme button.back:hover {
 /* Pulsante Google Maps con giallo */
 body.dark-theme button.google-maps-button {
     background-color: #fbc02d; /* Giallo brillante */
-    color: white; /* Testo bianco */
+    color: #525252; /* Testo bianco */
 }
 body.dark-theme button.google-maps-button:hover {
     background-color: #f9a825; /* Giallo più scuro per hover */
