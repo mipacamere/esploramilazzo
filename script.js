@@ -67,3 +67,22 @@ window.addEventListener('load', function() {
     // Mostra la sezione intro iniziale
     document.getElementById('intro').classList.add('visible');
 });
+
+let prevScrollPos = window.pageYOffset; // Memorizza la posizione precedente dello scroll
+const navbar = document.querySelector('.navbar');
+const languageSelection = document.querySelector('.language-selection');
+
+// Quando si scorre sulla pagina
+window.onscroll = function() {
+    let currentScrollPos = window.pageYOffset; // Posizione corrente dello scroll
+
+    // Se lo scroll è verso il basso, nascondi la navbar e la striscia delle lingue
+    if (prevScrollPos > currentScrollPos) {
+        navbar.style.top = "0";  // Mostra la navbar
+        languageSelection.classList.remove("hidden"); // Mostra la striscia delle lingue
+    } else {
+        navbar.style.top = "-80px"; // Nascondi la navbar
+        languageSelection.classList.add("hidden"); // Nascondi la striscia delle lingue
+    }
+    prevScrollPos = currentScrollPos; // Aggiorna la posizione dello scroll
+}
