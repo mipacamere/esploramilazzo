@@ -131,12 +131,14 @@ button.google-maps-button {
 button.main {
     width: 48%; /* Larghezza quasi metà per i pulsanti principali */
     display: inline-block;
+    margin-bottom: 20px; /* Distanza tra i tasti principali e quelli sotto */
 }
 
 button.start {
     width: 48%; /* Larghezza quasi metà per il pulsante 'Start' */
     display: inline-block;
     float: right;
+    margin-bottom: 20px; /* Distanza tra i tasti principali e quelli sotto */
 }
 
 button.back {
