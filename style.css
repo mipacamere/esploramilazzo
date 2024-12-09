@@ -201,6 +201,28 @@ button.google-maps-button {
     top: 20px;
     right: 20px;
     padding: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Aggiungi un'animazione per il cambiamento delle icone */
+.theme-toggle i {
+    transition: opacity 0.3s ease;
+}
+
+.theme-toggle i.sun {
+    opacity: 0;
+}
+
+body.light-theme .theme-toggle i.sun {
+    opacity: 1;
+}
+
+.theme-toggle i.moon {
+    opacity: 0;
+}
+
+body.dark-theme .theme-toggle i.moon {
+    opacity: 1;
 }
 
 /* Media queries per smartphone */
