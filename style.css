@@ -55,22 +55,77 @@ button.main, button.start, button.back, button.google-maps-button {
     text-align: center;
     width: 100%; /* I pulsanti occupano tutta la larghezza disponibile */
     transition: background-color 0.3s ease, transform 0.2s ease;
-    background-color: #34c759; /* Verde per il tema light */
-    color: white;
 }
 
-button.main:hover, button.start:hover, button.back:hover, button.google-maps-button:hover {
-    background-color: #28a745; /* Verde più scuro per hover */
-    transform: scale(1.05); /* Leggero ingrandimento per un effetto di interazione */
+/* Modifica del colore dei tasti in Light Theme */
+body.light-theme button.main {
+    background-color: #007aff; /* Blu iOS per i tasti di navigazione */
+    color: white; /* Testo bianco */
+}
+body.light-theme button.main:hover {
+    background-color: #0061d0; /* Blu più scuro per hover */
+}
+
+body.light-theme button.back {
+    background-color: #ff3b30; /* Rosso iOS per il tasto indietro */
+    color: white; /* Testo bianco */
+}
+body.light-theme button.back:hover {
+    background-color: #d93d2a; /* Rosso più scuro per hover */
+}
+
+body.light-theme button.start {
+    background-color: #5e2b82; /* Viola iOS per il tasto "Torna alla home" */
+    color: white; /* Testo bianco */
+}
+body.light-theme button.start:hover {
+    background-color: #4b1f67; /* Viola più scuro per hover */
+}
+
+body.light-theme button.google-maps-button {
+    background-color: #34c759; /* Verde iOS per il tasto Google Maps */
+    color: white; /* Testo bianco */
+}
+body.light-theme button.google-maps-button:hover {
+    background-color: #2a9c4f; /* Verde più scuro per hover */
+}
+
+/* Modifica del colore dei tasti in Dark Theme */
+body.dark-theme button.main {
+    background-color: #007aff; /* Blu iOS per i tasti di navigazione */
+    color: white; /* Testo bianco */
+}
+body.dark-theme button.main:hover {
+    background-color: #0061d0; /* Blu più scuro per hover */
+}
+
+body.dark-theme button.back {
+    background-color: #ff3b30; /* Rosso iOS per il tasto indietro */
+    color: white; /* Testo bianco */
+}
+body.dark-theme button.back:hover {
+    background-color: #d93d2a; /* Rosso più scuro per hover */
+}
+
+body.dark-theme button.start {
+    background-color: #5e2b82; /* Viola iOS per il tasto "Torna alla home" */
+    color: white; /* Testo bianco */
+}
+body.dark-theme button.start:hover {
+    background-color: #4b1f67; /* Viola più scuro per hover */
+}
+
+body.dark-theme button.google-maps-button {
+    background-color: #34c759; /* Verde iOS per il tasto Google Maps */
+    color: white; /* Testo bianco */
+}
+body.dark-theme button.google-maps-button:hover {
+    background-color: #2a9c4f; /* Verde più scuro per hover */
 }
 
 /* Pulsante Google Maps (posizionato sopra gli altri pulsanti) */
 button.google-maps-button {
-    background-color: #ff9500; /* Arancione per Google Maps */
     margin-bottom: 15px;
-}
-button.google-maps-button:hover {
-    background-color: #e67900; /* Arancione più scuro per hover */
 }
 
 /* Pulsante per il tema */
@@ -151,34 +206,6 @@ body, h1, h2, h3, p {
     margin: 0;
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
-
-/* Piccole ottimizzazioni per la larghezza della finestra */
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-    button.main, button.start, button.back, button.google-maps-button {
-        width: 48%; /* I pulsanti sono affiancati (non impilati) */
-        font-size: 14px;
-        padding: 10px;
-    }
-}
-
-/* Stili aggiuntivi per layout */
-h1, h2, h3, h4 {
-    color: inherit; /* Mantieni il colore del testo in base al tema */
-}
-
-/* Gestione visibilità delle sezioni */
-.hidden {
-    display: none;
-}
-
-/* Personalizzazione generale */
-body, h1, h2, h3, p {
-    margin: 0;
-    padding: 0;
 }
 
 /* Piccole ottimizzazioni per la larghezza della finestra */
