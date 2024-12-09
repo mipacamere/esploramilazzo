@@ -18,7 +18,6 @@ function goToColazione() { hideAllSections(); document.getElementById('colazione
 function goToItinerario() { hideAllSections(); document.getElementById('itinerario').classList.add('visible'); scrollToTop(); }
 function goToIndicazioniCapoMilazzo() { hideAllSections(); document.getElementById('indicazioniCapoMilazzo').classList.add('visible'); scrollToTop(); }
 function goToCapoMilazzo() { hideAllSections(); document.getElementById('capoMilazzo').classList.add('visible'); scrollToTop(); }
-function goToCapoMilazzo() { hideAllSections(); document.getElementById('capoMilazzo').classList.add('visible'); scrollToTop(); }
 function goToPiscinaVenereA() { hideAllSections(); document.getElementById('piscinaVenereA').classList.add('visible'); scrollToTop(); }
 function goToPanoramicaIsoleA() { hideAllSections(); document.getElementById('panoramicaIsoleA').classList.add('visible'); scrollToTop(); }
 function goToBorgoAnticoA() { hideAllSections(); document.getElementById('borgoAnticoA').classList.add('visible'); scrollToTop(); }
