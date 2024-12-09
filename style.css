@@ -6,6 +6,7 @@ div[id] {
 div.visible {
     display: block;
 }
+
 /* Tema Light */
 body.light-theme {
     background-color: #ffffff; /* Sfondo bianco */
@@ -35,7 +36,7 @@ body.dark-theme {
 }
 
 /* Contenitore per il tema Dark */
-dark-theme.container {
+.dark-theme .container {
     background-color: #000000; /* Sfondo nero per il tema dark */
     color: #ffffff; /* Testo bianco per il tema dark */
 }
@@ -52,6 +53,7 @@ dark-theme.container {
     right: 20px;
     padding: 8px;
 }
+
 /* Pulsanti di navigazione */
 button.main, button.start, button.back, button.google-maps-button, button.home-button {
     font-size: 16px;
@@ -63,6 +65,7 @@ button.main, button.start, button.back, button.google-maps-button, button.home-b
     width: auto;
     transition: background-color 0.3s ease;
 }
+
 /* Tema Light: Pulsanti */
 body.light-theme button.main {
     background-color: #34c759; /* Verde per navigazione */
@@ -92,68 +95,138 @@ body.light-theme button.start {
 body.light-theme button.start:hover {
     background-color: #0051a8; /* Blu più scuro per hover */
 }
+
 /* Tema Dark: Pulsanti */
 body.dark-theme button.main {
-    background-color: #9b59b6; /* Viola per navigazione */
+    background-color: #34c759; /* Verde per navigazione */
     color: white;
 }
 body.dark-theme button.main:hover {
-    background-color: #8e44ad; /* Viola più scuro per hover */
+    background-color: #28a745; /* Verde più scuro per hover */
 }
 body.dark-theme button.back {
-    background-color: #ff9500; /* Arancione per il tasto indietro */
+    background-color: #ff3b30; /* Rosso per il tasto indietro */
     color: white;
 }
 body.dark-theme button.back:hover {
-    background-color: #e67900; /* Arancione più scuro per hover */
+    background-color: #d93d2a; /* Rosso più scuro per hover */
 }
 body.dark-theme button.google-maps-button {
-    background-color: #34c759; /* Verde per Google Maps */
+    background-color: #ff9500; /* Arancione per Google Maps */
     color: white;
 }
 body.dark-theme button.google-maps-button:hover {
-    background-color: #28a745; /* Verde più scuro per hover */
+    background-color: #e67900; /* Arancione più scuro per hover */
 }
 body.dark-theme button.start {
-    background-color: #ffcc00; /* Giallo per torna alla home */
+    background-color: #007aff; /* Blu per torna alla home */
     color: white;
 }
 body.dark-theme button.start:hover {
-    background-color: #f5b700; /* Giallo più scuro per hover */
+    background-color: #0051a8; /* Blu più scuro per hover */
 }
-/* Sezioni di contenuto */
-#intro, #arrivo, #indicazioni, #colazione, #itinerario, #indicazioniCapoMilazzo, #capoMilazzo {
-    padding: 20px;
-    margin: 20px 0;
-    background-color: #ffffff;
+
+/* Navbar */
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+.navbar li {
+    display: inline;
+    margin-right: 10px;
+}
+.navbar li a {
+    text-decoration: none;
+    color: #007aff;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.navbar li a:hover {
+    background-color: #007aff;
+    color: #ffffff;
+}
+
+/* Stili per le immagini */
+.image-container img {
+    max-width: 100%;
+    height: auto;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-#intro {
-    background-color: #f9f9f9; /* Colore chiaro per il tema chiaro */
+
+/* Stili per i pulsanti */
+button.main {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #34c759;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-#arrivo, #indicazioni, #colazione, #itinerario, #indicazioniCapoMilazzo, #capoMilazzo {
-    background-color: #e5e5ea; /* Grigio chiaro simile a iOS */
+button.main:hover {
+    background-color: #28a745;
 }
-/* Media queries per la visualizzazione mobile */
-@media screen and (max-width: 768px) {
+button.start, button.back, button.google-maps-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button.start:hover, button.back:hover, button.google-maps-button:hover {
+    background-color: #007aff;
+    color: white;
+}
+
+/* Pulsante per Google Maps */
+.google-maps-button {
+    background-color: #ff9500;
+    color: white;
+}
+.google-maps-button:hover {
+    background-color: #e67900;
+}
+
+/* Pulsante per Home (non usato attualmente ma disponibile per futuro) */
+.home-button {
+    background-color: #007aff;
+    color: white;
+}
+.home-button:hover {
+    background-color: #0051a8;
+}
+
+/* Stili aggiuntivi per layout */
+h1, h2, h3, h4 {
+    color: inherit; /* Mantieni il colore del testo in base al tema */
+}
+
+/* Gestione visibilità delle sezioni */
+.hidden {
+    display: none;
+}
+
+/* Personalizzazione generale */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Piccole ottimizzazioni per la larghezza della finestra */
+@media (max-width: 768px) {
     .container {
         padding: 10px;
     }
-    button.main,
-    button.start,
-    button.back,
-    button.google-maps-button,
-    button.home-button {
-        width: 100%; /* Pulsanti full-width su dispositivi mobili */
-    }
-    h1 {
-        font-size: 24px;
-    }
-    h2, h3 {
-        font-size: 20px;
-    }
-    p {
-        font-size: 16px;
+    button.main, button.start, button.back, button.google-maps-button {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
     }
 }
