@@ -47,14 +47,15 @@ body.dark-theme {
 
 /* Pulsante con bordi arrotondati, più grande e con effetti di hover più leggeri */
 button.main, button.start, button.back, button.google-maps-button {
-    font-size: 16px;
-    padding: 16px 28px; /* Più spazio per una migliore interazione */
+    font-size: 18px;  /* Ingrandiamo la dimensione del testo */
+    padding: 16px 30px; /* Più spazio per una migliore interazione */
     border: none;
-    border-radius: 12px; /* Bordo arrotondato */
+    border-radius: 12px;
     cursor: pointer;
     text-align: center;
-    width: 100%; /* I pulsanti occupano tutta la larghezza disponibile */
+    width: 100%;  /* Pulsanti che occupano tutta la larghezza disponibile */
     transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 10px; /* Aggiungi spazio tra i pulsanti */
 }
 
 /* Nuovo colore dei tasti in Light Theme */
@@ -190,15 +191,21 @@ button.google-maps-button {
 /* Media queries per smartphone */
 @media (max-width: 768px) {
     .container {
-        width: 90%; /* Più spazio sui dispositivi mobili */
-        padding: 15px;
+        width: 100%; /* Contenitore usa tutta la larghezza disponibile */
+        padding: 10px;
     }
 
+    /* Disporre i pulsanti affiancati, sfruttando al massimo lo spazio */
     button.main, button.start, button.back, button.google-maps-button {
-        font-size: 18px;
-        padding: 14px 20px;
-        width: 100%; /* I pulsanti occupano tutta la larghezza disponibile */
-        margin-bottom: 10px; /* Aggiungi uno spazio tra i pulsanti */
+        width: 48%;  /* Pulsanti affiancati */
+        font-size: 18px;  /* Più grande per una migliore visibilità */
+        padding: 14px 20px;  /* Più spazio per una buona interazione */
+        margin-right: 4%; /* Distanza tra i pulsanti */
+    }
+
+    /* Rimuovi il margine destro dal pulsante a destra (per evitare overflow) */
+    button.google-maps-button {
+        margin-right: 0;
     }
 
     /* Navbar per piccoli schermi */
