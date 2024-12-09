@@ -54,14 +54,12 @@ function goToIntro() { hideAllSections(); document.getElementById('intro').class
 // Funzione per gestire l'attivazione del tema scuro
 function toggleTheme() {
     const body = document.body;
-    body.classList.toggle('dark-theme');
-    body.classList.toggle('light-theme');
-
-    const button = document.querySelector('.theme-toggle');
-    if (body.classList.contains('dark-theme')) {
-        button.textContent = '🌙';  // Icona tema chiaro
+    if (body.classList.contains('light-theme')) {
+        body.classList.remove('light-theme');
+        body.classList.add('dark-theme');
     } else {
-        button.textContent = '🌞';  // Icona tema scuro
+        body.classList.remove('dark-theme');
+        body.classList.add('light-theme');
     }
 }
 
