@@ -35,7 +35,7 @@ body.dark-theme {
 }
 
 /* Contenitore per il tema Dark */
-body.dark-theme .container {
+dark-theme.container {
     background-color: #000000; /* Sfondo nero per il tema dark */
     color: #ffffff; /* Testo bianco per il tema dark */
 }
