@@ -10,8 +10,8 @@ div.visible {
 
 /* Tema Light */
 body.light-theme {
-    background-color: #f5f5f5; /* Sfondo chiaro per l'interfaccia Android */
-    color: #212121; /* Testo scuro */
+    background-color: #ffffff; /* Sfondo chiaro per l'interfaccia Android */
+    color: #525252; /* Testo scuro */
     font-family: 'Roboto', sans-serif; /* Font Android */
     margin: 0;
     padding: 0;
@@ -19,7 +19,7 @@ body.light-theme {
 
 /* Tema Dark */
 body.dark-theme {
-    background-color: #121212; /* Sfondo scuro */
+    background-color: #333333; /* Sfondo scuro */
     color: #e0e0e0; /* Testo chiaro */
     font-family: 'Roboto', sans-serif; /* Font Android */
     margin: 0;
@@ -33,16 +33,16 @@ body.dark-theme {
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #ffffff; /* Sfondo bianco per il tema light */
-    color: #212121; /* Testo scuro per il tema light */
+    background-color: #f5f5f5; /* Sfondo bianco per il tema light */
+    color: #525252; /* Testo scuro per il tema light */
     border-radius: 16px; /* Bordo arrotondato per il look Android */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Ombra più forte per un look moderno */
 }
 
 /* Modifica per il tema Dark */
 .dark-theme .container {
-    background-color: #333333; /* Sfondo scuro per il tema dark */
-    color: #e0e0e0; /* Testo chiaro per il tema dark */
+    background-color: #000000; /* Sfondo scuro per il tema dark */
+    color:  #e8e8e8; /* Testo chiaro per il tema dark */
 }
 
 /* Pulsante con bordi arrotondati, più grande e con effetti di hover più leggeri */
@@ -61,11 +61,12 @@ button.main, button.start, button.back, button.google-maps-button {
 
 /* Pulsante "Torna alla Home" con blu */
 body.light-theme button.start {
-    background-color: #1e88e5; /* Blu intenso */
-    color: white; /* Testo bianco */
+    background-color: #bbbbbb; /* Blu intenso */
+    color: #1e88e5; /* Testo bianco */
 }
 body.light-theme button.start:hover {
     background-color: #1565c0; /* Blu più scuro per hover */
+    color: white; /* Testo bianco */
 }
 
 /* Pulsante principale con verde */
@@ -78,11 +79,12 @@ body.light-theme button.main:hover {
 }
 
 body.light-theme button.back {
-    background-color: #d32f2f; /* Rosso acceso */
-    color: white; /* Testo bianco */
+    background-color: #bbbbbb; /* Rosso acceso */
+    color: #d32f2f; /* Testo bianco */
 }
 body.light-theme button.back:hover {
     background-color: #c62828; /* Rosso più scuro per hover */
+    color: white; /* Testo bianco */
 }
 
 /* Pulsante Google Maps con giallo */
@@ -98,11 +100,12 @@ body.light-theme button.google-maps-button:hover {
 
 /* Pulsante "Torna alla Home" con blu */
 body.dark-theme button.start {
-    background-color: #1e88e5; /* Blu intenso */
-    color: white; /* Testo bianco */
+    background-color: #333333; /* Blu intenso */
+    color: #1e88e5; /* Testo bianco */
 }
 body.dark-theme button.start:hover {
     background-color: #1565c0; /* Blu più scuro per hover */
+    color: white; /* Testo bianco */
 }
 
 /* Pulsante principale con verde */
@@ -115,11 +118,12 @@ body.dark-theme button.main:hover {
 }
 
 body.dark-theme button.back {
-    background-color: #d32f2f; /* Rosso acceso */
-    color: white; /* Testo bianco */
+    background-color: #333333; /* Rosso acceso */
+    color: #d32f2f; /* Testo bianco */
 }
 body.dark-theme button.back:hover {
     background-color: #c62828; /* Rosso più scuro per hover */
+    color: white; /* Testo bianco */
 }
 
 /* Pulsante Google Maps con giallo */
