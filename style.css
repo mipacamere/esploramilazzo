@@ -38,6 +38,7 @@ body.dark-theme {
     text-align: center;
     padding: 10px 0;
     z-index: 9999; /* Assicurati che la navbar stia sopra il resto del contenuto */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombra per una leggera profondità */
 }
 
 .navbar ul {
@@ -66,8 +67,8 @@ body.dark-theme {
 
 /* Contenitore principale (allargato) */
 .container {
-    width: 90%; /* Maggiore larghezza rispetto a prima */
-    max-width: 700px; /* Limite massimo per la larghezza */
+    width: 95%; /* Più largo per il contenuto principale */
+    max-width: 800px; /* Limite massimo per la larghezza */
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
