@@ -1,0 +1,194 @@
+/* CSS di base per nascondere le sezioni */
+div[id] {
+    display: none;
+}
+
+/* Classe 'visible' per mostrare una sezione */
+div.visible {
+    display: block;
+}
+
+/* Tema Light */
+body.light-theme {
+    background-color: #ffffff; /* Sfondo bianco */
+    color: #000000; /* Testo nero */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Tema Dark */
+body.dark-theme {
+    background-color: #000000; /* Sfondo nero */
+    color: #ffffff; /* Testo bianco */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenitore principale più stretto */
+.container {
+    width: 100%;
+    max-width: 600px; /* Limita la larghezza per dispositivi mobili */
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Sfondo bianco per il tema light */
+    color: #000000; /* Testo nero per il tema light */
+    border-radius: 20px; /* Bordo arrotondato per il look iOS */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per dare profondità */
+}
+
+/* Modifica per il tema Dark */
+.dark-theme .container {
+    background-color: #1c1c1e; /* Sfondo scuro per il tema dark */
+    color: #f2f2f7; /* Testo chiaro per il tema dark */
+}
+
+/* Pulsante con bordi arrotondati, più grande e con effetti di hover più leggeri */
+button.main, button.start, button.back, button.google-maps-button {
+    font-size: 18px;
+    padding: 14px 24px; /* Più spazio per una migliore interazione */
+    border: none;
+    border-radius: 12px; /* Bordo arrotondato */
+    cursor: pointer;
+    text-align: center;
+    width: 100%; /* I pulsanti occupano tutta la larghezza disponibile */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #34c759; /* Verde per il tema light */
+    color: white;
+}
+
+button.main:hover, button.start:hover, button.back:hover, button.google-maps-button:hover {
+    background-color: #28a745; /* Verde più scuro per hover */
+    transform: scale(1.05); /* Leggero ingrandimento per un effetto di interazione */
+}
+
+/* Pulsante Google Maps (posizionato sopra gli altri pulsanti) */
+button.google-maps-button {
+    background-color: #ff9500; /* Arancione per Google Maps */
+    margin-bottom: 15px;
+}
+button.google-maps-button:hover {
+    background-color: #e67900; /* Arancione più scuro per hover */
+}
+
+/* Pulsante per il tema */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: inherit;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+}
+
+/* Navbar ottimizzata */
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f1f1f1;
+    text-align: center;
+    border-radius: 12px; /* Bordo arrotondato per navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombra per un effetto leggero */
+}
+.navbar li {
+    display: inline-block;
+    margin-right: 10px;
+}
+.navbar li a {
+    text-decoration: none;
+    color: #007aff;
+    font-size: 18px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+.navbar li a:hover {
+    background-color: #007aff;
+    color: #ffffff;
+}
+
+/* Stili per le immagini */
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    margin-bottom: 15px;
+}
+
+/* Media queries per smartphone */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Più spazio sui dispositivi mobili */
+        padding: 15px;
+    }
+
+    button.main, button.start, button.back, button.google-maps-button {
+        font-size: 18px;
+        padding: 14px 20px;
+        width: 100%; /* I pulsanti occupano tutta la larghezza disponibile */
+    }
+
+    /* Navbar per piccoli schermi */
+    .navbar li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+/* Ottimizzazione per la visibilità delle sezioni */
+.hidden {
+    display: none;
+}
+
+/* Miglioramenti generali */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Piccole ottimizzazioni per la larghezza della finestra */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    button.main, button.start, button.back, button.google-maps-button {
+        width: 48%; /* I pulsanti sono affiancati (non impilati) */
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Stili aggiuntivi per layout */
+h1, h2, h3, h4 {
+    color: inherit; /* Mantieni il colore del testo in base al tema */
+}
+
+/* Gestione visibilità delle sezioni */
+.hidden {
+    display: none;
+}
+
+/* Personalizzazione generale */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Piccole ottimizzazioni per la larghezza della finestra */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    button.main, button.start, button.back, button.google-maps-button {
+        width: 48%; /* I pulsanti sono affiancati (non impilati) */
+        font-size: 14px;
+        padding: 10px;
+    }
+}
