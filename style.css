@@ -22,6 +22,7 @@ body.dark-theme {
     margin: 0;
     padding: 0;
 }
+
 /* Contenitore principale che racchiude il corpo centrale */
 .container {
     width: 100%;
@@ -29,7 +30,16 @@ body.dark-theme {
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
+    background-color: #ffffff; /* Sfondo bianco per il tema light */
+    color: #000000; /* Testo nero per il tema light */
 }
+
+/* Contenitore per il tema Dark */
+body.dark-theme .container {
+    background-color: #000000; /* Sfondo nero per il tema dark */
+    color: #ffffff; /* Testo bianco per il tema dark */
+}
+
 /* Pulsante del tema (moon icon) */
 .theme-toggle {
     background: none;
