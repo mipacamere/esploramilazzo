@@ -39,28 +39,83 @@ body.dark-theme {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Ombra più forte per un look moderno */
 }
 
-/* Modifica per il tema Dark */
-.dark-theme .container {
-    background-color: #000000; /* Sfondo scuro per il tema dark */
-    color:  #e8e8e8; /* Testo chiaro per il tema dark */
+/* Navbar ottimizzata */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #6200ea; /* Colore principale per navbar */
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 12px 12px 0 0; /* Bordo arrotondato in alto */
+    z-index: 1000; /* Assicurati che la navbar stia sopra il resto del contenuto */
+    transition: top 0.3s ease; /* Transizione fluida quando la navbar scompare */
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar li a:hover {
+    background-color: #3700b3;
+}
+
+/* Sezione di selezione lingue */
+.language-selection {
+    position: fixed;
+    top: 50px; /* Distanza dalla navbar */
+    left: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 10px 0;
+    z-index: 999; /* Appare sotto la navbar */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Ombra per la striscia */
+    transition: top 0.3s ease;
+}
+
+.language-selection.hidden {
+    top: -60px; /* Nascondi la striscia quando non visibile */
+}
+
+/* Stili per le immagini */
+.language-flag {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 0 10px;
 }
 
 /* Pulsante con bordi arrotondati, più grande e con effetti di hover più leggeri */
 button.main, button.start, button.back, button.google-maps-button {
-    font-size: 18px;  /* Ingrandiamo la dimensione del testo */
-    padding: 16px 30px; /* Più spazio per una migliore interazione */
+    font-size: 16px;
+    padding: 16px 28px; /* Più spazio per una migliore interazione */
     border: none;
-    border-radius: 12px;
+    border-radius: 12px; /* Bordo arrotondato */
     cursor: pointer;
     text-align: center;
-    width: 100%;  /* Pulsanti che occupano tutta la larghezza disponibile */
+    width: 100%; /* I pulsanti occupano tutta la larghezza disponibile */
     transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-bottom: 10px; /* Aggiungi spazio tra i pulsanti */
 }
 
 /* Nuovo colore dei tasti in Light Theme */
-
-/* Pulsante "Torna alla Home" con blu */
 body.light-theme button.start {
     background-color: #e1e1e1; /* Blu intenso */
     color: #1e88e5; /* Testo bianco */
@@ -70,7 +125,6 @@ body.light-theme button.start:hover {
     color: white; /* Testo bianco */
 }
 
-/* Pulsante principale con verde */
 body.light-theme button.main {
     background-color: #388e3c; /* Verde chiaro */
     color: white; /* Testo bianco */
@@ -88,7 +142,6 @@ body.light-theme button.back:hover {
     color: white; /* Testo bianco */
 }
 
-/* Pulsante Google Maps con giallo */
 body.light-theme button.google-maps-button {
     background-color: #fbc02d; /* Giallo brillante */
     color: #525252; /* Testo bianco */
@@ -98,8 +151,6 @@ body.light-theme button.google-maps-button:hover {
 }
 
 /* Nuovo colore dei tasti in Dark Theme */
-
-/* Pulsante "Torna alla Home" con blu */
 body.dark-theme button.start {
     background-color: #333333; /* Blu intenso */
     color: #1e88e5; /* Testo bianco */
@@ -109,7 +160,6 @@ body.dark-theme button.start:hover {
     color: white; /* Testo bianco */
 }
 
-/* Pulsante principale con verde */
 body.dark-theme button.main {
     background-color: #388e3c; /* Verde chiaro */
     color: white; /* Testo bianco */
@@ -127,7 +177,6 @@ body.dark-theme button.back:hover {
     color: white; /* Testo bianco */
 }
 
-/* Pulsante Google Maps con giallo */
 body.dark-theme button.google-maps-button {
     background-color: #fbc02d; /* Giallo brillante */
     color: #525252; /* Testo bianco */
@@ -154,53 +203,18 @@ button.google-maps-button {
     padding: 10px;
 }
 
-/* Navbar ottimizzata */
-.navbar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    background-color: #6200ea; /* Colore principale per navbar */
-    text-align: center;
-    border-radius: 12px; /* Bordo arrotondato per navbar */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Ombra per un effetto leggero */
-}
-.navbar li {
-    display: inline-block;
-    margin-right: 10px;
-}
-.navbar li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 16px;
-    padding: 12px 20px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-}
-.navbar li a:hover {
-    background-color: #3700b3;
-}
-
-/* Stili per le immagini */
-.image-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 16px;
-    margin-bottom: 15px;
-}
-
 /* Media queries per smartphone */
 @media (max-width: 768px) {
     .container {
-        width: 100%; /* Contenitore usa tutta la larghezza disponibile */
-        padding: 10px;
+        width: 90%; /* Più spazio sui dispositivi mobili */
+        padding: 15px;
     }
 
-    /* Disporre i pulsanti uno sopra l'altro, ognuno occupa tutta la larghezza */
     button.main, button.start, button.back, button.google-maps-button {
-        width: 100%;  /* Ogni pulsante prende tutta la larghezza */
-        font-size: 18px;  /* Più grande per una migliore visibilità */
-        padding: 14px 20px;  /* Più spazio per una buona interazione */
-        margin-bottom: 10px; /* Aggiungi spazio tra i pulsanti */
+        font-size: 18px;
+        padding: 14px 20px;
+        width: 100%; /* I pulsanti occupano tutta la larghezza disponibile */
+        margin-bottom: 10px; /* Aggiungi uno spazio tra i pulsanti */
     }
 
     /* Navbar per piccoli schermi */
@@ -228,7 +242,7 @@ body, h1, h2, h3, p {
         padding: 10px;
     }
     button.main, button.start, button.back, button.google-maps-button {
-        width: 100%; /* Ogni pulsante prende tutta la larghezza */
+        width: 48%; /* I pulsanti sono affiancati (non impilati) */
         font-size: 14px;
         padding: 10px;
     }
@@ -238,9 +252,20 @@ body, h1, h2, h3, p {
 
 /* Sezione di selezione lingue */
 .language-selection {
-    display: flex;
-    flex-direction: column; /* Righe disposte in verticale */
-    gap: 20px; /* Spazio tra le righe */
+    position: fixed;
+    top: 50px; /* Distanza dalla navbar */
+    left: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 10px 0;
+    z-index: 999; /* Appare sotto la navbar */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Ombra per la striscia */
+    transition: top 0.3s ease;
+}
+
+.language-selection.hidden {
+    top: -60px; /* Nascondi la striscia quando non visibile */
 }
 
 /* Righe di lingue, disposte orizzontalmente */
