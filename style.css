@@ -58,12 +58,23 @@ button.main, button.start, button.back, button.google-maps-button {
 }
 
 /* Nuovo colore dei tasti in Light Theme */
-body.light-theme button.main {
+
+/* Pulsante "Torna alla Home" con blu */
+body.light-theme button.start {
     background-color: #1e88e5; /* Blu intenso */
     color: white; /* Testo bianco */
 }
-body.light-theme button.main:hover {
+body.light-theme button.start:hover {
     background-color: #1565c0; /* Blu più scuro per hover */
+}
+
+/* Pulsante principale con verde */
+body.light-theme button.main {
+    background-color: #388e3c; /* Verde chiaro */
+    color: white; /* Testo bianco */
+}
+body.light-theme button.main:hover {
+    background-color: #2c6c2f; /* Verde più scuro per hover */
 }
 
 body.light-theme button.back {
@@ -74,29 +85,33 @@ body.light-theme button.back:hover {
     background-color: #c62828; /* Rosso più scuro per hover */
 }
 
-body.light-theme button.start {
-    background-color: #388e3c; /* Verde chiaro */
-    color: white; /* Testo bianco */
-}
-body.light-theme button.start:hover {
-    background-color: #2c6c2f; /* Verde più scuro per hover */
-}
-
+/* Pulsante Google Maps con giallo */
 body.light-theme button.google-maps-button {
-    background-color: #f57c00; /* Arancione brillante */
+    background-color: #fbc02d; /* Giallo brillante */
     color: white; /* Testo bianco */
 }
 body.light-theme button.google-maps-button:hover {
-    background-color: #e65100; /* Arancione più scuro per hover */
+    background-color: #f9a825; /* Giallo più scuro per hover */
 }
 
 /* Nuovo colore dei tasti in Dark Theme */
-body.dark-theme button.main {
+
+/* Pulsante "Torna alla Home" con blu */
+body.dark-theme button.start {
     background-color: #1e88e5; /* Blu intenso */
     color: white; /* Testo bianco */
 }
-body.dark-theme button.main:hover {
+body.dark-theme button.start:hover {
     background-color: #1565c0; /* Blu più scuro per hover */
+}
+
+/* Pulsante principale con verde */
+body.dark-theme button.main {
+    background-color: #388e3c; /* Verde chiaro */
+    color: white; /* Testo bianco */
+}
+body.dark-theme button.main:hover {
+    background-color: #2c6c2f; /* Verde più scuro per hover */
 }
 
 body.dark-theme button.back {
@@ -107,20 +122,13 @@ body.dark-theme button.back:hover {
     background-color: #c62828; /* Rosso più scuro per hover */
 }
 
-body.dark-theme button.start {
-    background-color: #388e3c; /* Verde chiaro */
-    color: white; /* Testo bianco */
-}
-body.dark-theme button.start:hover {
-    background-color: #2c6c2f; /* Verde più scuro per hover */
-}
-
+/* Pulsante Google Maps con giallo */
 body.dark-theme button.google-maps-button {
-    background-color: #f57c00; /* Arancione brillante */
+    background-color: #fbc02d; /* Giallo brillante */
     color: white; /* Testo bianco */
 }
 body.dark-theme button.google-maps-button:hover {
-    background-color: #e65100; /* Arancione più scuro per hover */
+    background-color: #f9a825; /* Giallo più scuro per hover */
 }
 
 /* Pulsante Google Maps (posizionato sopra gli altri pulsanti) */
@@ -140,6 +148,7 @@ button.google-maps-button {
     right: 20px;
     padding: 10px;
 }
+
 
 /* Navbar ottimizzata */
 .navbar ul {
