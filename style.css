@@ -1,0 +1,251 @@
+/* CSS di base per nascondere le sezioni */
+div[id] {
+    display: none;
+}
+/* Classe 'visible' per mostrare una sezione */
+div.visible {
+    display: block;
+}
+
+/* Tema Light */
+body.light-theme {
+    background-color: #ffffff; /* Sfondo bianco */
+    color: #000000; /* Testo nero */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Tema Dark */
+body.dark-theme {
+    background-color: #000000; /* Sfondo nero */
+    color: #ffffff; /* Testo bianco */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenitore principale che racchiude il corpo centrale */
+.container {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Sfondo bianco per il tema light */
+    color: #000000; /* Testo nero per il tema light */
+}
+
+/* Contenitore per il tema Dark */
+.dark-theme .container {
+    background-color: #000000; /* Sfondo nero per il tema dark */
+    color: #ffffff; /* Testo bianco per il tema dark */
+}
+
+/* Pulsante del tema (moon icon) */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: inherit;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px;
+}
+
+/* Pulsanti di navigazione principali */
+button.main, button.start, button.back, button.google-maps-button, button.home-button {
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    width: auto;
+    transition: background-color 0.3s ease;
+}
+
+/* Pulsante Google Maps (posizionato sopra gli altri pulsanti) */
+button.google-maps-button {
+    background-color: #ff9500; /* Arancione per Google Maps */
+    color: white;
+    margin-bottom: 20px; /* Aggiungi spazio tra Google Maps e gli altri pulsanti */
+}
+button.google-maps-button:hover {
+    background-color: #e67900; /* Arancione più scuro per hover */
+}
+
+/* Tema Light: Pulsanti */
+body.light-theme button.main {
+    background-color: #34c759; /* Verde per navigazione */
+    color: white;
+}
+body.light-theme button.main:hover {
+    background-color: #28a745; /* Verde più scuro per hover */
+}
+body.light-theme button.back {
+    background-color: #ff3b30; /* Rosso per il tasto indietro */
+    color: white;
+}
+body.light-theme button.back:hover {
+    background-color: #d93d2a; /* Rosso più scuro per hover */
+}
+body.light-theme button.start {
+    background-color: #007aff; /* Blu per torna alla home */
+    color: white;
+}
+body.light-theme button.start:hover {
+    background-color: #0051a8; /* Blu più scuro per hover */
+}
+
+/* Tema Dark: Pulsanti */
+body.dark-theme button.main {
+    background-color: #34c759; /* Verde per navigazione */
+    color: white;
+}
+body.dark-theme button.main:hover {
+    background-color: #28a745; /* Verde più scuro per hover */
+}
+body.dark-theme button.back {
+    background-color: #ff3b30; /* Rosso per il tasto indietro */
+    color: white;
+}
+body.dark-theme button.back:hover {
+    background-color: #d93d2a; /* Rosso più scuro per hover */
+}
+body.dark-theme button.start {
+    background-color: #007aff; /* Blu per torna alla home */
+    color: white;
+}
+body.dark-theme button.start:hover {
+    background-color: #0051a8; /* Blu più scuro per hover */
+}
+
+/* Posizionamento dei pulsanti in modalità desktop */
+button.google-maps-button {
+    width: 100%; /* Aggiunge larghezza completa al pulsante Google Maps */
+    margin-bottom: 20px; /* Distanza dal resto dei pulsanti */
+}
+
+button.main {
+    width: 48%; /* Larghezza quasi metà per i pulsanti principali */
+    display: inline-block;
+}
+
+button.start {
+    width: 48%; /* Larghezza quasi metà per il pulsante 'Start' */
+    display: inline-block;
+    float: right;
+}
+
+button.back {
+    width: 48%; /* Larghezza quasi metà per il pulsante 'Back' */
+    display: inline-block;
+    float: left;
+}
+
+/* Navbar */
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+.navbar li {
+    display: inline;
+    margin-right: 10px;
+}
+.navbar li a {
+    text-decoration: none;
+    color: #007aff;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.navbar li a:hover {
+    background-color: #007aff;
+    color: #ffffff;
+}
+
+/* Stili per le immagini */
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Pulsanti generali */
+button.main {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #34c759;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button.main:hover {
+    background-color: #28a745;
+}
+button.start, button.back, button.google-maps-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button.start:hover, button.back:hover, button.google-maps-button:hover {
+    background-color: #007aff;
+    color: white;
+}
+
+/* Pulsante per Google Maps */
+.google-maps-button {
+    background-color: #ff9500;
+    color: white;
+}
+.google-maps-button:hover {
+    background-color: #e67900;
+}
+
+/* Pulsante per Home (non usato attualmente ma disponibile per futuro) */
+.home-button {
+    background-color: #007aff;
+    color: white;
+}
+.home-button:hover {
+    background-color: #0051a8;
+}
+
+/* Stili aggiuntivi per layout */
+h1, h2, h3, h4 {
+    color: inherit; /* Mantieni il colore del testo in base al tema */
+}
+
+/* Gestione visibilità delle sezioni */
+.hidden {
+    display: none;
+}
+
+/* Personalizzazione generale */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Piccole ottimizzazioni per la larghezza della finestra */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    button.main, button.start, button.back, button.google-maps-button {
+        width: 48%; /* I pulsanti sono affiancati (non impilati) */
+        font-size: 14px;
+        padding: 10px;
+    }
+}
