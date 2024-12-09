@@ -54,7 +54,7 @@ body.dark-theme {
     padding: 8px;
 }
 
-/* Pulsanti di navigazione */
+/* Pulsanti di navigazione principali */
 button.main, button.start, button.back, button.google-maps-button, button.home-button {
     font-size: 16px;
     padding: 12px 24px;
@@ -64,6 +64,16 @@ button.main, button.start, button.back, button.google-maps-button, button.home-b
     text-align: center;
     width: auto;
     transition: background-color 0.3s ease;
+}
+
+/* Pulsante Google Maps (posizionato sopra gli altri pulsanti) */
+button.google-maps-button {
+    background-color: #ff9500; /* Arancione per Google Maps */
+    color: white;
+    margin-bottom: 20px; /* Aggiungi spazio tra Google Maps e gli altri pulsanti */
+}
+button.google-maps-button:hover {
+    background-color: #e67900; /* Arancione più scuro per hover */
 }
 
 /* Tema Light: Pulsanti */
@@ -80,13 +90,6 @@ body.light-theme button.back {
 }
 body.light-theme button.back:hover {
     background-color: #d93d2a; /* Rosso più scuro per hover */
-}
-body.light-theme button.google-maps-button {
-    background-color: #ff9500; /* Arancione per Google Maps */
-    color: white;
-}
-body.light-theme button.google-maps-button:hover {
-    background-color: #e67900; /* Arancione più scuro per hover */
 }
 body.light-theme button.start {
     background-color: #007aff; /* Blu per torna alla home */
@@ -111,19 +114,20 @@ body.dark-theme button.back {
 body.dark-theme button.back:hover {
     background-color: #d93d2a; /* Rosso più scuro per hover */
 }
-body.dark-theme button.google-maps-button {
-    background-color: #ff9500; /* Arancione per Google Maps */
-    color: white;
-}
-body.dark-theme button.google-maps-button:hover {
-    background-color: #e67900; /* Arancione più scuro per hover */
-}
 body.dark-theme button.start {
     background-color: #007aff; /* Blu per torna alla home */
     color: white;
 }
 body.dark-theme button.start:hover {
     background-color: #0051a8; /* Blu più scuro per hover */
+}
+
+/* Posizionamento dei pulsanti: Indietro a sinistra, Home a destra */
+button.back {
+    float: left;
+}
+button.start {
+    float: right;
 }
 
 /* Navbar */
@@ -158,7 +162,7 @@ body.dark-theme button.start:hover {
     border-radius: 8px;
 }
 
-/* Stili per i pulsanti */
+/* Pulsanti generali */
 button.main {
     font-size: 18px;
     padding: 10px 20px;
