@@ -1,0 +1,23 @@
+/* CSS di base per nascondere le sezioni */
+div[id] {
+    display: none;
+}
+
+/* Classe 'visible' per mostrare una sezione */
+div.visible {
+    display: block;
+}
+
+/* Tema scuro (aggiungi il CSS del tema scuro come preferisci) */
+body.dark-theme {
+    background-color: #333;
+    color: white;
+}
+
+/* Personalizzazioni per il pulsante del tema (opzionale) */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
