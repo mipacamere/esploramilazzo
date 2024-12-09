@@ -69,8 +69,8 @@ body.dark-theme {
 .container {
     width: 95%; /* Più largo per il contenuto principale */
     max-width: 800px; /* Limite massimo per la larghezza */
-    margin: 2px auto; /* Ridotto l'offset esterno (margine) da 0 a 10px */
-    padding: 15px;
+    margin: 0px auto; /* Ridotto l'offset esterno (margine) da 0 a 10px */
+    padding: 20px;
     box-sizing: border-box;
     background-color: #f5f5f5; /* Sfondo chiaro per il tema light */
     color: #525252; /* Testo scuro per il tema light */
