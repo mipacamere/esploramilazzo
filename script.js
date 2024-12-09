@@ -1,10 +1,17 @@
 // Funzione per nascondere tutte le sezioni
 function hideAllSections() {
-    const sections = document.querySelectorAll('#intro, #arrivo, #indicazioni, #colazione, #itinerario, #indicazioniCapoMilazzo, #capoMilazzo, #piscinaVenereA, #panoramicaIsoleA');
-    sections.forEach(function (section) {
-        section.style.display = 'none';
+    const sections = document.querySelectorAll('.container > div');
+    sections.forEach(section => {
+        section.classList.add('hidden');  // Aggiungi la classe 'hidden' per nascondere
+        section.classList.remove('visible');  // Rimuovi la classe 'visible'
     });
 }
+
+// Funzione per scrollare in cima alla pagina
+function scrollToTop() {
+    window.scrollTo(0, 0);
+}
+
 
 // Imposta la visualizzazione iniziale alla sezione "intro"
 document.addEventListener('DOMContentLoaded', function () {
