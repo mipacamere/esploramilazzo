@@ -1,0 +1,158 @@
+/* CSS di base per nascondere le sezioni */
+div[id] {
+    display: none;
+}
+
+/* Classe 'visible' per mostrare una sezione */
+div.visible {
+    display: block;
+}
+
+/* Tema chiaro (Light Theme) */
+body.light-theme {
+    background-color: #f2f2f7; /* Grigio chiaro simile a iOS */
+    color: #000000; /* Testo nero */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Font iOS */
+    margin: 0;
+    padding: 0;
+}
+
+/* Tema scuro (Dark Theme) */
+body.dark-theme {
+    background-color: #000000; /* Nero assoluto */
+    color: #ffffff; /* Testo bianco */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Font iOS */
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenitore principale che racchiude il corpo centrale */
+.container {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Pulsante del tema (moon icon) */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: inherit;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px;
+}
+
+/* Stile dei pulsanti principali (IOS Style) */
+button.main,
+button.start,
+button.back,
+button.google-maps-button {
+    background-color: #007aff; /* Blu simile ai pulsanti iOS */
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button.main:hover,
+button.start:hover,
+button.back:hover,
+button.google-maps-button:hover {
+    background-color: #0051a8; /* Colore blu scuro per hover */
+}
+
+/* Formattazione delle immagini (responsive e in linea con il design iOS) */
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+/* Sezioni di contenuto */
+#intro, #arrivo, #indicazioni, #colazione, #itinerario, #indicazioniCapoMilazzo, #capoMilazzo {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#intro {
+    background-color: #f9f9f9; /* Colore chiaro per il tema chiaro */
+}
+
+#arrivo, #indicazioni, #colazione, #itinerario, #indicazioniCapoMilazzo, #capoMilazzo {
+    background-color: #e5e5ea; /* Grigio chiaro simile a iOS */
+}
+
+/* Stile per i testi */
+h1, h2, h3, p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+/* Pulsante personalizzato per la mappa */
+.google-maps-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #34c759; /* Verde iOS per la mappa */
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    width: auto;
+    color: white;
+}
+
+.google-maps-button i {
+    margin-right: 10px;
+}
+
+.google-maps-button:hover {
+    background-color: #28a745; /* Colore più scuro per hover */
+}
+
+/* Media queries per la visualizzazione mobile */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    button.main,
+    button.start,
+    button.back,
+    button.google-maps-button {
+        width: 100%; /* Pulsanti full-width su dispositivi mobili */
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2, h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
