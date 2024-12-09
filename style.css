@@ -1,20 +1,14 @@
-/* CSS di base per nascondere le sezioni */
-div[id] {
-    display: none;
-}
-
-/* Classe 'visible' per mostrare una sezione */
-div.visible {
-    display: block;
-}
-
 /* Tema Light */
 body.light-theme {
-    background-color: #ffffff; /* Sfondo bianco */
+    background-color: #f7f7f7; /* Sfondo chiaro simile a iOS */
     color: #000000; /* Testo nero */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Tema Dark */
@@ -24,6 +18,10 @@ body.dark-theme {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Contenitore principale che racchiude il corpo centrale */
@@ -53,11 +51,12 @@ button.main, button.start, button.back, button.google-maps-button, button.home-b
     font-size: 16px;
     padding: 12px 24px;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px; /* Angoli arrotondati */
     cursor: pointer;
     text-align: center;
     width: auto;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombra per i pulsanti, stile iOS */
+    transition: all 0.3s ease;
 }
 
 /* Tema Light: Pulsanti */
@@ -68,6 +67,7 @@ body.light-theme button.main {
 
 body.light-theme button.main:hover {
     background-color: #28a745; /* Verde più scuro per hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Ombra più accentuata */
 }
 
 body.light-theme button.back {
@@ -77,6 +77,7 @@ body.light-theme button.back {
 
 body.light-theme button.back:hover {
     background-color: #d93d2a; /* Rosso più scuro per hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Ombra più accentuata */
 }
 
 body.light-theme button.google-maps-button {
@@ -86,6 +87,7 @@ body.light-theme button.google-maps-button {
 
 body.light-theme button.google-maps-button:hover {
     background-color: #e67900; /* Arancione più scuro per hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Ombra più accentuata */
 }
 
 body.light-theme button.home-button {
@@ -95,6 +97,7 @@ body.light-theme button.home-button {
 
 body.light-theme button.home-button:hover {
     background-color: #0051a8; /* Blu più scuro per hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Ombra più accentuata */
 }
 
 /* Tema Dark: Pulsanti */
@@ -105,6 +108,7 @@ body.dark-theme button.main {
 
 body.dark-theme button.main:hover {
     background-color: #8e44ad; /* Viola più scuro per hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Ombra più accentuata */
 }
 
 body.dark-theme button.back {
@@ -114,6 +118,7 @@ body.dark-theme button.back {
 
 body.dark-theme button.back:hover {
     background-color: #e67900; /* Arancione più scuro per hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Ombra più accentuata */
 }
 
 body.dark-theme button.google-maps-button {
@@ -123,6 +128,7 @@ body.dark-theme button.google-maps-button {
 
 body.dark-theme button.google-maps-button:hover {
     background-color: #28a745; /* Verde più scuro per hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Ombra più accentuata */
 }
 
 body.dark-theme button.home-button {
@@ -132,23 +138,7 @@ body.dark-theme button.home-button {
 
 body.dark-theme button.home-button:hover {
     background-color: #f5b700; /* Giallo più scuro per hover */
-}
-
-/* Sezioni di contenuto */
-#intro, #arrivo, #indicazioni, #colazione, #itinerario, #indicazioniCapoMilazzo, #capoMilazzo {
-    padding: 20px;
-    margin: 20px 0;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-#intro {
-    background-color: #f9f9f9; /* Colore chiaro per il tema chiaro */
-}
-
-#arrivo, #indicazioni, #colazione, #itinerario, #indicazioniCapoMilazzo, #capoMilazzo {
-    background-color: #e5e5ea; /* Grigio chiaro simile a iOS */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Ombra più accentuata */
 }
 
 /* Layout per i pulsanti */
@@ -163,7 +153,7 @@ body.dark-theme button.home-button:hover {
 .itinerary-buttons {
     display: flex;
     gap: 10px;
-    justify-content: center;
+    justify-content: space-between; /* Pulsanti affiancati */
     width: 100%;
 }
 
@@ -180,7 +170,7 @@ body.dark-theme button.home-button:hover {
 
 /* Pulsanti fissi in fondo alla pagina */
 .back-home-buttons button {
-    width: 48%;
+    width: 48%; /* Pulsanti alla stessa larghezza */
 }
 
 /* Media queries per la visualizzazione mobile */
@@ -194,7 +184,7 @@ body.dark-theme button.home-button:hover {
     button.back,
     button.google-maps-button,
     button.home-button {
-        width: auto; /* Pulsanti non full-width, per avere spazi tra di loro */
+        width: auto; /* Pulsanti non full-width */
     }
 
     .itinerary-buttons {
