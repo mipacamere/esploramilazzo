@@ -31,7 +31,7 @@ function goToTramontoTonoA() { hideAllSections(); document.getElementById('tramo
 function goToRientroCentroA() { hideAllSections(); document.getElementById('rientroCentroA').classList.add('visible'); scrollToTop(); }
 function goToSpiaggiaPonente() { hideAllSections(); document.getElementById('spiaggiaPonente').classList.add('visible'); scrollToTop(); }
 function goToLidoSpiaggia() { hideAllSections(); document.getElementById('lidoSpiaggia').classList.add('visible'); scrollToTop(); }
-function goTotempoSpiaggiaB() { hideAllSections(); document.getElementById('tempoSpiaggiaB').classList.add('visible'); scrollToTop(); }
+function goToTempoSpiaggiaB() { hideAllSections(); document.getElementById('tempoSpiaggiaB').classList.add('visible'); scrollToTop(); }
 function goToAttivitaAcquaticheB() { hideAllSections(); document.getElementById('attivitaAcquaticheB').classList.add('visible'); scrollToTop(); }
 function goToPranzoB() { hideAllSections(); document.getElementById('pranzoB').classList.add('visible'); scrollToTop(); }
 function goToPomeriggioB() { hideAllSections(); document.getElementById('pomeriggioB').classList.add('visible'); scrollToTop(); }
