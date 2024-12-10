@@ -67,7 +67,7 @@ body.dark-theme {
 
 /* Contenitore principale (con margine ridotto) */
 .container {
-    width: 95%; /* Più largo per il contenuto principale */
+    width: 99%; /* Più largo per il contenuto principale */
     max-width: 800px; /* Limite massimo per la larghezza */
     margin: 0px auto; /* Ridotto l'offset esterno (margine) da 0 a 10px */
     padding: 20px;
