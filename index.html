@@ -8,28 +8,35 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #f4f4f4;
+            background-color: white; /* White background */
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
         .container {
-            max-width: 800px;
-            margin: 50px auto;
+            max-width: 90%;
+            width: 500px;
             background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid #ddd; /* Subtle gray frame */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
         }
 
         h1 {
-            font-size: 24px;
+            font-size: 26px;
             margin-bottom: 20px;
-        }
-
-        .language-selection {
-            display: flex;
-            justify-content: center;
+            color: #333;
         }
 
         .language-grid {
@@ -37,14 +44,18 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
-            max-width: 600px;
         }
 
         .language-item {
             text-align: center;
-            flex: 1 1 calc(25% - 20px); /* 4 columns on larger screens */
-            max-width: 150px;
-            min-width: 100px;
+            flex: 1 1 calc(25% - 20px);
+            max-width: 120px;
+            min-width: 85px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .language-item:hover {
+            transform: scale(1.1);
         }
 
         .language-item a {
@@ -54,12 +65,18 @@
         }
 
         .language-flag {
-            width: 100%; /* Responsive width */
-            max-width: 120px; /* Max flag size */
-            min-width: 85px; /* Min flag size */
+            width: 100%;
+            max-width: 100px;
+            min-width: 85px;
             height: auto;
             display: block;
             margin: 0 auto;
+            border-radius: 10px;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .language-item:hover .language-flag {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
 
         .language-item p {
@@ -69,12 +86,17 @@
         }
 
         @media (max-width: 600px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+
             .language-item {
-                flex: 1 1 calc(50% - 20px); /* 2 columns on small screens */
+                flex: 1 1 calc(50% - 20px);
             }
 
             .language-flag {
-                max-width: 85px; /* Smaller flags on small screens */
+                max-width: 85px;
             }
         }
     </style>
@@ -82,59 +104,56 @@
 <body>
     <div class="container">
         <h1>Select Your Language</h1>
-        <div class="language-selection">
-            <div class="language-grid">
-                <div class="language-item">
-                    <a href="index_en.html">
-                        <img src="flags/english.png" alt="English" class="language-flag">
-                        <p>English</p>
-                    </a>
-                </div>
-                <div class="language-item">
-                    <a href="index_it.html">
-                        <img src="flags/italian.png" alt="Italiano" class="language-flag">
-                        <p>Italiano</p>
-                    </a>
-                </div>
-                <div class="language-item">
-                    <a href="index_es.html">
-                        <img src="flags/spanish.png" alt="Español" class="language-flag">
-                        <p>Español</p>
-                    </a>
-                </div>
-                <div class="language-item">
-                    <a href="index_fr.html">
-                        <img src="flags/french.png" alt="Français" class="language-flag">
-                        <p>Français</p>
-                    </a>
-                </div>
-                <div class="language-item">
-                    <a href="index_ge.html">
-                        <img src="flags/german.png" alt="Deutsch" class="language-flag">
-                        <p>Deutsch</p>
-                    </a>
-                </div>
-                <div class="language-item">
-                    <a href="index_ru.html">
-                        <img src="flags/russian.png" alt="русский" class="language-flag">
-                        <p>русский</p>
-                    </a>
-                </div>
-                <div class="language-item">
-                    <a href="index_ch.html">
-                        <img src="flags/chinese.png" alt="Chinese" class="language-flag">
-                        <p>中文</p>
-                    </a>
-                </div>
-                <div class="language-item">
-                    <a href="index_ar.html">
-                        <img src="flags/arab.png" alt="العربية" class="language-flag">
-                        <p>العربية</p>
-                    </a>
-                </div>
+        <div class="language-grid">
+            <div class="language-item">
+                <a href="index_en.html">
+                    <img src="flags/english.png" alt="English" class="language-flag">
+                    <p>English</p>
+                </a>
+            </div>
+            <div class="language-item">
+                <a href="index_it.html">
+                    <img src="flags/italian.png" alt="Italiano" class="language-flag">
+                    <p>Italiano</p>
+                </a>
+            </div>
+            <div class="language-item">
+                <a href="index_es.html">
+                    <img src="flags/spanish.png" alt="Español" class="language-flag">
+                    <p>Español</p>
+                </a>
+            </div>
+            <div class="language-item">
+                <a href="index_fr.html">
+                    <img src="flags/french.png" alt="Français" class="language-flag">
+                    <p>Français</p>
+                </a>
+            </div>
+            <div class="language-item">
+                <a href="index_ge.html">
+                    <img src="flags/german.png" alt="Deutsch" class="language-flag">
+                    <p>Deutsch</p>
+                </a>
+            </div>
+            <div class="language-item">
+                <a href="index_ru.html">
+                    <img src="flags/russian.png" alt="русский" class="language-flag">
+                    <p>русский</p>
+                </a>
+            </div>
+            <div class="language-item">
+                <a href="index_ch.html">
+                    <img src="flags/chinese.png" alt="Chinese" class="language-flag">
+                    <p>中文</p>
+                </a>
+            </div>
+            <div class="language-item">
+                <a href="index_ar.html">
+                    <img src="flags/arab.png" alt="العربية" class="language-flag">
+                    <p>العربية</p>
+                </a>
             </div>
         </div>
     </div>
-    <script src="scripts.js"></script>
 </body>
 </html>
