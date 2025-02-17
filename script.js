@@ -73,6 +73,19 @@ let prevScrollPos = window.pageYOffset; // Memorizza la posizione precedente del
 const navbar = document.querySelector('.navbar');
 const languageSelection = document.querySelector('.language-selection');
 
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(registration => {
+        console.log('Service Worker registrato con successo:', registration);
+      })
+      .catch(error => {
+        console.log('Registrazione Service Worker fallita:', error);
+      });
+  });
+}
+
+
 // Quando si scorre sulla pagina
 window.onscroll = function() {
     let currentScrollPos = window.pageYOffset; // Posizione corrente dello scroll
